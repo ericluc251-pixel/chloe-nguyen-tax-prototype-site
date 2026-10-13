@@ -668,6 +668,765 @@
           }
         }
       }
+    },
+    "/tools/list_entities": {
+      "post": {
+        "operationId": "tool_list_entities",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/get_entity": {
+      "post": {
+        "operationId": "tool_get_entity",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/set_owners": {
+      "post": {
+        "operationId": "tool_set_owners",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/get_household": {
+      "post": {
+        "operationId": "tool_get_household",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/return_due_date": {
+      "post": {
+        "operationId": "tool_return_due_date",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/k1_status": {
+      "post": {
+        "operationId": "tool_k1_status",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/record_extension": {
+      "post": {
+        "operationId": "tool_record_extension",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/request_biz_documents": {
+      "post": {
+        "operationId": "tool_request_biz_documents",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/estimate_schedule": {
+      "post": {
+        "operationId": "tool_estimate_schedule",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/set_estimate": {
+      "post": {
+        "operationId": "tool_set_estimate",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/estimates_due": {
+      "post": {
+        "operationId": "tool_estimates_due",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/send_estimate_reminder": {
+      "post": {
+        "operationId": "tool_send_estimate_reminder",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_payroll_filings": {
+      "post": {
+        "operationId": "tool_list_payroll_filings",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_salestax_filings": {
+      "post": {
+        "operationId": "tool_list_salestax_filings",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/mark_filed": {
+      "post": {
+        "operationId": "tool_mark_filed",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/generate_payroll_calendar": {
+      "post": {
+        "operationId": "tool_generate_payroll_calendar",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/generate_sales_tax_calendar": {
+      "post": {
+        "operationId": "tool_generate_sales_tax_calendar",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/set_sales_tax_amounts": {
+      "post": {
+        "operationId": "tool_set_sales_tax_amounts",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/compliance_items": {
+      "post": {
+        "operationId": "tool_compliance_items",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/close_status": {
+      "post": {
+        "operationId": "tool_close_status",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/generate_closes": {
+      "post": {
+        "operationId": "tool_generate_closes",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/set_close_item": {
+      "post": {
+        "operationId": "tool_set_close_item",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/close_month": {
+      "post": {
+        "operationId": "tool_close_month",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/reopen_close": {
+      "post": {
+        "operationId": "tool_reopen_close",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_payees": {
+      "post": {
+        "operationId": "tool_list_payees",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/upsert_payee": {
+      "post": {
+        "operationId": "tool_upsert_payee",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/build_1099s": {
+      "post": {
+        "operationId": "tool_build_1099s",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/set_1099_state": {
+      "post": {
+        "operationId": "tool_set_1099_state",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/mark_1099_filed": {
+      "post": {
+        "operationId": "tool_mark_1099_filed",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/mark_1099_recipient_sent": {
+      "post": {
+        "operationId": "tool_mark_1099_recipient_sent",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_jurisdictions": {
+      "post": {
+        "operationId": "tool_list_jurisdictions",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/deadline_for": {
+      "post": {
+        "operationId": "tool_deadline_for",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/biz_price_quote": {
+      "post": {
+        "operationId": "tool_biz_price_quote",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
     }
   }
 }

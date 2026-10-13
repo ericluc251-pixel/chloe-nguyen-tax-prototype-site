@@ -101,6 +101,105 @@
     },
     {
       "name": "ai_usage"
+    },
+    {
+      "name": "list_entities"
+    },
+    {
+      "name": "get_entity"
+    },
+    {
+      "name": "set_owners"
+    },
+    {
+      "name": "get_household"
+    },
+    {
+      "name": "return_due_date"
+    },
+    {
+      "name": "k1_status"
+    },
+    {
+      "name": "record_extension"
+    },
+    {
+      "name": "request_biz_documents"
+    },
+    {
+      "name": "estimate_schedule"
+    },
+    {
+      "name": "set_estimate"
+    },
+    {
+      "name": "estimates_due"
+    },
+    {
+      "name": "send_estimate_reminder"
+    },
+    {
+      "name": "list_payroll_filings"
+    },
+    {
+      "name": "list_salestax_filings"
+    },
+    {
+      "name": "mark_filed"
+    },
+    {
+      "name": "generate_payroll_calendar"
+    },
+    {
+      "name": "generate_sales_tax_calendar"
+    },
+    {
+      "name": "set_sales_tax_amounts"
+    },
+    {
+      "name": "compliance_items"
+    },
+    {
+      "name": "close_status"
+    },
+    {
+      "name": "generate_closes"
+    },
+    {
+      "name": "set_close_item"
+    },
+    {
+      "name": "close_month"
+    },
+    {
+      "name": "reopen_close"
+    },
+    {
+      "name": "list_payees"
+    },
+    {
+      "name": "upsert_payee"
+    },
+    {
+      "name": "build_1099s"
+    },
+    {
+      "name": "set_1099_state"
+    },
+    {
+      "name": "mark_1099_filed"
+    },
+    {
+      "name": "mark_1099_recipient_sent"
+    },
+    {
+      "name": "list_jurisdictions"
+    },
+    {
+      "name": "deadline_for"
+    },
+    {
+      "name": "biz_price_quote"
     }
   ],
   "docs": {

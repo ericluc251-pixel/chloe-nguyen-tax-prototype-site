@@ -11,6 +11,10 @@ Area served: Katy, TX; Houston, TX
 - Tax return preparation [TAX] — from $125. Individual and business tax returns, e-filed with the IRS.
 - ITIN application (IRS Form W-7) [ITIN] — $150. Form W-7 preparation, identity document review and submission with the tax return.
 - Monthly bookkeeping [BOOK] — $200/month. Monthly bank and card reconciliation with a profit and loss report.
+- S corporation tax return (Form 1120-S) [BIZ1120S] — from $1,500. S-corp return e-filed, with a Schedule K-1 for each shareholder.
+- Partnership and multi-member LLC return (Form 1065) [BIZ1065] — from $1,400. Partnership return e-filed, capital accounts kept, a Schedule K-1 for each partner.
+- C corporation tax return (Form 1120) [BIZ1120] — from $1,900. Corporate return e-filed, with quarterly estimated tax planning.
+- Payroll service and filings [PAYROLL] — $150/month. Payroll run and every Form 941, 940, W-2/W-3 and Texas Workforce Commission report filed on time.
 
 ## Pages
 
@@ -18,14 +22,26 @@ Area served: Katy, TX; Houston, TX
 - [Refund estimator](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/estimator): Estimate a 2025 federal refund or balance due.
 - [Get started](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/start): Short questionnaire that opens a tax return case.
 - [Help center](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/help): Articles on documents, deadlines, refunds and IRS letters.
+- [Business services](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business): S-corp, partnership and C-corp returns, payroll, Texas sales tax, bookkeeping and 1099s, with prices and deadlines.
+- [Business price calculator](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business-price): Monthly, annual and one-time price from entity type, employees, transactions, states and payroll.
 - [Client portal](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/portal): Clients follow their return, upload documents, sign and pay.
 - [AI summary](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/llms): This llms.txt-style summary for AI assistants and agents.
+
+## Business services
+
+- [Business services](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business): Business tax returns, payroll, Texas sales tax, bookkeeping and 1099s in English, Vietnamese and Spanish.
+- [Business service BOOK](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business/BOOK): What is included, documents needed, deadlines, price and FAQ.
+- [Business service BIZ1120S](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business/BIZ1120S): What is included, documents needed, deadlines, price and FAQ.
+- [Business service BIZ1065](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business/BIZ1065): What is included, documents needed, deadlines, price and FAQ.
+- [Business service BIZ1120](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business/BIZ1120): What is included, documents needed, deadlines, price and FAQ.
+- [Business service PAYROLL](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business/PAYROLL): What is included, documents needed, deadlines, price and FAQ.
+- [Business price calculator](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/business-price): Monthly, annual and one-time tax return price from entity type, employees, transactions, states and payroll.
 
 ## For AI agents
 
 Entry point: window.CNTA (in the staff Workspace). Calls: CNTA.schema(), CNTA.tools.list(), CNTA.tools.call(name, args).
 Tools run with the permissions of the signed-in staff member, are audited and return {ok, data} or {ok:false, error}.
 
-Tools: describe_schema, list_records, get_record, create_record, update_record, run_case_action, verify_document, send_reminder, search, list_products, start_request, apply_change_set, sync_status, provision_workbook, datasource_status, list_inbox, decide_inbox, explain_return, add_work_note, add_comment, query_agent_runs, extract_document, list_extractions, confirm_extraction, reject_extraction, review_return, get_yoy, ai_usage
+Tools: describe_schema, list_records, get_record, create_record, update_record, run_case_action, verify_document, send_reminder, search, list_products, start_request, apply_change_set, sync_status, provision_workbook, datasource_status, list_inbox, decide_inbox, explain_return, add_work_note, add_comment, query_agent_runs, extract_document, list_extractions, confirm_extraction, reject_extraction, review_return, get_yoy, ai_usage, list_entities, get_entity, set_owners, get_household, return_due_date, k1_status, record_extension, request_biz_documents, estimate_schedule, set_estimate, estimates_due, send_estimate_reminder, list_payroll_filings, list_salestax_filings, mark_filed, generate_payroll_calendar, generate_sales_tax_calendar, set_sales_tax_amounts, compliance_items, close_status, generate_closes, set_close_item, close_month, reopen_close, list_payees, upsert_payee, build_1099s, set_1099_state, mark_1099_filed, mark_1099_recipient_sent, list_jurisdictions, deadline_for, biz_price_quote
 
 Prototype with sample data. Not tax advice.
