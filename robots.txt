@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/sitemap.xml

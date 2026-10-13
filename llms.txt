@@ -1,0 +1,31 @@
+# Chloe Nguyen Tax Advisory
+
+> Tax preparation and small-business services for individuals and families in Katy and Houston, Texas, in English, Vietnamese and Spanish. Prototype site with sample content and prices; not tax advice.
+
+Contact: (281) 555-0100 · hello@chloenguyentax.example
+Languages: English, Vietnamese, Spanish
+Area served: Katy, TX; Houston, TX
+
+## Services
+
+- Tax return preparation [TAX] — from $125. Individual and business tax returns, e-filed with the IRS.
+- ITIN application (IRS Form W-7) [ITIN] — $150. Form W-7 preparation, identity document review and submission with the tax return.
+- Monthly bookkeeping [BOOK] — $200/month. Monthly bank and card reconciliation with a profit and loss report.
+
+## Pages
+
+- [Home](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/site): Services, how it works, pricing, deadlines and FAQ.
+- [Refund estimator](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/estimator): Estimate a 2025 federal refund or balance due.
+- [Get started](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/start): Short questionnaire that opens a tax return case.
+- [Help center](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/help): Articles on documents, deadlines, refunds and IRS letters.
+- [Client portal](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/portal): Clients follow their return, upload documents, sign and pay.
+- [AI summary](https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/llms): This llms.txt-style summary for AI assistants and agents.
+
+## For AI agents
+
+Entry point: window.CNTA (in the staff Workspace). Calls: CNTA.schema(), CNTA.tools.list(), CNTA.tools.call(name, args).
+Tools run with the permissions of the signed-in staff member, are audited and return {ok, data} or {ok:false, error}.
+
+Tools: describe_schema, list_records, get_record, create_record, update_record, run_case_action, verify_document, send_reminder, search, list_products, start_request, apply_change_set
+
+Prototype with sample data. Not tax advice.
