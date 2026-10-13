@@ -1,0 +1,30 @@
+{
+  "name": "Chloe Nguyen Tax Advisory",
+  "short_name": "CN Tax",
+  "description": "Follow your tax return, upload documents and message your preparer in English, Vietnamese or Spanish.",
+  "start_url": "./#/portal",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#1f3b73",
+  "background_color": "#f5f7fb",
+  "lang": "en",
+  "categories": [
+    "finance",
+    "business"
+  ],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

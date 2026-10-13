@@ -1,0 +1,305 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Chloe Nguyen Tax Advisory platform API",
+    "version": "1.0.0",
+    "description": "Static summary of the agent tool endpoints. The complete spec (CRUD per table, JSON-Schema per tool) is generated live in the Workspace at #/studio/api-spec."
+  },
+  "servers": [
+    {
+      "url": "https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/api/v1",
+      "description": "Production API (planned)"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/tools/describe_schema": {
+      "post": {
+        "operationId": "tool_describe_schema",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_records": {
+      "post": {
+        "operationId": "tool_list_records",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/get_record": {
+      "post": {
+        "operationId": "tool_get_record",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/create_record": {
+      "post": {
+        "operationId": "tool_create_record",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/update_record": {
+      "post": {
+        "operationId": "tool_update_record",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/run_case_action": {
+      "post": {
+        "operationId": "tool_run_case_action",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/verify_document": {
+      "post": {
+        "operationId": "tool_verify_document",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/send_reminder": {
+      "post": {
+        "operationId": "tool_send_reminder",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/search": {
+      "post": {
+        "operationId": "tool_search",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_products": {
+      "post": {
+        "operationId": "tool_list_products",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/start_request": {
+      "post": {
+        "operationId": "tool_start_request",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/apply_change_set": {
+      "post": {
+        "operationId": "tool_apply_change_set",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    }
+  }
+}

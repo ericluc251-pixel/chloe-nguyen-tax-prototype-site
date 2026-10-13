@@ -1,0 +1,68 @@
+{
+  "name": "Chloe Nguyen Tax Advisory agent",
+  "description": "Tax preparation and small-business services for individuals and families in Katy and Houston, Texas, in English, Vietnamese and Spanish. Prototype site with sample content and prices; not tax advice.",
+  "url": "https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/",
+  "languages": [
+    "en",
+    "vi",
+    "es"
+  ],
+  "capabilities": {
+    "tools": true,
+    "streaming": false,
+    "humanApproval": true,
+    "pushNotifications": "webhooks"
+  },
+  "auth": {
+    "type": "bearer",
+    "note": "Every call runs as a staff member or a service user (\"Agent: <name>\") with one role; tool roles, record and field access and PII masking apply. Risky tools can require human approval."
+  },
+  "tools": [
+    {
+      "name": "describe_schema"
+    },
+    {
+      "name": "list_records"
+    },
+    {
+      "name": "get_record"
+    },
+    {
+      "name": "create_record"
+    },
+    {
+      "name": "update_record"
+    },
+    {
+      "name": "run_case_action"
+    },
+    {
+      "name": "verify_document"
+    },
+    {
+      "name": "send_reminder"
+    },
+    {
+      "name": "search"
+    },
+    {
+      "name": "list_products"
+    },
+    {
+      "name": "start_request"
+    },
+    {
+      "name": "apply_change_set"
+    }
+  ],
+  "docs": {
+    "llms": "https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/llms.txt",
+    "openapi": "https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/openapi.json",
+    "liveSpec": "https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/#/studio/api-spec"
+  },
+  "connect": {
+    "browser": "window.CNTA.tools.call(name, args)",
+    "rest": "POST /api/v1/tools/<name> (planned)",
+    "mcp": "MCP server exposing the same tools (planned)"
+  }
+}
