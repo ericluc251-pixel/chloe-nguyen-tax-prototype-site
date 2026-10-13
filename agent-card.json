@@ -53,6 +53,21 @@
     },
     {
       "name": "apply_change_set"
+    },
+    {
+      "name": "sync_status"
+    },
+    {
+      "name": "provision_workbook"
+    },
+    {
+      "name": "datasource_status"
+    },
+    {
+      "name": "list_inbox"
+    },
+    {
+      "name": "decide_inbox"
     }
   ],
   "docs": {

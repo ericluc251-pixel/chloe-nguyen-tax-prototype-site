@@ -26,6 +26,6 @@ Area served: Katy, TX; Houston, TX
 Entry point: window.CNTA (in the staff Workspace). Calls: CNTA.schema(), CNTA.tools.list(), CNTA.tools.call(name, args).
 Tools run with the permissions of the signed-in staff member, are audited and return {ok, data} or {ok:false, error}.
 
-Tools: describe_schema, list_records, get_record, create_record, update_record, run_case_action, verify_document, send_reminder, search, list_products, start_request, apply_change_set
+Tools: describe_schema, list_records, get_record, create_record, update_record, run_case_action, verify_document, send_reminder, search, list_products, start_request, apply_change_set, sync_status, provision_workbook, datasource_status, list_inbox, decide_inbox
 
 Prototype with sample data. Not tax advice.
