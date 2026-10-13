@@ -415,6 +415,259 @@
           }
         }
       }
+    },
+    "/tools/explain_return": {
+      "post": {
+        "operationId": "tool_explain_return",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/add_work_note": {
+      "post": {
+        "operationId": "tool_add_work_note",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/add_comment": {
+      "post": {
+        "operationId": "tool_add_comment",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/query_agent_runs": {
+      "post": {
+        "operationId": "tool_query_agent_runs",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/extract_document": {
+      "post": {
+        "operationId": "tool_extract_document",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_extractions": {
+      "post": {
+        "operationId": "tool_list_extractions",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/confirm_extraction": {
+      "post": {
+        "operationId": "tool_confirm_extraction",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/reject_extraction": {
+      "post": {
+        "operationId": "tool_reject_extraction",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/review_return": {
+      "post": {
+        "operationId": "tool_review_return",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/get_yoy": {
+      "post": {
+        "operationId": "tool_get_yoy",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/ai_usage": {
+      "post": {
+        "operationId": "tool_ai_usage",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
     }
   }
 }

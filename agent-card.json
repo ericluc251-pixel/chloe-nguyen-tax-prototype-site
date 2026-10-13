@@ -68,6 +68,39 @@
     },
     {
       "name": "decide_inbox"
+    },
+    {
+      "name": "explain_return"
+    },
+    {
+      "name": "add_work_note"
+    },
+    {
+      "name": "add_comment"
+    },
+    {
+      "name": "query_agent_runs"
+    },
+    {
+      "name": "extract_document"
+    },
+    {
+      "name": "list_extractions"
+    },
+    {
+      "name": "confirm_extraction"
+    },
+    {
+      "name": "reject_extraction"
+    },
+    {
+      "name": "review_return"
+    },
+    {
+      "name": "get_yoy"
+    },
+    {
+      "name": "ai_usage"
     }
   ],
   "docs": {
