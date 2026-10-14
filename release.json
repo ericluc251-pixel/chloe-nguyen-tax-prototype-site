@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-14T06:22:40Z",
-  "commit": "8da7b00",
+  "built": "2026-10-14T22:50:45Z",
+  "commit": "eaf1243",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -133,7 +133,7 @@
     },
     {
       "file": "src/css/88-templates-ui.css",
-      "bytes": 4402
+      "bytes": 4535
     },
     {
       "file": "src/css/89-portal-billing.css",
@@ -465,7 +465,7 @@
     },
     {
       "file": "src/js/88-templates-ui.js",
-      "bytes": 42711
+      "bytes": 42730
     },
     {
       "file": "src/js/89-portal-billing.js",
@@ -517,12 +517,12 @@
     },
     {
       "file": "src/js/100-gsheet.js",
-      "bytes": 44328
+      "bytes": 44534
     },
     {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-3b89751987"
+  "sw": "cnta-6b336da10a"
 }
