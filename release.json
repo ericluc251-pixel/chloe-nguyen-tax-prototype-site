@@ -1,0 +1,520 @@
+{
+  "version": "1.0.0",
+  "built": "2026-10-14T03:26:44Z",
+  "commit": "2fcf980",
+  "modules": [
+    {
+      "file": "src/css/00-app.css",
+      "bytes": 62288
+    },
+    {
+      "file": "src/css/10-front-r4.css",
+      "bytes": 7856
+    },
+    {
+      "file": "src/css/11-front-r5.css",
+      "bytes": 8942
+    },
+    {
+      "file": "src/css/20-studio.css",
+      "bytes": 5201
+    },
+    {
+      "file": "src/css/21-studio-r5.css",
+      "bytes": 5354
+    },
+    {
+      "file": "src/css/53-ms-auth.css",
+      "bytes": 685
+    },
+    {
+      "file": "src/css/55-sync-ui.css",
+      "bytes": 9481
+    },
+    {
+      "file": "src/css/56-setup-guide.css",
+      "bytes": 6365
+    },
+    {
+      "file": "src/css/57-data-workbench.css",
+      "bytes": 6160
+    },
+    {
+      "file": "src/css/58-onboard.css",
+      "bytes": 7561
+    },
+    {
+      "file": "src/css/59-pii-guard.css",
+      "bytes": 4485
+    },
+    {
+      "file": "src/css/60-ai-gateway.css",
+      "bytes": 1563
+    },
+    {
+      "file": "src/css/65-chat-ui.css",
+      "bytes": 8699
+    },
+    {
+      "file": "src/css/66-copilot.css",
+      "bytes": 5705
+    },
+    {
+      "file": "src/css/67-extraction-ui.css",
+      "bytes": 8451
+    },
+    {
+      "file": "src/css/68-review-ui.css",
+      "bytes": 3549
+    },
+    {
+      "file": "src/css/69-explain-ui.css",
+      "bytes": 9436
+    },
+    {
+      "file": "src/css/71-biz-returns.css",
+      "bytes": 877
+    },
+    {
+      "file": "src/css/72-payroll-salestax.css",
+      "bytes": 616
+    },
+    {
+      "file": "src/css/73-books-1099.css",
+      "bytes": 1063
+    },
+    {
+      "file": "src/css/74-juris-packs.css",
+      "bytes": 2405
+    },
+    {
+      "file": "src/css/75-entity-ui.css",
+      "bytes": 6128
+    },
+    {
+      "file": "src/css/76-portal-biz.css",
+      "bytes": 4566
+    },
+    {
+      "file": "src/css/77-compliance-ui.css",
+      "bytes": 6633
+    },
+    {
+      "file": "src/css/78-1099-books-ui.css",
+      "bytes": 4406
+    },
+    {
+      "file": "src/css/79-biz-site.css",
+      "bytes": 5807
+    },
+    {
+      "file": "src/css/81-billing.css",
+      "bytes": 1142
+    },
+    {
+      "file": "src/css/82-collections.css",
+      "bytes": 2859
+    },
+    {
+      "file": "src/css/84-kpi.css",
+      "bytes": 842
+    },
+    {
+      "file": "src/css/85-pipeline-ui.css",
+      "bytes": 7015
+    },
+    {
+      "file": "src/css/86-kpi-ui.css",
+      "bytes": 6034
+    },
+    {
+      "file": "src/css/87-seo.css",
+      "bytes": 4023
+    },
+    {
+      "file": "src/css/88-templates-ui.css",
+      "bytes": 4402
+    },
+    {
+      "file": "src/css/89-portal-billing.css",
+      "bytes": 8463
+    },
+    {
+      "file": "src/css/90-wisp.css",
+      "bytes": 3501
+    },
+    {
+      "file": "src/css/91-mfa-session.css",
+      "bytes": 1982
+    },
+    {
+      "file": "src/css/93-perf-integrity.css",
+      "bytes": 1852
+    },
+    {
+      "file": "src/css/94-env-health.css",
+      "bytes": 2548
+    },
+    {
+      "file": "src/css/95-mfa-ui.css",
+      "bytes": 4949
+    },
+    {
+      "file": "src/css/96-security-center.css",
+      "bytes": 8747
+    },
+    {
+      "file": "src/css/97-audit-ui.css",
+      "bytes": 5645
+    },
+    {
+      "file": "src/css/98-perf-a11y.css",
+      "bytes": 8504
+    },
+    {
+      "file": "src/css/99-docs-hub.css",
+      "bytes": 6897
+    },
+    {
+      "file": "src/css/100-demo-hub.css",
+      "bytes": 4747
+    },
+    {
+      "file": "src/js/00-roadmap.js",
+      "bytes": 19268
+    },
+    {
+      "file": "src/js/01-core-data.js",
+      "bytes": 28665
+    },
+    {
+      "file": "src/js/02-core-helpers.js",
+      "bytes": 7229
+    },
+    {
+      "file": "src/js/05-platform-registry.js",
+      "bytes": 29641
+    },
+    {
+      "file": "src/js/06-platform-rules-events.js",
+      "bytes": 5441
+    },
+    {
+      "file": "src/js/07-platform-tools.js",
+      "bytes": 16744
+    },
+    {
+      "file": "src/js/08-platform-agents.js",
+      "bytes": 26945
+    },
+    {
+      "file": "src/js/09-platform-integrations.js",
+      "bytes": 28084
+    },
+    {
+      "file": "src/js/10-ws-shell.js",
+      "bytes": 4642
+    },
+    {
+      "file": "src/js/11-ws-workflow.js",
+      "bytes": 10705
+    },
+    {
+      "file": "src/js/12-ws-appointments-roles.js",
+      "bytes": 11406
+    },
+    {
+      "file": "src/js/13-ws-ai.js",
+      "bytes": 20363
+    },
+    {
+      "file": "src/js/14-ws-juris.js",
+      "bytes": 4888
+    },
+    {
+      "file": "src/js/15-ws-board-reports-notify.js",
+      "bytes": 19024
+    },
+    {
+      "file": "src/js/16-ws-dashboard.js",
+      "bytes": 8011
+    },
+    {
+      "file": "src/js/17-ws-list-form.js",
+      "bytes": 29055
+    },
+    {
+      "file": "src/js/20-portal.js",
+      "bytes": 55980
+    },
+    {
+      "file": "src/js/21-site.js",
+      "bytes": 16963
+    },
+    {
+      "file": "src/js/22-intake.js",
+      "bytes": 20253
+    },
+    {
+      "file": "src/js/23-estimator.js",
+      "bytes": 8230
+    },
+    {
+      "file": "src/js/24-help.js",
+      "bytes": 19957
+    },
+    {
+      "file": "src/js/25-chat.js",
+      "bytes": 25080
+    },
+    {
+      "file": "src/js/26-i18n-es.js",
+      "bytes": 27303
+    },
+    {
+      "file": "src/js/30-round3.js",
+      "bytes": 30084
+    },
+    {
+      "file": "src/js/31-front-r4.js",
+      "bytes": 28697
+    },
+    {
+      "file": "src/js/32-front-ws.js",
+      "bytes": 41475
+    },
+    {
+      "file": "src/js/33-front-r5.js",
+      "bytes": 50840
+    },
+    {
+      "file": "src/js/34-ws-r5.js",
+      "bytes": 19657
+    },
+    {
+      "file": "src/js/35-a11y.js",
+      "bytes": 4821
+    },
+    {
+      "file": "src/js/40-studio.js",
+      "bytes": 47811
+    },
+    {
+      "file": "src/js/41-ai-crawl.js",
+      "bytes": 6144
+    },
+    {
+      "file": "src/js/42-studio-r5.js",
+      "bytes": 51175
+    },
+    {
+      "file": "src/js/50-storage.js",
+      "bytes": 40933
+    },
+    {
+      "file": "src/js/51-graph.js",
+      "bytes": 52067
+    },
+    {
+      "file": "src/js/52-excel-adapter.js",
+      "bytes": 26048
+    },
+    {
+      "file": "src/js/53-ms-auth.js",
+      "bytes": 33697
+    },
+    {
+      "file": "src/js/54-xlsx.js",
+      "bytes": 49987
+    },
+    {
+      "file": "src/js/55-sync-ui.js",
+      "bytes": 32238
+    },
+    {
+      "file": "src/js/56-setup-guide.js",
+      "bytes": 46350
+    },
+    {
+      "file": "src/js/57-data-workbench.js",
+      "bytes": 36526
+    },
+    {
+      "file": "src/js/58-onboard.js",
+      "bytes": 58667
+    },
+    {
+      "file": "src/js/59-pii-guard.js",
+      "bytes": 30494
+    },
+    {
+      "file": "src/js/60-ai-gateway.js",
+      "bytes": 31710
+    },
+    {
+      "file": "src/js/61-extraction.js",
+      "bytes": 36407
+    },
+    {
+      "file": "src/js/62-return-review.js",
+      "bytes": 37699
+    },
+    {
+      "file": "src/js/63-agent-runs.js",
+      "bytes": 26955
+    },
+    {
+      "file": "src/js/64-assistant.js",
+      "bytes": 64688
+    },
+    {
+      "file": "src/js/65-chat-ui.js",
+      "bytes": 38990
+    },
+    {
+      "file": "src/js/66-copilot.js",
+      "bytes": 46188
+    },
+    {
+      "file": "src/js/67-extraction-ui.js",
+      "bytes": 37137
+    },
+    {
+      "file": "src/js/68-review-ui.js",
+      "bytes": 19836
+    },
+    {
+      "file": "src/js/69-explain-ui.js",
+      "bytes": 37222
+    },
+    {
+      "file": "src/js/70-entities.js",
+      "bytes": 28318
+    },
+    {
+      "file": "src/js/71-biz-returns.js",
+      "bytes": 55019
+    },
+    {
+      "file": "src/js/72-payroll-salestax.js",
+      "bytes": 58837
+    },
+    {
+      "file": "src/js/73-books-1099.js",
+      "bytes": 63271
+    },
+    {
+      "file": "src/js/74-juris-packs.js",
+      "bytes": 41206
+    },
+    {
+      "file": "src/js/75-entity-ui.js",
+      "bytes": 32137
+    },
+    {
+      "file": "src/js/76-portal-biz.js",
+      "bytes": 35529
+    },
+    {
+      "file": "src/js/77-compliance-ui.js",
+      "bytes": 29097
+    },
+    {
+      "file": "src/js/78-1099-books-ui.js",
+      "bytes": 46879
+    },
+    {
+      "file": "src/js/79-biz-site.js",
+      "bytes": 82546
+    },
+    {
+      "file": "src/js/80-leads.js",
+      "bytes": 41864
+    },
+    {
+      "file": "src/js/81-billing.js",
+      "bytes": 61035
+    },
+    {
+      "file": "src/js/82-collections.js",
+      "bytes": 61857
+    },
+    {
+      "file": "src/js/83-templates.js",
+      "bytes": 61186
+    },
+    {
+      "file": "src/js/84-kpi.js",
+      "bytes": 48178
+    },
+    {
+      "file": "src/js/85-pipeline-ui.js",
+      "bytes": 51330
+    },
+    {
+      "file": "src/js/86-kpi-ui.js",
+      "bytes": 46956
+    },
+    {
+      "file": "src/js/87-seo.js",
+      "bytes": 105441
+    },
+    {
+      "file": "src/js/88-templates-ui.js",
+      "bytes": 42711
+    },
+    {
+      "file": "src/js/89-portal-billing.js",
+      "bytes": 51574
+    },
+    {
+      "file": "src/js/90-wisp.js",
+      "bytes": 71433
+    },
+    {
+      "file": "src/js/91-mfa-session.js",
+      "bytes": 44633
+    },
+    {
+      "file": "src/js/92-audit-retention.js",
+      "bytes": 45242
+    },
+    {
+      "file": "src/js/93-perf-integrity.js",
+      "bytes": 45337
+    },
+    {
+      "file": "src/js/94-env-health.js",
+      "bytes": 40833
+    },
+    {
+      "file": "src/js/95-mfa-ui.js",
+      "bytes": 43607
+    },
+    {
+      "file": "src/js/96-security-center.js",
+      "bytes": 89364
+    },
+    {
+      "file": "src/js/97-audit-ui.js",
+      "bytes": 48612
+    },
+    {
+      "file": "src/js/98-perf-a11y.js",
+      "bytes": 24726
+    },
+    {
+      "file": "src/js/99-docs-hub.js",
+      "bytes": 76665
+    },
+    {
+      "file": "src/js/100-demo-hub.js",
+      "bytes": 34025
+    },
+    {
+      "file": "src/js/9999-boot.js",
+      "bytes": 304
+    }
+  ],
+  "sw": "cnta-534f83e099"
+}

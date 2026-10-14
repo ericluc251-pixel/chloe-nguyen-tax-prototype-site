@@ -1427,6 +1427,949 @@
           }
         }
       }
+    },
+    "/tools/create_lead": {
+      "post": {
+        "operationId": "tool_create_lead",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/update_lead_stage": {
+      "post": {
+        "operationId": "tool_update_lead_stage",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/convert_lead": {
+      "post": {
+        "operationId": "tool_convert_lead",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/create_billing_schedule": {
+      "post": {
+        "operationId": "tool_create_billing_schedule",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/set_billing_schedule_status": {
+      "post": {
+        "operationId": "tool_set_billing_schedule_status",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/run_billing": {
+      "post": {
+        "operationId": "tool_run_billing",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_billing_schedules": {
+      "post": {
+        "operationId": "tool_list_billing_schedules",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/apply_coupon": {
+      "post": {
+        "operationId": "tool_apply_coupon",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/get_price_book": {
+      "post": {
+        "operationId": "tool_get_price_book",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/ar_aging": {
+      "post": {
+        "operationId": "tool_ar_aging",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/run_dunning": {
+      "post": {
+        "operationId": "tool_run_dunning",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/pause_dunning": {
+      "post": {
+        "operationId": "tool_pause_dunning",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/write_off_invoice": {
+      "post": {
+        "operationId": "tool_write_off_invoice",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/create_payment_link": {
+      "post": {
+        "operationId": "tool_create_payment_link",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_templates": {
+      "post": {
+        "operationId": "tool_list_templates",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/render_template": {
+      "post": {
+        "operationId": "tool_render_template",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/send_template": {
+      "post": {
+        "operationId": "tool_send_template",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_enrollments": {
+      "post": {
+        "operationId": "tool_list_enrollments",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/exit_enrollment": {
+      "post": {
+        "operationId": "tool_exit_enrollment",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/enroll_in_sequence": {
+      "post": {
+        "operationId": "tool_enroll_in_sequence",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/get_metric": {
+      "post": {
+        "operationId": "tool_get_metric",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_metrics": {
+      "post": {
+        "operationId": "tool_list_metrics",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_testimonials": {
+      "post": {
+        "operationId": "tool_list_testimonials",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/approve_testimonial": {
+      "post": {
+        "operationId": "tool_approve_testimonial",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/seo_pages": {
+      "post": {
+        "operationId": "tool_seo_pages",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_articles": {
+      "post": {
+        "operationId": "tool_list_articles",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/wisp_status": {
+      "post": {
+        "operationId": "tool_wisp_status",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/list_risks": {
+      "post": {
+        "operationId": "tool_list_risks",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/open_incident": {
+      "post": {
+        "operationId": "tool_open_incident",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/incident_obligations": {
+      "post": {
+        "operationId": "tool_incident_obligations",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/mfa_status": {
+      "post": {
+        "operationId": "tool_mfa_status",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/retention_due": {
+      "post": {
+        "operationId": "tool_retention_due",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/request_disposal": {
+      "post": {
+        "operationId": "tool_request_disposal",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/authorize_disposal": {
+      "post": {
+        "operationId": "tool_authorize_disposal",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/legal_hold": {
+      "post": {
+        "operationId": "tool_legal_hold",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/verify_audit_chain": {
+      "post": {
+        "operationId": "tool_verify_audit_chain",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/integrity_scan": {
+      "post": {
+        "operationId": "tool_integrity_scan",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/perf_report": {
+      "post": {
+        "operationId": "tool_perf_report",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/env_status": {
+      "post": {
+        "operationId": "tool_env_status",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/health_check": {
+      "post": {
+        "operationId": "tool_health_check",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
+    "/tools/search_docs": {
+      "post": {
+        "operationId": "tool_search_docs",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
     }
   }
 }
