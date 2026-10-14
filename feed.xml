@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title>Chloe Nguyen Tax Advisory: Tax tips and resources</title>
+<subtitle>Short, plain-language guides for families, workers and small businesses. Each one says which tax year it covers.</subtitle>
+<id>https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/feed.xml</id>
+<link rel="self" type="application/atom+xml" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/feed.xml"/>
+<link rel="alternate" type="text/html" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en.html"/>
+<updated>2026-10-06T00:00:00Z</updated>
+<author><name>Chloe Nguyen Tax Advisory</name><uri>https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/</uri></author>
+<entry>
+<title>What to bring for your 2026 tax return (filing in 2027)</title>
+<id>https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-what-to-bring-2027.html</id>
+<link rel="alternate" type="text/html" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-what-to-bring-2027.html"/>
+<link rel="alternate" type="text/html" hreflang="vi" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-vi-what-to-bring-2027.html"/>
+<link rel="alternate" type="text/html" hreflang="es" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-es-what-to-bring-2027.html"/>
+<published>2026-10-06T00:00:00Z</published>
+<updated>2026-10-06T00:00:00Z</updated>
+<author><name>Chloe Nguyen Tax Advisory</name></author>
+<summary>A checklist of the documents to gather for your 2026 federal return, so your appointment is quick and nothing is missed.</summary>
+<category term="filing" label="Filing season"/>
+<category term="deductions" label="Deductions and credits"/>
+</entry>
+<entry>
+<title>Filed an extension? Your 2025 return is due October 15, 2026</title>
+<id>https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-extension-due-october-15.html</id>
+<link rel="alternate" type="text/html" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-extension-due-october-15.html"/>
+<link rel="alternate" type="text/html" hreflang="vi" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-vi-extension-due-october-15.html"/>
+<link rel="alternate" type="text/html" hreflang="es" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-es-extension-due-october-15.html"/>
+<published>2026-10-01T00:00:00Z</published>
+<updated>2026-10-01T00:00:00Z</updated>
+<author><name>Chloe Nguyen Tax Advisory</name></author>
+<summary>An extension gave you more time to file, not more time to pay. Here is what to do before October 15.</summary>
+<category term="deadlines" label="Deadlines"/>
+<category term="filing" label="Filing season"/>
+</entry>
+<entry>
+<title>New deductions for tips and overtime (tax years 2025 to 2028)</title>
+<id>https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-tips-and-overtime-deductions.html</id>
+<link rel="alternate" type="text/html" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-tips-and-overtime-deductions.html"/>
+<link rel="alternate" type="text/html" hreflang="vi" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-vi-tips-and-overtime-deductions.html"/>
+<link rel="alternate" type="text/html" hreflang="es" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-es-tips-and-overtime-deductions.html"/>
+<published>2026-09-29T00:00:00Z</published>
+<updated>2026-09-29T00:00:00Z</updated>
+<author><name>Chloe Nguyen Tax Advisory</name></author>
+<summary>Workers who receive tips or overtime pay may deduct part of it on their federal return for 2025 through 2028, even if they do not itemize.</summary>
+<category term="deductions" label="Deductions and credits"/>
+</entry>
+<entry>
+<title>Self-employed in Texas: what you owe and when</title>
+<id>https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-self-employed-in-texas.html</id>
+<link rel="alternate" type="text/html" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-self-employed-in-texas.html"/>
+<link rel="alternate" type="text/html" hreflang="vi" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-vi-self-employed-in-texas.html"/>
+<link rel="alternate" type="text/html" hreflang="es" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-es-self-employed-in-texas.html"/>
+<published>2026-09-22T00:00:00Z</published>
+<updated>2026-09-22T00:00:00Z</updated>
+<author><name>Chloe Nguyen Tax Advisory</name></author>
+<summary>Texas has no state income tax, but self-employed people still owe federal income tax and self-employment tax. Here is how it works for 2026.</summary>
+<category term="self-employed" label="Self-employed"/>
+<category term="business" label="Small business"/>
+<category term="deadlines" label="Deadlines"/>
+</entry>
+<entry>
+<title>ITIN renewals: is your number still valid?</title>
+<id>https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-itin-renewals.html</id>
+<link rel="alternate" type="text/html" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-itin-renewals.html"/>
+<link rel="alternate" type="text/html" hreflang="vi" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-vi-itin-renewals.html"/>
+<link rel="alternate" type="text/html" hreflang="es" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-es-itin-renewals.html"/>
+<published>2026-09-08T00:00:00Z</published>
+<updated>2026-09-08T00:00:00Z</updated>
+<author><name>Chloe Nguyen Tax Advisory</name></author>
+<summary>An ITIN that has not been used on a federal tax return for three years in a row expires. Here is how to check and renew it.</summary>
+<category term="itin" label="ITIN"/>
+<category term="filing" label="Filing season"/>
+</entry>
+<entry>
+<title>Got a letter from the IRS? How to tell if it is real</title>
+<id>https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-irs-letters-and-scams.html</id>
+<link rel="alternate" type="text/html" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-en-irs-letters-and-scams.html"/>
+<link rel="alternate" type="text/html" hreflang="vi" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-vi-irs-letters-and-scams.html"/>
+<link rel="alternate" type="text/html" hreflang="es" href="https://ericluc251-pixel.github.io/chloe-nguyen-tax-prototype-site/resources-es-irs-letters-and-scams.html"/>
+<published>2026-08-25T00:00:00Z</published>
+<updated>2026-08-25T00:00:00Z</updated>
+<author><name>Chloe Nguyen Tax Advisory</name></author>
+<summary>The IRS usually contacts you first by mail. Here is how to read a notice, and the signs of a scam.</summary>
+<category term="irs-letters" label="IRS letters"/>
+</entry>
+</feed>

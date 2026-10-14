@@ -200,6 +200,129 @@
     },
     {
       "name": "biz_price_quote"
+    },
+    {
+      "name": "create_lead"
+    },
+    {
+      "name": "update_lead_stage"
+    },
+    {
+      "name": "convert_lead"
+    },
+    {
+      "name": "create_billing_schedule"
+    },
+    {
+      "name": "set_billing_schedule_status"
+    },
+    {
+      "name": "run_billing"
+    },
+    {
+      "name": "list_billing_schedules"
+    },
+    {
+      "name": "apply_coupon"
+    },
+    {
+      "name": "get_price_book"
+    },
+    {
+      "name": "ar_aging"
+    },
+    {
+      "name": "run_dunning"
+    },
+    {
+      "name": "pause_dunning"
+    },
+    {
+      "name": "write_off_invoice"
+    },
+    {
+      "name": "create_payment_link"
+    },
+    {
+      "name": "list_templates"
+    },
+    {
+      "name": "render_template"
+    },
+    {
+      "name": "send_template"
+    },
+    {
+      "name": "list_enrollments"
+    },
+    {
+      "name": "exit_enrollment"
+    },
+    {
+      "name": "enroll_in_sequence"
+    },
+    {
+      "name": "get_metric"
+    },
+    {
+      "name": "list_metrics"
+    },
+    {
+      "name": "list_testimonials"
+    },
+    {
+      "name": "approve_testimonial"
+    },
+    {
+      "name": "seo_pages"
+    },
+    {
+      "name": "list_articles"
+    },
+    {
+      "name": "wisp_status"
+    },
+    {
+      "name": "list_risks"
+    },
+    {
+      "name": "open_incident"
+    },
+    {
+      "name": "incident_obligations"
+    },
+    {
+      "name": "mfa_status"
+    },
+    {
+      "name": "retention_due"
+    },
+    {
+      "name": "request_disposal"
+    },
+    {
+      "name": "authorize_disposal"
+    },
+    {
+      "name": "legal_hold"
+    },
+    {
+      "name": "verify_audit_chain"
+    },
+    {
+      "name": "integrity_scan"
+    },
+    {
+      "name": "perf_report"
+    },
+    {
+      "name": "env_status"
+    },
+    {
+      "name": "health_check"
+    },
+    {
+      "name": "search_docs"
     }
   ],
   "docs": {
