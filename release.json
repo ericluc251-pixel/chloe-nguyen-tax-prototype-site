@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-15T00:22:48Z",
-  "commit": "d9970df",
+  "built": "2026-10-15T02:18:51Z",
+  "commit": "1a65d71",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -186,6 +186,18 @@
     {
       "file": "src/css/101-data-admin.css",
       "bytes": 931
+    },
+    {
+      "file": "src/css/102-ws-lists.css",
+      "bytes": 469
+    },
+    {
+      "file": "src/css/103-ws-nav.css",
+      "bytes": 1307
+    },
+    {
+      "file": "src/css/104-front-simple.css",
+      "bytes": 3584
     },
     {
       "file": "src/js/00-roadmap.js",
@@ -385,7 +397,7 @@
     },
     {
       "file": "src/js/67-extraction-ui.js",
-      "bytes": 37137
+      "bytes": 37213
     },
     {
       "file": "src/js/68-review-ui.js",
@@ -528,9 +540,21 @@
       "bytes": 17795
     },
     {
+      "file": "src/js/102-ws-lists.js",
+      "bytes": 2854
+    },
+    {
+      "file": "src/js/103-ws-nav.js",
+      "bytes": 5505
+    },
+    {
+      "file": "src/js/104-front-simple.js",
+      "bytes": 10377
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-f919e783fd"
+  "sw": "cnta-5bc441879d"
 }
