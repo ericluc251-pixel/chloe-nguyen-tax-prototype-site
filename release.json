@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-15T15:13:48Z",
-  "commit": "59ef066",
+  "built": "2026-10-15T17:07:38Z",
+  "commit": "a94c515",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -253,7 +253,7 @@
     },
     {
       "file": "src/css/119-scripts.css",
-      "bytes": 6063
+      "bytes": 6370
     },
     {
       "file": "src/css/120-portal-builder.css",
@@ -277,7 +277,7 @@
     },
     {
       "file": "src/css/128-wf-editor.css",
-      "bytes": 19858
+      "bytes": 20080
     },
     {
       "file": "src/css/129-wf-runs.css",
@@ -290,6 +290,10 @@
     {
       "file": "src/css/131-wf-ai.css",
       "bytes": 2095
+    },
+    {
+      "file": "src/css/132-nav-cmd.css",
+      "bytes": 804
     },
     {
       "file": "src/js/00-roadmap.js",
@@ -701,7 +705,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 94477
+      "bytes": 96625
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -733,11 +737,11 @@
     },
     {
       "file": "src/js/127-wf-meta.js",
-      "bytes": 94229
+      "bytes": 95470
     },
     {
       "file": "src/js/128-wf-editor.js",
-      "bytes": 192715
+      "bytes": 201739
     },
     {
       "file": "src/js/129-wf-runs.js",
@@ -745,16 +749,28 @@
     },
     {
       "file": "src/js/130-portal-layout.js",
-      "bytes": 80395
+      "bytes": 82460
     },
     {
       "file": "src/js/131-wf-ai.js",
       "bytes": 33542
     },
     {
+      "file": "src/js/132-nav-cmd.js",
+      "bytes": 21838
+    },
+    {
+      "file": "src/js/147-wf-i18n.js",
+      "bytes": 8817
+    },
+    {
+      "file": "src/js/148-wf-i18n-data.js",
+      "bytes": 107899
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-522596d166"
+  "sw": "cnta-761d73a5d7"
 }
