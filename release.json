@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-15T19:37:48Z",
-  "commit": "4e4c301",
+  "built": "2026-10-15T21:28:13Z",
+  "commit": "e2da819",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -294,6 +294,66 @@
     {
       "file": "src/css/132-nav-cmd.css",
       "bytes": 804
+    },
+    {
+      "file": "src/css/135-requirements.css",
+      "bytes": 2844
+    },
+    {
+      "file": "src/css/136-explain.css",
+      "bytes": 1166
+    },
+    {
+      "file": "src/css/137-query-client.css",
+      "bytes": 319
+    },
+    {
+      "file": "src/css/138-client-portal-auth.css",
+      "bytes": 1188
+    },
+    {
+      "file": "src/css/139-r38-workbench.css",
+      "bytes": 4993
+    },
+    {
+      "file": "src/css/140-ai-ops.css",
+      "bytes": 4683
+    },
+    {
+      "file": "src/css/142-voice-ptt.css",
+      "bytes": 2027
+    },
+    {
+      "file": "src/css/143-connectors.css",
+      "bytes": 3308
+    },
+    {
+      "file": "src/css/144-service-insights.css",
+      "bytes": 2142
+    },
+    {
+      "file": "src/css/145-packages.css",
+      "bytes": 2502
+    },
+    {
+      "file": "src/css/146-mcp-tokens.css",
+      "bytes": 1817
+    },
+    {
+      "file": "src/css/162-acl.css",
+      "bytes": 2341
+    },
+    {
+      "file": "src/css/167-content-guard.css",
+      "bytes": 4012
+    },
+    {
+      "file": "src/css/169-payroll.css",
+      "bytes": 4708
+    },
+    {
+      "file": "src/css/171-client-portal-activity.css",
+      "bytes": 1498
     },
     {
       "file": "src/js/00-roadmap.js",
@@ -669,11 +729,11 @@
     },
     {
       "file": "src/js/110-sn-home.js",
-      "bytes": 23485
+      "bytes": 23528
     },
     {
       "file": "src/js/111-auth.js",
-      "bytes": 31667
+      "bytes": 32189
     },
     {
       "file": "src/js/112-attach.js",
@@ -705,7 +765,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 96625
+      "bytes": 96619
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -713,11 +773,11 @@
     },
     {
       "file": "src/js/121-tenant.js",
-      "bytes": 23652
+      "bytes": 23698
     },
     {
       "file": "src/js/122-claude-panel.js",
-      "bytes": 48947
+      "bytes": 49271
     },
     {
       "file": "src/js/123-voice.js",
@@ -733,11 +793,11 @@
     },
     {
       "file": "src/js/126-efile-review.js",
-      "bytes": 41423
+      "bytes": 41439
     },
     {
       "file": "src/js/127-wf-meta.js",
-      "bytes": 95470
+      "bytes": 96038
     },
     {
       "file": "src/js/128-wf-editor.js",
@@ -757,7 +817,55 @@
     },
     {
       "file": "src/js/132-nav-cmd.js",
-      "bytes": 21838
+      "bytes": 22324
+    },
+    {
+      "file": "src/js/135-requirements.js",
+      "bytes": 75586
+    },
+    {
+      "file": "src/js/136-explain-data.js",
+      "bytes": 44570
+    },
+    {
+      "file": "src/js/136-explain.js",
+      "bytes": 27726
+    },
+    {
+      "file": "src/js/137-query-client.js",
+      "bytes": 23115
+    },
+    {
+      "file": "src/js/138-client-portal-auth.js",
+      "bytes": 36214
+    },
+    {
+      "file": "src/js/139-r38-workbench.js",
+      "bytes": 36114
+    },
+    {
+      "file": "src/js/140-ai-ops.js",
+      "bytes": 43810
+    },
+    {
+      "file": "src/js/142-voice-ptt.js",
+      "bytes": 35069
+    },
+    {
+      "file": "src/js/143-connectors.js",
+      "bytes": 27861
+    },
+    {
+      "file": "src/js/144-service-insights.js",
+      "bytes": 34119
+    },
+    {
+      "file": "src/js/145-packages.js",
+      "bytes": 121518
+    },
+    {
+      "file": "src/js/146-mcp-tokens.js",
+      "bytes": 16905
     },
     {
       "file": "src/js/147-wf-i18n.js",
@@ -768,9 +876,29 @@
       "bytes": 107899
     },
     {
+      "file": "src/js/162-acl.js",
+      "bytes": 45650
+    },
+    {
+      "file": "src/js/167-content-guard.js",
+      "bytes": 72266
+    },
+    {
+      "file": "src/js/169-payroll.js",
+      "bytes": 87276
+    },
+    {
+      "file": "src/js/171-client-portal-activity.js",
+      "bytes": 15120
+    },
+    {
+      "file": "src/js/174-kb-import.js",
+      "bytes": 21434
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-72015058fe"
+  "sw": "cnta-5ec6f93096"
 }
