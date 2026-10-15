@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-15T04:37:50Z",
-  "commit": "6443fed",
+  "built": "2026-10-15T06:39:41Z",
+  "commit": "aea4fd5",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -204,6 +204,26 @@
       "bytes": 183
     },
     {
+      "file": "src/css/106-sn-shell.css",
+      "bytes": 9641
+    },
+    {
+      "file": "src/css/107-sn-form.css",
+      "bytes": 5881
+    },
+    {
+      "file": "src/css/108-sn-list.css",
+      "bytes": 4007
+    },
+    {
+      "file": "src/css/109-sn-collab.css",
+      "bytes": 1111
+    },
+    {
+      "file": "src/css/110-sn-home.css",
+      "bytes": 3753
+    },
+    {
       "file": "src/js/00-roadmap.js",
       "bytes": 19268
     },
@@ -265,7 +285,7 @@
     },
     {
       "file": "src/js/17-ws-list-form.js",
-      "bytes": 29055
+      "bytes": 29466
     },
     {
       "file": "src/js/20-portal.js",
@@ -305,7 +325,7 @@
     },
     {
       "file": "src/js/32-front-ws.js",
-      "bytes": 41475
+      "bytes": 41507
     },
     {
       "file": "src/js/33-front-r5.js",
@@ -560,9 +580,33 @@
       "bytes": 9236
     },
     {
+      "file": "src/js/106-sn-shell.js",
+      "bytes": 35110
+    },
+    {
+      "file": "src/js/107-sn-form.js",
+      "bytes": 23560
+    },
+    {
+      "file": "src/js/108-sn-list.js",
+      "bytes": 23796
+    },
+    {
+      "file": "src/js/109-sn-collab.js",
+      "bytes": 13427
+    },
+    {
+      "file": "src/js/110-sn-home.js",
+      "bytes": 23287
+    },
+    {
+      "file": "src/js/114-numbering.js",
+      "bytes": 6942
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-0d30f27b10"
+  "sw": "cnta-c87a6c996d"
 }
