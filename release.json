@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-14T23:32:09Z",
-  "commit": "19ba74d",
+  "built": "2026-10-15T00:22:48Z",
+  "commit": "d9970df",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -521,7 +521,7 @@
     },
     {
       "file": "src/js/100-gsheet.js",
-      "bytes": 44944
+      "bytes": 45211
     },
     {
       "file": "src/js/101-data-admin.js",
@@ -532,5 +532,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-9d43c3846b"
+  "sw": "cnta-f919e783fd"
 }
