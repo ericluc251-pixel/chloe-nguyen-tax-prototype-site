@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-15T02:18:51Z",
-  "commit": "1a65d71",
+  "built": "2026-10-15T03:13:00Z",
+  "commit": "42749cb",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -198,6 +198,10 @@
     {
       "file": "src/css/104-front-simple.css",
       "bytes": 3584
+    },
+    {
+      "file": "src/css/105-notify-live.css",
+      "bytes": 183
     },
     {
       "file": "src/js/00-roadmap.js",
@@ -552,9 +556,13 @@
       "bytes": 10377
     },
     {
+      "file": "src/js/105-notify-live.js",
+      "bytes": 9236
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-5bc441879d"
+  "sw": "cnta-0d30f27b10"
 }
