@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-15T06:39:41Z",
-  "commit": "aea4fd5",
+  "built": "2026-10-15T15:03:53Z",
+  "commit": "ae17995",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -173,7 +173,7 @@
     },
     {
       "file": "src/css/99-docs-hub.css",
-      "bytes": 6897
+      "bytes": 6919
     },
     {
       "file": "src/css/100-demo-hub.css",
@@ -209,7 +209,7 @@
     },
     {
       "file": "src/css/107-sn-form.css",
-      "bytes": 5881
+      "bytes": 6085
     },
     {
       "file": "src/css/108-sn-list.css",
@@ -222,6 +222,74 @@
     {
       "file": "src/css/110-sn-home.css",
       "bytes": 3753
+    },
+    {
+      "file": "src/css/111-auth.css",
+      "bytes": 2964
+    },
+    {
+      "file": "src/css/112-attach.css",
+      "bytes": 2681
+    },
+    {
+      "file": "src/css/113-sla-jobs.css",
+      "bytes": 2790
+    },
+    {
+      "file": "src/css/115-form-builder.css",
+      "bytes": 3565
+    },
+    {
+      "file": "src/css/116-reports.css",
+      "bytes": 2038
+    },
+    {
+      "file": "src/css/117-kb.css",
+      "bytes": 4464
+    },
+    {
+      "file": "src/css/118-chat-int.css",
+      "bytes": 1651
+    },
+    {
+      "file": "src/css/119-scripts.css",
+      "bytes": 6063
+    },
+    {
+      "file": "src/css/120-portal-builder.css",
+      "bytes": 5768
+    },
+    {
+      "file": "src/css/121-tenant.css",
+      "bytes": 1236
+    },
+    {
+      "file": "src/css/122-claude-panel.css",
+      "bytes": 6194
+    },
+    {
+      "file": "src/css/123-voice.css",
+      "bytes": 2823
+    },
+    {
+      "file": "src/css/125-efile-return.css",
+      "bytes": 5975
+    },
+    {
+      "file": "src/css/128-wf-editor.css",
+      "bytes": 19858
+    },
+    {
+      "file": "src/css/129-wf-runs.css",
+      "bytes": 3107
+    },
+    {
+      "file": "src/css/130-portal-layout.css",
+      "bytes": 8793
+    },
+    {
+      "file": "src/css/131-wf-ai.css",
+      "bytes": 2095
     },
     {
       "file": "src/js/00-roadmap.js",
@@ -565,7 +633,7 @@
     },
     {
       "file": "src/js/102-ws-lists.js",
-      "bytes": 2854
+      "bytes": 3198
     },
     {
       "file": "src/js/103-ws-nav.js",
@@ -581,11 +649,11 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 35110
+      "bytes": 35301
     },
     {
       "file": "src/js/107-sn-form.js",
-      "bytes": 23560
+      "bytes": 23363
     },
     {
       "file": "src/js/108-sn-list.js",
@@ -597,16 +665,96 @@
     },
     {
       "file": "src/js/110-sn-home.js",
-      "bytes": 23287
+      "bytes": 23435
+    },
+    {
+      "file": "src/js/111-auth.js",
+      "bytes": 31667
+    },
+    {
+      "file": "src/js/112-attach.js",
+      "bytes": 17095
+    },
+    {
+      "file": "src/js/113-sla-jobs.js",
+      "bytes": 36314
     },
     {
       "file": "src/js/114-numbering.js",
       "bytes": 6942
     },
     {
+      "file": "src/js/115-form-builder.js",
+      "bytes": 25187
+    },
+    {
+      "file": "src/js/116-reports.js",
+      "bytes": 25118
+    },
+    {
+      "file": "src/js/117-kb.js",
+      "bytes": 42208
+    },
+    {
+      "file": "src/js/118-chat-int.js",
+      "bytes": 19370
+    },
+    {
+      "file": "src/js/119-scripts.js",
+      "bytes": 94477
+    },
+    {
+      "file": "src/js/120-portal-builder.js",
+      "bytes": 56794
+    },
+    {
+      "file": "src/js/121-tenant.js",
+      "bytes": 23652
+    },
+    {
+      "file": "src/js/122-claude-panel.js",
+      "bytes": 48935
+    },
+    {
+      "file": "src/js/123-voice.js",
+      "bytes": 25260
+    },
+    {
+      "file": "src/js/124-efile-tables.js",
+      "bytes": 8299
+    },
+    {
+      "file": "src/js/125-efile-return.js",
+      "bytes": 18845
+    },
+    {
+      "file": "src/js/126-efile-review.js",
+      "bytes": 41423
+    },
+    {
+      "file": "src/js/127-wf-meta.js",
+      "bytes": 94229
+    },
+    {
+      "file": "src/js/128-wf-editor.js",
+      "bytes": 192715
+    },
+    {
+      "file": "src/js/129-wf-runs.js",
+      "bytes": 46924
+    },
+    {
+      "file": "src/js/130-portal-layout.js",
+      "bytes": 80395
+    },
+    {
+      "file": "src/js/131-wf-ai.js",
+      "bytes": 33542
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-c87a6c996d"
+  "sw": "cnta-522596d166"
 }

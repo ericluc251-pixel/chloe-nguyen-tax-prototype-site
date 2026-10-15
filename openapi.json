@@ -2370,6 +2370,869 @@
           }
         }
       }
+    },
+    "/efile/returns": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Create a return, calculate it with the pinned rule pack and run the IRS business rules",
+        "description": "Body {input, returnNumber?}. The vault stores the whole filing encrypted; the reply is a masked view. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "Canonical return input (TY2026 model) and optional RET number"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "List returns (clear columns only)",
+        "description": "Query case, status. Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "case",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Masked view: status, amounts, findings, signature, submissions, staged package",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/input": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Masked input (SSN last 4, account hidden, PIN \"set\")",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Replace the input; clears approval, recalculates",
+        "description": "Body {input, version?}. 409 STALE_VERSION when the version moved. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "input, version"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/compute": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Recalculate and run business rules",
+        "description": "{repin:true} (preparer, admin) accepts a newer rule pack after 409 RULE_PACK_CHANGED. Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "repin?"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/findings": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Business-rule findings (source: engine)",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/claim": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "The signed-in preparer claims the return (PTIN)",
+        "description": "Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "{ptin: \"P12345678\"}"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/approve": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Reviewer approval (not the person who prepared or last edited it)",
+        "description": "Roles: reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/8879": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Amounts and hash the client signs on Form 8879",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/sign8879": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Record the client Form 8879 signature(s) for the amounts as they stand",
+        "description": "Body {signers:[{who, pin, method, identityVerified, identityEvidence?}], efwConsent?}. The PIN is never returned. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "signers"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/package": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Prepare for sending through the company transmitter",
+        "description": "manual-keying: the keying sheet (masked). mef-direct: stage the MeF zip. partner-api: 501. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/keying-sheet": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "FreeTaxUSA keying sheet in screen order, each value linked to its source line",
+        "description": "Query reveal=1&reason=... shows identifiers in clear; the reason is required and logged first. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reveal",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reason",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/transmit": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "The explicit human action: send (mef-direct) or mark submitted (manual-keying)",
+        "description": "Body {confirm: <package or sheet id>, reference?}. Needs reviewer approval, a signed 8879, a Paid invoice and approver != sender. Never called by a job. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "confirm, reference"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/manual-ack": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Record the IRS acknowledgment for a manually keyed return",
+        "description": "Body {status, errors[], receivedAt?, override?}. A second ack is 409 ACK_EXISTS; override is admin only. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "status, errors"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/returns/{id}/reject-notice": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Record that the client was told about a reject (stops the 24 h clock)",
+        "description": "Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "{how}"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/packages/{sid}": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Download a staged or sent IFA package (zip, logged before the bytes leave)",
+        "description": "Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "application/zip, Cache-Control: no-store"
+          }
+        },
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/acks": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Record the IRS acknowledgment read in e-Services (MeF submissions)",
+        "description": "Body {submissionId, status, errors[], receivedAt?, override?}. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "ack"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/efile/reject-notices": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Rejects whose client notice is due or overdue",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        }
+      }
+    },
+    "/efile/extensions": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "File Form 4868",
+        "description": "Body {input | returnId, amountPaying?, efw?, confirm:true}. Needs a reviewer's approval of this exact request (POST /efile/extensions/approve) by someone other than the filer. Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "input, confirm"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "List Form 4868 extensions",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        }
+      }
+    },
+    "/efile/offline/result": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Token route for tools/efile-offline: post an offline XSD result or an ack",
+        "description": "Body {kind:\"xsd\", file:\"<SID>.zip\", valid, skipped, errors[], package_problems[], schema_version, company_id} or {kind:\"ack\", ...}. A skipped check is recorded but is not a pass. Roles: preparer, admin (session token; AUTH must be on). Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "xsd or ack result"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/efile/jobs": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "E-file job status (ships disabled)",
+        "description": "Roles: admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        }
+      }
+    },
+    "/efile/jobs/{action}": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "enable | disable | run the ack-and-deadline job",
+        "description": "Roles: admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "action",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "enable",
+                "disable",
+                "run"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/efile/settings": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Per-company e-file settings (EFIN, ETIN, Software IDs, transmitter, ...)",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Save settings (versioned)",
+        "description": "transmitter is manual-keying (default), partner-api or mef-direct. Roles: admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "settings + version"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/efile/vault/{id}": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Masked vault document (logged)",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Create or update a vault document",
+        "description": "Roles: preparer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "doc, reason, version?"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/vault/{id}/reveal": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Reveal full values with a reason (logged)",
+        "description": "Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "reason, paths?"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/vault/{id}/access": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Access history of a record",
+        "description": "Roles: reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/audit/verify": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Verify the tamper-evident access chain",
+        "description": "Roles: admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        }
+      }
+    },
+    "/efile/returns/{id}/lines": {
+      "get": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Every calculated line with its source",
+        "description": "Each line is either the sum of entered documents (document, box, input path, amount) or computed, with the engine's trace sentence. Roles: preparer, reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/efile/extensions/approve": {
+      "post": {
+        "tags": [
+          "E-file"
+        ],
+        "summary": "Approve one exact Form 4868 request",
+        "description": "Body {input | returnId, amountPaying?}. A reviewer or admin approves; the approval is single use and covers exactly this request. The person who approved cannot file it (403 SEPARATION_OF_DUTIES). Filing without it answers 409 APPROVAL_REQUIRED. Roles: reviewer, admin. Needs a signed-in session (Bearer token) when AUTH is on. Replies are no-store and never contain a full SSN, account number or PIN.",
+        "responses": {
+          "200": {
+            "description": "{ok:true, ...}. Errors: {ok:false, error:\"CODE: message\"} with 400/401/403/404/409/422/501."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "input or returnId, amountPaying"
+              }
+            }
+          }
+        }
+      }
     }
-  }
+  },
+  "x-efile-note": "Paths under /efile are served by the Cloudflare Worker (tools/worker), not by the static site; they need a signed-in staff session."
 }
