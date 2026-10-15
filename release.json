@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-15T17:07:38Z",
-  "commit": "a94c515",
+  "built": "2026-10-15T18:30:43Z",
+  "commit": "43557ca",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -305,11 +305,11 @@
     },
     {
       "file": "src/js/02-core-helpers.js",
-      "bytes": 7229
+      "bytes": 7244
     },
     {
       "file": "src/js/05-platform-registry.js",
-      "bytes": 29641
+      "bytes": 29799
     },
     {
       "file": "src/js/06-platform-rules-events.js",
@@ -629,7 +629,7 @@
     },
     {
       "file": "src/js/100-gsheet.js",
-      "bytes": 45211
+      "bytes": 46042
     },
     {
       "file": "src/js/101-data-admin.js",
@@ -653,7 +653,7 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 35301
+      "bytes": 35342
     },
     {
       "file": "src/js/107-sn-form.js",
@@ -669,7 +669,7 @@
     },
     {
       "file": "src/js/110-sn-home.js",
-      "bytes": 23435
+      "bytes": 23485
     },
     {
       "file": "src/js/111-auth.js",
@@ -697,7 +697,7 @@
     },
     {
       "file": "src/js/117-kb.js",
-      "bytes": 42208
+      "bytes": 42248
     },
     {
       "file": "src/js/118-chat-int.js",
@@ -709,7 +709,7 @@
     },
     {
       "file": "src/js/120-portal-builder.js",
-      "bytes": 56794
+      "bytes": 57093
     },
     {
       "file": "src/js/121-tenant.js",
@@ -717,7 +717,7 @@
     },
     {
       "file": "src/js/122-claude-panel.js",
-      "bytes": 48935
+      "bytes": 48947
     },
     {
       "file": "src/js/123-voice.js",
@@ -741,7 +741,7 @@
     },
     {
       "file": "src/js/128-wf-editor.js",
-      "bytes": 201739
+      "bytes": 201799
     },
     {
       "file": "src/js/129-wf-runs.js",
@@ -772,5 +772,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-761d73a5d7"
+  "sw": "cnta-3e29f05af5"
 }
