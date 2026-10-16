@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T11:26:32Z",
-  "commit": "0367a6f",
+  "built": "2026-10-16T13:12:53Z",
+  "commit": "6b7ca24",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -493,15 +493,15 @@
     },
     {
       "file": "src/js/01-core-data.js",
-      "bytes": 28665
+      "bytes": 28735
     },
     {
       "file": "src/js/02-core-helpers.js",
-      "bytes": 7357
+      "bytes": 11381
     },
     {
       "file": "src/js/04-sn-schema.js",
-      "bytes": 60260
+      "bytes": 61875
     },
     {
       "file": "src/js/04-sn-tables.js",
@@ -509,7 +509,7 @@
     },
     {
       "file": "src/js/05-platform-registry.js",
-      "bytes": 29799
+      "bytes": 29813
     },
     {
       "file": "src/js/06-platform-rules-events.js",
@@ -517,7 +517,7 @@
     },
     {
       "file": "src/js/07-platform-tools.js",
-      "bytes": 16744
+      "bytes": 16809
     },
     {
       "file": "src/js/08-platform-agents.js",
@@ -533,11 +533,11 @@
     },
     {
       "file": "src/js/11-ws-workflow.js",
-      "bytes": 10705
+      "bytes": 10722
     },
     {
       "file": "src/js/12-ws-appointments-roles.js",
-      "bytes": 11408
+      "bytes": 11522
     },
     {
       "file": "src/js/13-ws-ai.js",
@@ -549,19 +549,19 @@
     },
     {
       "file": "src/js/15-ws-board-reports-notify.js",
-      "bytes": 19024
+      "bytes": 19264
     },
     {
       "file": "src/js/16-ws-dashboard.js",
-      "bytes": 8011
+      "bytes": 8095
     },
     {
       "file": "src/js/17-ws-list-form.js",
-      "bytes": 30093
+      "bytes": 30295
     },
     {
       "file": "src/js/20-portal.js",
-      "bytes": 63369
+      "bytes": 63342
     },
     {
       "file": "src/js/21-site.js",
@@ -597,7 +597,7 @@
     },
     {
       "file": "src/js/32-front-ws.js",
-      "bytes": 41617
+      "bytes": 41623
     },
     {
       "file": "src/js/33-front-r5.js",
@@ -605,7 +605,7 @@
     },
     {
       "file": "src/js/34-ws-r5.js",
-      "bytes": 19657
+      "bytes": 20189
     },
     {
       "file": "src/js/35-a11y.js",
@@ -761,7 +761,7 @@
     },
     {
       "file": "src/js/84-kpi.js",
-      "bytes": 48178
+      "bytes": 48255
     },
     {
       "file": "src/js/85-pipeline-ui.js",
@@ -825,7 +825,7 @@
     },
     {
       "file": "src/js/100-demo-hub.js",
-      "bytes": 34042
+      "bytes": 34007
     },
     {
       "file": "src/js/100-gsheet.js",
@@ -837,7 +837,7 @@
     },
     {
       "file": "src/js/102-ws-lists.js",
-      "bytes": 3198
+      "bytes": 3196
     },
     {
       "file": "src/js/103-ws-nav.js",
@@ -853,11 +853,11 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 35730
+      "bytes": 35830
     },
     {
       "file": "src/js/107-sn-form.js",
-      "bytes": 26508
+      "bytes": 26523
     },
     {
       "file": "src/js/108-sn-list.js",
@@ -865,7 +865,7 @@
     },
     {
       "file": "src/js/109-sn-collab.js",
-      "bytes": 13427
+      "bytes": 13783
     },
     {
       "file": "src/js/110-sn-home.js",
@@ -1013,7 +1013,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 122941
+      "bytes": 122959
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1089,7 +1089,7 @@
     },
     {
       "file": "src/js/164-smart-search.js",
-      "bytes": 50276
+      "bytes": 50426
     },
     {
       "file": "src/js/165-shortcuts.js",
@@ -1133,7 +1133,7 @@
     },
     {
       "file": "src/js/176-activity-stream.js",
-      "bytes": 13593
+      "bytes": 13614
     },
     {
       "file": "src/js/177-sn-dev-forms.js",
@@ -1177,7 +1177,7 @@
     },
     {
       "file": "src/js/188-ui-forms.js",
-      "bytes": 101598
+      "bytes": 101613
     },
     {
       "file": "src/js/192-r38-intake.js",
@@ -1185,7 +1185,7 @@
     },
     {
       "file": "src/js/193-ui-lists.js",
-      "bytes": 69727
+      "bytes": 69734
     },
     {
       "file": "src/js/194-wf-credentials.js",
@@ -1200,9 +1200,13 @@
       "bytes": 8114
     },
     {
+      "file": "src/js/197-sn-mode.js",
+      "bytes": 2718
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-b10b77d1aa"
+  "sw": "cnta-e5ab5dede7"
 }
