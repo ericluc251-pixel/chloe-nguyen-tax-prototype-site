@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T15:26:38Z",
-  "commit": "6132645",
+  "built": "2026-10-16T16:51:55Z",
+  "commit": "835f96c",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -513,11 +513,11 @@
     },
     {
       "file": "src/js/06-platform-rules-events.js",
-      "bytes": 5441
+      "bytes": 6647
     },
     {
       "file": "src/js/07-platform-tools.js",
-      "bytes": 16809
+      "bytes": 18274
     },
     {
       "file": "src/js/08-platform-agents.js",
@@ -533,7 +533,7 @@
     },
     {
       "file": "src/js/11-ws-workflow.js",
-      "bytes": 10722
+      "bytes": 11154
     },
     {
       "file": "src/js/12-ws-appointments-roles.js",
@@ -881,7 +881,7 @@
     },
     {
       "file": "src/js/113-sla-jobs.js",
-      "bytes": 41881
+      "bytes": 42856
     },
     {
       "file": "src/js/114-numbering.js",
@@ -905,7 +905,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 111037
+      "bytes": 114876
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -917,7 +917,7 @@
     },
     {
       "file": "src/js/122-claude-panel.js",
-      "bytes": 50616
+      "bytes": 51257
     },
     {
       "file": "src/js/123-voice.js",
@@ -961,7 +961,7 @@
     },
     {
       "file": "src/js/133-notify-editor.js",
-      "bytes": 45518
+      "bytes": 46697
     },
     {
       "file": "src/js/134-triage.js",
@@ -997,7 +997,7 @@
     },
     {
       "file": "src/js/141-form-assist.js",
-      "bytes": 26399
+      "bytes": 26777
     },
     {
       "file": "src/js/142-voice-ptt.js",
@@ -1013,7 +1013,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 122959
+      "bytes": 122980
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1137,7 +1137,7 @@
     },
     {
       "file": "src/js/177-sn-dev-forms.js",
-      "bytes": 56834
+      "bytes": 56979
     },
     {
       "file": "src/js/178-sn-polish.js",
@@ -1204,9 +1204,13 @@
       "bytes": 2718
     },
     {
+      "file": "src/js/198-sn-codemod.js",
+      "bytes": 18379
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-d426dd002f"
+  "sw": "cnta-7b668f131f"
 }
