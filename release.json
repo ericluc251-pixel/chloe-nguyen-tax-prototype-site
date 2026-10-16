@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T21:17:03Z",
-  "commit": "05a974a",
+  "built": "2026-10-16T22:10:14Z",
+  "commit": "fec4a18",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -221,7 +221,7 @@
     },
     {
       "file": "src/css/110-sn-home.css",
-      "bytes": 3753
+      "bytes": 7056
     },
     {
       "file": "src/css/111-auth.css",
@@ -241,7 +241,7 @@
     },
     {
       "file": "src/css/116-reports.css",
-      "bytes": 2038
+      "bytes": 9199
     },
     {
       "file": "src/css/117-kb.css",
@@ -505,7 +505,7 @@
     },
     {
       "file": "src/js/04-sn-tables.js",
-      "bytes": 11690
+      "bytes": 11867
     },
     {
       "file": "src/js/05-platform-registry.js",
@@ -869,7 +869,7 @@
     },
     {
       "file": "src/js/110-sn-home.js",
-      "bytes": 24868
+      "bytes": 36285
     },
     {
       "file": "src/js/111-auth.js",
@@ -893,7 +893,7 @@
     },
     {
       "file": "src/js/116-reports.js",
-      "bytes": 27210
+      "bytes": 57807
     },
     {
       "file": "src/js/117-kb.js",
@@ -1013,7 +1013,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 122980
+      "bytes": 123024
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1208,9 +1208,13 @@
       "bytes": 18379
     },
     {
+      "file": "src/js/203-report-local.js",
+      "bytes": 1760
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-0cb79903aa"
+  "sw": "cnta-3e6e8ff056"
 }
