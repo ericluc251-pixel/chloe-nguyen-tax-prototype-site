@@ -55,6 +55,9 @@
       "name": "apply_change_set"
     },
     {
+      "name": "get_properties"
+    },
+    {
       "name": "sync_status"
     },
     {

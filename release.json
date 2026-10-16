@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-15T21:28:13Z",
-  "commit": "e2da819",
+  "built": "2026-10-16T05:38:55Z",
+  "commit": "4c50238",
   "modules": [
     {
       "file": "src/css/00-app.css",
-      "bytes": 62389
+      "bytes": 62420
     },
     {
       "file": "src/css/10-front-r4.css",
@@ -169,7 +169,7 @@
     },
     {
       "file": "src/css/98-perf-a11y.css",
-      "bytes": 8504
+      "bytes": 8762
     },
     {
       "file": "src/css/99-docs-hub.css",
@@ -205,7 +205,7 @@
     },
     {
       "file": "src/css/106-sn-shell.css",
-      "bytes": 9825
+      "bytes": 9643
     },
     {
       "file": "src/css/107-sn-form.css",
@@ -253,7 +253,7 @@
     },
     {
       "file": "src/css/119-scripts.css",
-      "bytes": 6370
+      "bytes": 6744
     },
     {
       "file": "src/css/120-portal-builder.css",
@@ -296,6 +296,14 @@
       "bytes": 804
     },
     {
+      "file": "src/css/133-notify-editor.css",
+      "bytes": 3191
+    },
+    {
+      "file": "src/css/134-triage.css",
+      "bytes": 3039
+    },
+    {
       "file": "src/css/135-requirements.css",
       "bytes": 2844
     },
@@ -320,6 +328,10 @@
       "bytes": 4683
     },
     {
+      "file": "src/css/141-form-assist.css",
+      "bytes": 2575
+    },
+    {
       "file": "src/css/142-voice-ptt.css",
       "bytes": 2027
     },
@@ -340,20 +352,96 @@
       "bytes": 1817
     },
     {
+      "file": "src/css/149-list-power.css",
+      "bytes": 3828
+    },
+    {
+      "file": "src/css/153-history.css",
+      "bytes": 2211
+    },
+    {
+      "file": "src/css/154-dotwalk.css",
+      "bytes": 3856
+    },
+    {
+      "file": "src/css/156-ui-actions.css",
+      "bytes": 716
+    },
+    {
+      "file": "src/css/157-api-explorer.css",
+      "bytes": 934
+    },
+    {
+      "file": "src/css/158-events.css",
+      "bytes": 2713
+    },
+    {
+      "file": "src/css/159-schedules.css",
+      "bytes": 1226
+    },
+    {
+      "file": "src/css/160-import-sets.css",
+      "bytes": 1499
+    },
+    {
       "file": "src/css/162-acl.css",
       "bytes": 2341
+    },
+    {
+      "file": "src/css/163-ai-builder.css",
+      "bytes": 2479
+    },
+    {
+      "file": "src/css/164-smart-search.css",
+      "bytes": 2717
+    },
+    {
+      "file": "src/css/165-shortcuts.css",
+      "bytes": 713
+    },
+    {
+      "file": "src/css/166-pu-fixes.css",
+      "bytes": 1858
     },
     {
       "file": "src/css/167-content-guard.css",
       "bytes": 4012
     },
     {
+      "file": "src/css/168-email-editor.css",
+      "bytes": 2763
+    },
+    {
       "file": "src/css/169-payroll.css",
       "bytes": 4708
     },
     {
+      "file": "src/css/170-claude-launcher.css",
+      "bytes": 2481
+    },
+    {
       "file": "src/css/171-client-portal-activity.css",
       "bytes": 1498
+    },
+    {
+      "file": "src/css/173-ux-polaris.css",
+      "bytes": 6375
+    },
+    {
+      "file": "src/css/177-sn-dev-forms.css",
+      "bytes": 6071
+    },
+    {
+      "file": "src/css/178-sn-polish.css",
+      "bytes": 25105
+    },
+    {
+      "file": "src/css/180-backup-ui.css",
+      "bytes": 540
+    },
+    {
+      "file": "src/css/181-doc-intel.css",
+      "bytes": 2168
     },
     {
       "file": "src/js/00-roadmap.js",
@@ -365,7 +453,7 @@
     },
     {
       "file": "src/js/02-core-helpers.js",
-      "bytes": 7244
+      "bytes": 7357
     },
     {
       "file": "src/js/05-platform-registry.js",
@@ -417,7 +505,7 @@
     },
     {
       "file": "src/js/17-ws-list-form.js",
-      "bytes": 29691
+      "bytes": 30043
     },
     {
       "file": "src/js/20-portal.js",
@@ -457,7 +545,7 @@
     },
     {
       "file": "src/js/32-front-ws.js",
-      "bytes": 41507
+      "bytes": 41617
     },
     {
       "file": "src/js/33-front-r5.js",
@@ -549,7 +637,7 @@
     },
     {
       "file": "src/js/66-copilot.js",
-      "bytes": 46188
+      "bytes": 46198
     },
     {
       "file": "src/js/67-extraction-ui.js",
@@ -681,19 +769,19 @@
     },
     {
       "file": "src/js/99-docs-hub.js",
-      "bytes": 76665
+      "bytes": 76686
     },
     {
       "file": "src/js/100-demo-hub.js",
-      "bytes": 34025
+      "bytes": 34042
     },
     {
       "file": "src/js/100-gsheet.js",
-      "bytes": 46042
+      "bytes": 48957
     },
     {
       "file": "src/js/101-data-admin.js",
-      "bytes": 17795
+      "bytes": 17895
     },
     {
       "file": "src/js/102-ws-lists.js",
@@ -713,15 +801,15 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 35342
+      "bytes": 35730
     },
     {
       "file": "src/js/107-sn-form.js",
-      "bytes": 25601
+      "bytes": 26508
     },
     {
       "file": "src/js/108-sn-list.js",
-      "bytes": 23796
+      "bytes": 23876
     },
     {
       "file": "src/js/109-sn-collab.js",
@@ -729,7 +817,7 @@
     },
     {
       "file": "src/js/110-sn-home.js",
-      "bytes": 23528
+      "bytes": 24868
     },
     {
       "file": "src/js/111-auth.js",
@@ -741,7 +829,7 @@
     },
     {
       "file": "src/js/113-sla-jobs.js",
-      "bytes": 36314
+      "bytes": 41881
     },
     {
       "file": "src/js/114-numbering.js",
@@ -753,7 +841,7 @@
     },
     {
       "file": "src/js/116-reports.js",
-      "bytes": 25118
+      "bytes": 27210
     },
     {
       "file": "src/js/117-kb.js",
@@ -765,7 +853,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 96619
+      "bytes": 111037
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -777,7 +865,7 @@
     },
     {
       "file": "src/js/122-claude-panel.js",
-      "bytes": 49271
+      "bytes": 50616
     },
     {
       "file": "src/js/123-voice.js",
@@ -797,11 +885,11 @@
     },
     {
       "file": "src/js/127-wf-meta.js",
-      "bytes": 96038
+      "bytes": 104312
     },
     {
       "file": "src/js/128-wf-editor.js",
-      "bytes": 201799
+      "bytes": 202229
     },
     {
       "file": "src/js/129-wf-runs.js",
@@ -817,11 +905,19 @@
     },
     {
       "file": "src/js/132-nav-cmd.js",
-      "bytes": 22324
+      "bytes": 22362
+    },
+    {
+      "file": "src/js/133-notify-editor.js",
+      "bytes": 45518
+    },
+    {
+      "file": "src/js/134-triage.js",
+      "bytes": 20246
     },
     {
       "file": "src/js/135-requirements.js",
-      "bytes": 75586
+      "bytes": 76780
     },
     {
       "file": "src/js/136-explain-data.js",
@@ -829,11 +925,11 @@
     },
     {
       "file": "src/js/136-explain.js",
-      "bytes": 27726
+      "bytes": 28043
     },
     {
       "file": "src/js/137-query-client.js",
-      "bytes": 23115
+      "bytes": 27411
     },
     {
       "file": "src/js/138-client-portal-auth.js",
@@ -841,11 +937,15 @@
     },
     {
       "file": "src/js/139-r38-workbench.js",
-      "bytes": 36114
+      "bytes": 48061
     },
     {
       "file": "src/js/140-ai-ops.js",
       "bytes": 43810
+    },
+    {
+      "file": "src/js/141-form-assist.js",
+      "bytes": 26399
     },
     {
       "file": "src/js/142-voice-ptt.js",
@@ -861,7 +961,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 121518
+      "bytes": 122056
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -876,29 +976,113 @@
       "bytes": 107899
     },
     {
+      "file": "src/js/149-list-power.js",
+      "bytes": 55524
+    },
+    {
+      "file": "src/js/153-history.js",
+      "bytes": 18783
+    },
+    {
+      "file": "src/js/154-dotwalk.js",
+      "bytes": 39852
+    },
+    {
+      "file": "src/js/155-sys-props.js",
+      "bytes": 24798
+    },
+    {
+      "file": "src/js/156-ui-actions.js",
+      "bytes": 42734
+    },
+    {
+      "file": "src/js/157-api-explorer.js",
+      "bytes": 9771
+    },
+    {
+      "file": "src/js/158-events.js",
+      "bytes": 24315
+    },
+    {
+      "file": "src/js/159-schedules.js",
+      "bytes": 16029
+    },
+    {
+      "file": "src/js/160-import-sets.js",
+      "bytes": 24652
+    },
+    {
       "file": "src/js/162-acl.js",
-      "bytes": 45650
+      "bytes": 69054
+    },
+    {
+      "file": "src/js/163-ai-builder.js",
+      "bytes": 98335
+    },
+    {
+      "file": "src/js/164-smart-search.js",
+      "bytes": 50276
+    },
+    {
+      "file": "src/js/165-shortcuts.js",
+      "bytes": 20011
+    },
+    {
+      "file": "src/js/166-form-guard.js",
+      "bytes": 6552
     },
     {
       "file": "src/js/167-content-guard.js",
       "bytes": 72266
     },
     {
+      "file": "src/js/168-email-editor.js",
+      "bytes": 30492
+    },
+    {
       "file": "src/js/169-payroll.js",
       "bytes": 87276
+    },
+    {
+      "file": "src/js/170-claude-launcher.js",
+      "bytes": 7848
     },
     {
       "file": "src/js/171-client-portal-activity.js",
       "bytes": 15120
     },
     {
+      "file": "src/js/173-ux-polaris.js",
+      "bytes": 1589
+    },
+    {
       "file": "src/js/174-kb-import.js",
       "bytes": 21434
+    },
+    {
+      "file": "src/js/177-sn-dev-forms.js",
+      "bytes": 56834
+    },
+    {
+      "file": "src/js/178-sn-polish.js",
+      "bytes": 47028
+    },
+    {
+      "file": "src/js/180-backup-ui.js",
+      "bytes": 7803
+    },
+    {
+      "file": "src/js/181-doc-intel.js",
+      "bytes": 28930
+    },
+    {
+      "file": "src/js/185-code-editor.js",
+      "bytes": 17271
     },
     {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-5ec6f93096"
+  "sw": "cnta-606fbed84c"
 }

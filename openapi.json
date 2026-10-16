@@ -301,6 +301,29 @@
         }
       }
     },
+    "/tools/get_properties": {
+      "post": {
+        "operationId": "tool_get_properties",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
     "/tools/sync_status": {
       "post": {
         "operationId": "tool_sync_status",
