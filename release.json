@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T06:04:43Z",
-  "commit": "d2cd22b",
+  "built": "2026-10-16T06:37:37Z",
+  "commit": "afd3845",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -821,7 +821,7 @@
     },
     {
       "file": "src/js/111-auth.js",
-      "bytes": 32189
+      "bytes": 37390
     },
     {
       "file": "src/js/112-attach.js",
@@ -921,7 +921,7 @@
     },
     {
       "file": "src/js/136-explain-data.js",
-      "bytes": 44570
+      "bytes": 45742
     },
     {
       "file": "src/js/136-explain.js",
@@ -1084,5 +1084,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-ae90f96299"
+  "sw": "cnta-c701b9cab5"
 }
