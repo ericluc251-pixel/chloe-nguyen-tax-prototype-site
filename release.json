@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T07:18:05Z",
-  "commit": "62078fc",
+  "built": "2026-10-16T09:33:19Z",
+  "commit": "2ae7acd",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -277,11 +277,11 @@
     },
     {
       "file": "src/css/128-wf-editor.css",
-      "bytes": 20080
+      "bytes": 29361
     },
     {
       "file": "src/css/129-wf-runs.css",
-      "bytes": 3107
+      "bytes": 3231
     },
     {
       "file": "src/css/130-portal-layout.css",
@@ -356,6 +356,14 @@
       "bytes": 3828
     },
     {
+      "file": "src/css/150-dictionary.css",
+      "bytes": 2547
+    },
+    {
+      "file": "src/css/152-sysfields.css",
+      "bytes": 721
+    },
+    {
       "file": "src/css/153-history.css",
       "bytes": 2211
     },
@@ -382,6 +390,10 @@
     {
       "file": "src/css/160-import-sets.css",
       "bytes": 1499
+    },
+    {
+      "file": "src/css/161-environments.css",
+      "bytes": 4599
     },
     {
       "file": "src/css/162-acl.css",
@@ -428,12 +440,24 @@
       "bytes": 6375
     },
     {
+      "file": "src/css/175-sn-tables.css",
+      "bytes": 258
+    },
+    {
+      "file": "src/css/176-activity-stream.css",
+      "bytes": 1722
+    },
+    {
       "file": "src/css/177-sn-dev-forms.css",
       "bytes": 6071
     },
     {
       "file": "src/css/178-sn-polish.css",
-      "bytes": 25105
+      "bytes": 6030
+    },
+    {
+      "file": "src/css/179-sn-parity.css",
+      "bytes": 29123
     },
     {
       "file": "src/css/180-backup-ui.css",
@@ -442,6 +466,26 @@
     {
       "file": "src/css/181-doc-intel.css",
       "bytes": 2168
+    },
+    {
+      "file": "src/css/183-survey.css",
+      "bytes": 394
+    },
+    {
+      "file": "src/css/187-identity.css",
+      "bytes": 3093
+    },
+    {
+      "file": "src/css/188-ui-forms.css",
+      "bytes": 43565
+    },
+    {
+      "file": "src/css/192-r38-intake.css",
+      "bytes": 5333
+    },
+    {
+      "file": "src/css/193-ui-lists.css",
+      "bytes": 29904
     },
     {
       "file": "src/js/00-roadmap.js",
@@ -454,6 +498,10 @@
     {
       "file": "src/js/02-core-helpers.js",
       "bytes": 7357
+    },
+    {
+      "file": "src/js/04-sn-tables.js",
+      "bytes": 11690
     },
     {
       "file": "src/js/05-platform-registry.js",
@@ -505,11 +553,11 @@
     },
     {
       "file": "src/js/17-ws-list-form.js",
-      "bytes": 30043
+      "bytes": 30093
     },
     {
       "file": "src/js/20-portal.js",
-      "bytes": 55980
+      "bytes": 56126
     },
     {
       "file": "src/js/21-site.js",
@@ -537,7 +585,7 @@
     },
     {
       "file": "src/js/30-round3.js",
-      "bytes": 30084
+      "bytes": 29704
     },
     {
       "file": "src/js/31-front-r4.js",
@@ -885,15 +933,15 @@
     },
     {
       "file": "src/js/127-wf-meta.js",
-      "bytes": 104312
+      "bytes": 134497
     },
     {
       "file": "src/js/128-wf-editor.js",
-      "bytes": 202229
+      "bytes": 244668
     },
     {
       "file": "src/js/129-wf-runs.js",
-      "bytes": 46924
+      "bytes": 47512
     },
     {
       "file": "src/js/130-portal-layout.js",
@@ -905,7 +953,7 @@
     },
     {
       "file": "src/js/132-nav-cmd.js",
-      "bytes": 22362
+      "bytes": 22942
     },
     {
       "file": "src/js/133-notify-editor.js",
@@ -925,7 +973,7 @@
     },
     {
       "file": "src/js/136-explain.js",
-      "bytes": 28043
+      "bytes": 27925
     },
     {
       "file": "src/js/137-query-client.js",
@@ -961,7 +1009,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 122056
+      "bytes": 122896
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -969,15 +1017,27 @@
     },
     {
       "file": "src/js/147-wf-i18n.js",
-      "bytes": 8817
+      "bytes": 8835
     },
     {
       "file": "src/js/148-wf-i18n-data.js",
-      "bytes": 107899
+      "bytes": 118381
     },
     {
       "file": "src/js/149-list-power.js",
       "bytes": 55524
+    },
+    {
+      "file": "src/js/150-dictionary.js",
+      "bytes": 79059
+    },
+    {
+      "file": "src/js/151-record-client.js",
+      "bytes": 15897
+    },
+    {
+      "file": "src/js/152-sysfields.js",
+      "bytes": 16743
     },
     {
       "file": "src/js/153-history.js",
@@ -985,7 +1045,7 @@
     },
     {
       "file": "src/js/154-dotwalk.js",
-      "bytes": 39852
+      "bytes": 41343
     },
     {
       "file": "src/js/155-sys-props.js",
@@ -993,7 +1053,7 @@
     },
     {
       "file": "src/js/156-ui-actions.js",
-      "bytes": 42734
+      "bytes": 41760
     },
     {
       "file": "src/js/157-api-explorer.js",
@@ -1012,12 +1072,16 @@
       "bytes": 24652
     },
     {
+      "file": "src/js/161-environments.js",
+      "bytes": 31392
+    },
+    {
       "file": "src/js/162-acl.js",
-      "bytes": 69054
+      "bytes": 70673
     },
     {
       "file": "src/js/163-ai-builder.js",
-      "bytes": 98335
+      "bytes": 98380
     },
     {
       "file": "src/js/164-smart-search.js",
@@ -1060,12 +1124,24 @@
       "bytes": 21434
     },
     {
+      "file": "src/js/175-sn-tables-ui.js",
+      "bytes": 7568
+    },
+    {
+      "file": "src/js/176-activity-stream.js",
+      "bytes": 13593
+    },
+    {
       "file": "src/js/177-sn-dev-forms.js",
       "bytes": 56834
     },
     {
       "file": "src/js/178-sn-polish.js",
-      "bytes": 47028
+      "bytes": 7175
+    },
+    {
+      "file": "src/js/179-sn-parity.js",
+      "bytes": 70346
     },
     {
       "file": "src/js/180-backup-ui.js",
@@ -1076,13 +1152,49 @@
       "bytes": 28930
     },
     {
+      "file": "src/js/183-survey.js",
+      "bytes": 40317
+    },
+    {
+      "file": "src/js/184-wf-import.js",
+      "bytes": 17738
+    },
+    {
       "file": "src/js/185-code-editor.js",
       "bytes": 17271
+    },
+    {
+      "file": "src/js/186-wf-templates.js",
+      "bytes": 10933
+    },
+    {
+      "file": "src/js/187-identity.js",
+      "bytes": 68952
+    },
+    {
+      "file": "src/js/188-ui-forms.js",
+      "bytes": 101598
+    },
+    {
+      "file": "src/js/192-r38-intake.js",
+      "bytes": 45052
+    },
+    {
+      "file": "src/js/193-ui-lists.js",
+      "bytes": 69727
+    },
+    {
+      "file": "src/js/194-wf-credentials.js",
+      "bytes": 11029
+    },
+    {
+      "file": "src/js/195-field-names.js",
+      "bytes": 3788
     },
     {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-c701b9cab5"
+  "sw": "cnta-5a4a3cdec4"
 }
