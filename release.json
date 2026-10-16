@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T16:51:55Z",
-  "commit": "835f96c",
+  "built": "2026-10-16T20:51:39Z",
+  "commit": "cef84f4",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -517,7 +517,7 @@
     },
     {
       "file": "src/js/07-platform-tools.js",
-      "bytes": 18274
+      "bytes": 18108
     },
     {
       "file": "src/js/08-platform-agents.js",
@@ -625,7 +625,7 @@
     },
     {
       "file": "src/js/50-storage.js",
-      "bytes": 40933
+      "bytes": 42550
     },
     {
       "file": "src/js/51-graph.js",
@@ -785,7 +785,7 @@
     },
     {
       "file": "src/js/90-wisp.js",
-      "bytes": 71433
+      "bytes": 71473
     },
     {
       "file": "src/js/91-mfa-session.js",
@@ -809,7 +809,7 @@
     },
     {
       "file": "src/js/96-security-center.js",
-      "bytes": 89364
+      "bytes": 89398
     },
     {
       "file": "src/js/97-audit-ui.js",
@@ -941,7 +941,7 @@
     },
     {
       "file": "src/js/128-wf-editor.js",
-      "bytes": 244668
+      "bytes": 243213
     },
     {
       "file": "src/js/129-wf-runs.js",
@@ -961,7 +961,7 @@
     },
     {
       "file": "src/js/133-notify-editor.js",
-      "bytes": 46697
+      "bytes": 47142
     },
     {
       "file": "src/js/134-triage.js",
@@ -1029,11 +1029,11 @@
     },
     {
       "file": "src/js/149-list-power.js",
-      "bytes": 57812
+      "bytes": 60177
     },
     {
       "file": "src/js/150-dictionary.js",
-      "bytes": 80222
+      "bytes": 80611
     },
     {
       "file": "src/js/151-record-client.js",
@@ -1081,7 +1081,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 70673
+      "bytes": 71830
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1133,11 +1133,11 @@
     },
     {
       "file": "src/js/176-activity-stream.js",
-      "bytes": 13614
+      "bytes": 13989
     },
     {
       "file": "src/js/177-sn-dev-forms.js",
-      "bytes": 56979
+      "bytes": 57410
     },
     {
       "file": "src/js/178-sn-polish.js",
@@ -1185,7 +1185,7 @@
     },
     {
       "file": "src/js/193-ui-lists.js",
-      "bytes": 78403
+      "bytes": 78420
     },
     {
       "file": "src/js/194-wf-credentials.js",
@@ -1212,5 +1212,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-7b668f131f"
+  "sw": "cnta-df346fb189"
 }
