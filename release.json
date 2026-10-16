@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T10:42:44Z",
-  "commit": "4f0adc9",
+  "built": "2026-10-16T11:26:32Z",
+  "commit": "0367a6f",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -501,7 +501,7 @@
     },
     {
       "file": "src/js/04-sn-schema.js",
-      "bytes": 58846
+      "bytes": 60260
     },
     {
       "file": "src/js/04-sn-tables.js",
@@ -537,7 +537,7 @@
     },
     {
       "file": "src/js/12-ws-appointments-roles.js",
-      "bytes": 11406
+      "bytes": 11408
     },
     {
       "file": "src/js/13-ws-ai.js",
@@ -561,7 +561,7 @@
     },
     {
       "file": "src/js/20-portal.js",
-      "bytes": 56126
+      "bytes": 63369
     },
     {
       "file": "src/js/21-site.js",
@@ -569,7 +569,7 @@
     },
     {
       "file": "src/js/22-intake.js",
-      "bytes": 20253
+      "bytes": 20267
     },
     {
       "file": "src/js/23-estimator.js",
@@ -581,7 +581,7 @@
     },
     {
       "file": "src/js/25-chat.js",
-      "bytes": 25080
+      "bytes": 25092
     },
     {
       "file": "src/js/26-i18n-es.js",
@@ -593,7 +593,7 @@
     },
     {
       "file": "src/js/31-front-r4.js",
-      "bytes": 28697
+      "bytes": 28703
     },
     {
       "file": "src/js/32-front-ws.js",
@@ -601,7 +601,7 @@
     },
     {
       "file": "src/js/33-front-r5.js",
-      "bytes": 50840
+      "bytes": 50944
     },
     {
       "file": "src/js/34-ws-r5.js",
@@ -729,7 +729,7 @@
     },
     {
       "file": "src/js/76-portal-biz.js",
-      "bytes": 35529
+      "bytes": 35555
     },
     {
       "file": "src/js/77-compliance-ui.js",
@@ -741,23 +741,23 @@
     },
     {
       "file": "src/js/79-biz-site.js",
-      "bytes": 82546
+      "bytes": 82548
     },
     {
       "file": "src/js/80-leads.js",
-      "bytes": 41864
+      "bytes": 41896
     },
     {
       "file": "src/js/81-billing.js",
-      "bytes": 61035
+      "bytes": 61087
     },
     {
       "file": "src/js/82-collections.js",
-      "bytes": 61857
+      "bytes": 61885
     },
     {
       "file": "src/js/83-templates.js",
-      "bytes": 61186
+      "bytes": 61230
     },
     {
       "file": "src/js/84-kpi.js",
@@ -765,7 +765,7 @@
     },
     {
       "file": "src/js/85-pipeline-ui.js",
-      "bytes": 51330
+      "bytes": 51342
     },
     {
       "file": "src/js/86-kpi-ui.js",
@@ -773,15 +773,15 @@
     },
     {
       "file": "src/js/87-seo.js",
-      "bytes": 105441
+      "bytes": 105451
     },
     {
       "file": "src/js/88-templates-ui.js",
-      "bytes": 42730
+      "bytes": 42771
     },
     {
       "file": "src/js/89-portal-billing.js",
-      "bytes": 51574
+      "bytes": 51601
     },
     {
       "file": "src/js/90-wisp.js",
@@ -901,7 +901,7 @@
     },
     {
       "file": "src/js/118-chat-int.js",
-      "bytes": 19370
+      "bytes": 19374
     },
     {
       "file": "src/js/119-scripts.js",
@@ -909,7 +909,7 @@
     },
     {
       "file": "src/js/120-portal-builder.js",
-      "bytes": 57093
+      "bytes": 57115
     },
     {
       "file": "src/js/121-tenant.js",
@@ -985,7 +985,7 @@
     },
     {
       "file": "src/js/138-client-portal-auth.js",
-      "bytes": 36214
+      "bytes": 36216
     },
     {
       "file": "src/js/139-r38-workbench.js",
@@ -1204,5 +1204,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-9df108edd3"
+  "sw": "cnta-b10b77d1aa"
 }
