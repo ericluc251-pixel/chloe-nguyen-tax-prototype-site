@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T05:38:55Z",
-  "commit": "4c50238",
+  "built": "2026-10-16T06:04:43Z",
+  "commit": "d2cd22b",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -1045,7 +1045,7 @@
     },
     {
       "file": "src/js/170-claude-launcher.js",
-      "bytes": 7848
+      "bytes": 7965
     },
     {
       "file": "src/js/171-client-portal-activity.js",
@@ -1084,5 +1084,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-606fbed84c"
+  "sw": "cnta-ae90f96299"
 }
