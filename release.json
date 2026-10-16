@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T20:51:39Z",
-  "commit": "cef84f4",
+  "built": "2026-10-16T21:17:03Z",
+  "commit": "05a974a",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -457,7 +457,7 @@
     },
     {
       "file": "src/css/179-sn-parity.css",
-      "bytes": 30688
+      "bytes": 30525
     },
     {
       "file": "src/css/180-backup-ui.css",
@@ -853,7 +853,7 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 35830
+      "bytes": 36107
     },
     {
       "file": "src/js/107-sn-form.js",
@@ -905,7 +905,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 114876
+      "bytes": 117739
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -1121,7 +1121,7 @@
     },
     {
       "file": "src/js/173-ux-polaris.js",
-      "bytes": 1589
+      "bytes": 366
     },
     {
       "file": "src/js/174-kb-import.js",
@@ -1145,7 +1145,7 @@
     },
     {
       "file": "src/js/179-sn-parity.js",
-      "bytes": 77805
+      "bytes": 79380
     },
     {
       "file": "src/js/180-backup-ui.js",
@@ -1212,5 +1212,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-df346fb189"
+  "sw": "cnta-0cb79903aa"
 }
