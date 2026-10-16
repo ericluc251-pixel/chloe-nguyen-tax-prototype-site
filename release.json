@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T09:33:19Z",
-  "commit": "2ae7acd",
+  "built": "2026-10-16T10:42:44Z",
+  "commit": "4f0adc9",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -498,6 +498,10 @@
     {
       "file": "src/js/02-core-helpers.js",
       "bytes": 7357
+    },
+    {
+      "file": "src/js/04-sn-schema.js",
+      "bytes": 58846
     },
     {
       "file": "src/js/04-sn-tables.js",
@@ -1009,7 +1013,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 122896
+      "bytes": 122941
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1029,7 +1033,7 @@
     },
     {
       "file": "src/js/150-dictionary.js",
-      "bytes": 79059
+      "bytes": 80222
     },
     {
       "file": "src/js/151-record-client.js",
@@ -1192,9 +1196,13 @@
       "bytes": 3788
     },
     {
+      "file": "src/js/196-sn-schema-admin.js",
+      "bytes": 8114
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-5a4a3cdec4"
+  "sw": "cnta-9df108edd3"
 }
