@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-17T08:30:40Z",
-  "commit": "04a3af8",
+  "built": "2026-10-17T10:43:12Z",
+  "commit": "49da217",
   "modules": [
     {
       "file": "src/css/00-app.css",
-      "bytes": 62420
+      "bytes": 62628
     },
     {
       "file": "src/css/10-front-r4.css",
@@ -457,7 +457,7 @@
     },
     {
       "file": "src/css/179-sn-parity.css",
-      "bytes": 33074
+      "bytes": 33099
     },
     {
       "file": "src/css/180-backup-ui.css",
@@ -477,7 +477,7 @@
     },
     {
       "file": "src/css/188-ui-forms.css",
-      "bytes": 48814
+      "bytes": 49990
     },
     {
       "file": "src/css/192-r38-intake.css",
@@ -489,7 +489,7 @@
     },
     {
       "file": "src/css/201-dev-pages.css",
-      "bytes": 9960
+      "bytes": 10471
     },
     {
       "file": "src/css/202-portal-requests.css",
@@ -505,11 +505,11 @@
     },
     {
       "file": "src/js/01-core-data.js",
-      "bytes": 29145
+      "bytes": 29593
     },
     {
       "file": "src/js/02-core-helpers.js",
-      "bytes": 11381
+      "bytes": 11521
     },
     {
       "file": "src/js/04-sn-schema.js",
@@ -545,7 +545,7 @@
     },
     {
       "file": "src/js/11-ws-workflow.js",
-      "bytes": 11154
+      "bytes": 11245
     },
     {
       "file": "src/js/12-ws-appointments-roles.js",
@@ -565,15 +565,15 @@
     },
     {
       "file": "src/js/16-ws-dashboard.js",
-      "bytes": 8095
+      "bytes": 8554
     },
     {
       "file": "src/js/17-ws-list-form.js",
-      "bytes": 30760
+      "bytes": 31669
     },
     {
       "file": "src/js/20-portal.js",
-      "bytes": 66033
+      "bytes": 66305
     },
     {
       "file": "src/js/21-site.js",
@@ -673,7 +673,7 @@
     },
     {
       "file": "src/js/59-pii-guard.js",
-      "bytes": 30753
+      "bytes": 30916
     },
     {
       "file": "src/js/60-ai-gateway.js",
@@ -757,7 +757,7 @@
     },
     {
       "file": "src/js/80-leads.js",
-      "bytes": 41896
+      "bytes": 43068
     },
     {
       "file": "src/js/81-billing.js",
@@ -833,11 +833,11 @@
     },
     {
       "file": "src/js/99-docs-hub.js",
-      "bytes": 76686
+      "bytes": 77788
     },
     {
       "file": "src/js/100-demo-hub.js",
-      "bytes": 34007
+      "bytes": 34527
     },
     {
       "file": "src/js/100-gsheet.js",
@@ -865,11 +865,11 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 36023
+      "bytes": 36189
     },
     {
       "file": "src/js/107-sn-form.js",
-      "bytes": 26523
+      "bytes": 27517
     },
     {
       "file": "src/js/108-sn-list.js",
@@ -881,11 +881,11 @@
     },
     {
       "file": "src/js/110-sn-home.js",
-      "bytes": 36432
+      "bytes": 36604
     },
     {
       "file": "src/js/111-auth.js",
-      "bytes": 37390
+      "bytes": 44091
     },
     {
       "file": "src/js/112-attach.js",
@@ -993,11 +993,11 @@
     },
     {
       "file": "src/js/137-query-client.js",
-      "bytes": 27411
+      "bytes": 27509
     },
     {
       "file": "src/js/138-client-portal-auth.js",
-      "bytes": 36216
+      "bytes": 37373
     },
     {
       "file": "src/js/139-r38-workbench.js",
@@ -1009,7 +1009,7 @@
     },
     {
       "file": "src/js/141-form-assist.js",
-      "bytes": 26777
+      "bytes": 26864
     },
     {
       "file": "src/js/142-voice-ptt.js",
@@ -1025,7 +1025,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 123173
+      "bytes": 123197
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1093,7 +1093,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 71830
+      "bytes": 73828
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1141,7 +1141,7 @@
     },
     {
       "file": "src/js/175-sn-tables-ui.js",
-      "bytes": 7568
+      "bytes": 9107
     },
     {
       "file": "src/js/176-activity-stream.js",
@@ -1157,7 +1157,7 @@
     },
     {
       "file": "src/js/179-sn-parity.js",
-      "bytes": 79821
+      "bytes": 81227
     },
     {
       "file": "src/js/180-backup-ui.js",
@@ -1177,7 +1177,7 @@
     },
     {
       "file": "src/js/185-code-editor.js",
-      "bytes": 17271
+      "bytes": 20644
     },
     {
       "file": "src/js/186-wf-templates.js",
@@ -1185,11 +1185,11 @@
     },
     {
       "file": "src/js/187-identity.js",
-      "bytes": 69269
+      "bytes": 69825
     },
     {
       "file": "src/js/188-ui-forms.js",
-      "bytes": 109105
+      "bytes": 109259
     },
     {
       "file": "src/js/192-r38-intake.js",
@@ -1197,7 +1197,7 @@
     },
     {
       "file": "src/js/193-ui-lists.js",
-      "bytes": 80403
+      "bytes": 81580
     },
     {
       "file": "src/js/194-wf-credentials.js",
@@ -1233,7 +1233,7 @@
     },
     {
       "file": "src/js/201-dev-pages.js",
-      "bytes": 57578
+      "bytes": 58265
     },
     {
       "file": "src/js/202-portal-requests.js",
@@ -1248,9 +1248,13 @@
       "bytes": 38814
     },
     {
+      "file": "src/js/205-privacy-guard.js",
+      "bytes": 17047
+    },
+    {
       "file": "src/js/9999-boot.js",
-      "bytes": 304
+      "bytes": 551
     }
   ],
-  "sw": "cnta-e1deabc2f0"
+  "sw": "cnta-3b5e756ae4"
 }
