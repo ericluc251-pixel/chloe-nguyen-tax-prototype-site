@@ -8,7 +8,7 @@ licence text(s) that come with the package.
 DOMPurify  [dompurify]  - HTML sanitizer for every rich-HTML rendering path (src/js/207-vendor-loader.js: cntaSanitizeHtml)
 ==============================================================================
 
--- dompurify@3.4.16  |  License: (MPL-2.0 OR Apache-2.0)  |  https://github.com/cure53/DOMPurify
+-- dompurify@3.4.17  |  License: (MPL-2.0 OR Apache-2.0)  |  https://github.com/cure53/DOMPurify
 
 [LICENSE]
 Apache License
@@ -592,7 +592,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 Tiptap (core packages only) + ProseMirror  [tiptap]  - rich text editor for HTML fields, KB articles, templates, comments
 ==============================================================================
 
--- @tiptap/core@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/core@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -617,7 +617,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/pm@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/pm@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE]
 MIT License
@@ -1010,7 +1010,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
--- @tiptap/starter-kit@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/starter-kit@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1035,7 +1035,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-blockquote@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-blockquote@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1060,7 +1060,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-bold@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-bullet-list@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1085,7 +1085,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-bullet-list@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-code@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1110,7 +1110,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-code@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-code-block@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1135,7 +1135,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-code-block@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-bold@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1160,7 +1160,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-document@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-gapcursor@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1185,7 +1185,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-dropcursor@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-hard-break@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1210,7 +1210,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-gapcursor@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-heading@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1235,7 +1235,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-hard-break@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-horizontal-rule@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1260,7 +1260,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-heading@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-italic@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1285,57 +1285,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-horizontal-rule@3.31.4  |  License: MIT  |  https://tiptap.dev
-
-[LICENSE.md]
-MIT License
-
-Copyright (c) 2025, Tiptap GmbH
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
--- @tiptap/extension-italic@3.31.4  |  License: MIT  |  https://tiptap.dev
-
-[LICENSE.md]
-MIT License
-
-Copyright (c) 2025, Tiptap GmbH
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
--- @tiptap/extension-link@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-link@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1383,7 +1333,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
--- @tiptap/extension-list@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-list@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1408,7 +1358,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-list-item@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-list-item@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1433,7 +1383,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-list-keymap@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-list-keymap@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1458,7 +1408,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-ordered-list@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-strike@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1483,7 +1433,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-paragraph@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-document@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1508,7 +1458,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-strike@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-dropcursor@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1533,7 +1483,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-text@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-text@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1558,7 +1508,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-underline@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-underline@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1583,7 +1533,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extensions@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extensions@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1608,7 +1558,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-mention@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-paragraph@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -1633,7 +1583,57 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tiptap/extension-placeholder@3.31.4  |  License: MIT  |  https://tiptap.dev
+-- @tiptap/extension-ordered-list@3.32.0  |  License: MIT  |  https://tiptap.dev
+
+[LICENSE.md]
+MIT License
+
+Copyright (c) 2025, Tiptap GmbH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-- @tiptap/extension-mention@3.32.0  |  License: MIT  |  https://tiptap.dev
+
+[LICENSE.md]
+MIT License
+
+Copyright (c) 2025, Tiptap GmbH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-- @tiptap/extension-placeholder@3.32.0  |  License: MIT  |  https://tiptap.dev
 
 [LICENSE.md]
 MIT License
@@ -2325,7 +2325,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
--- @tanstack/virtual-core@3.17.11  |  License: MIT  |  https://tanstack.com/virtual
+-- @tanstack/virtual-core@3.19.4  |  License: MIT  |  https://tanstack.com/virtual
 
 [LICENSE]
 MIT License
