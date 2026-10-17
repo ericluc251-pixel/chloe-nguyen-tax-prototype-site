@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-17T01:46:05Z",
-  "commit": "12acbd2",
+  "built": "2026-10-17T03:48:19Z",
+  "commit": "dfcb896",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -496,6 +496,10 @@
       "bytes": 12985
     },
     {
+      "file": "src/css/204-approvals.css",
+      "bytes": 1783
+    },
+    {
       "file": "src/js/00-roadmap.js",
       "bytes": 19268
     },
@@ -537,7 +541,7 @@
     },
     {
       "file": "src/js/10-ws-shell.js",
-      "bytes": 4642
+      "bytes": 4653
     },
     {
       "file": "src/js/11-ws-workflow.js",
@@ -849,7 +853,7 @@
     },
     {
       "file": "src/js/103-ws-nav.js",
-      "bytes": 5505
+      "bytes": 5516
     },
     {
       "file": "src/js/104-front-simple.js",
@@ -861,7 +865,7 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 36107
+      "bytes": 36023
     },
     {
       "file": "src/js/107-sn-form.js",
@@ -1021,7 +1025,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 123153
+      "bytes": 123173
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1049,7 +1053,7 @@
     },
     {
       "file": "src/js/152-sysfields.js",
-      "bytes": 16743
+      "bytes": 16762
     },
     {
       "file": "src/js/153-history.js",
@@ -1141,7 +1145,7 @@
     },
     {
       "file": "src/js/176-activity-stream.js",
-      "bytes": 14977
+      "bytes": 15080
     },
     {
       "file": "src/js/177-sn-dev-forms.js",
@@ -1153,7 +1157,7 @@
     },
     {
       "file": "src/js/179-sn-parity.js",
-      "bytes": 79380
+      "bytes": 79821
     },
     {
       "file": "src/js/180-backup-ui.js",
@@ -1193,7 +1197,7 @@
     },
     {
       "file": "src/js/193-ui-lists.js",
-      "bytes": 80040
+      "bytes": 80403
     },
     {
       "file": "src/js/194-wf-credentials.js",
@@ -1240,9 +1244,13 @@
       "bytes": 1760
     },
     {
+      "file": "src/js/204-approvals.js",
+      "bytes": 38814
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 304
     }
   ],
-  "sw": "cnta-bbf8b71a8c"
+  "sw": "cnta-f4e05eacf6"
 }

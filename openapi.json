@@ -2394,6 +2394,29 @@
         }
       }
     },
+    "/tools/list_my_approvals": {
+      "post": {
+        "operationId": "tool_list_my_approvals",
+        "tags": [
+          "Agent tools"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "{ok, data} or {ok:false, error}"
+          }
+        }
+      }
+    },
     "/efile/returns": {
       "post": {
         "tags": [
