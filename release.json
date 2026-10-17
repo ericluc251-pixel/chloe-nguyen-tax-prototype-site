@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-16T23:44:37Z",
-  "commit": "1b44128",
+  "built": "2026-10-17T00:59:50Z",
+  "commit": "10e5c90",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -445,7 +445,7 @@
     },
     {
       "file": "src/css/176-activity-stream.css",
-      "bytes": 1722
+      "bytes": 5084
     },
     {
       "file": "src/css/177-sn-dev-forms.css",
@@ -453,11 +453,11 @@
     },
     {
       "file": "src/css/178-sn-polish.css",
-      "bytes": 6030
+      "bytes": 6840
     },
     {
       "file": "src/css/179-sn-parity.css",
-      "bytes": 30525
+      "bytes": 33074
     },
     {
       "file": "src/css/180-backup-ui.css",
@@ -477,7 +477,7 @@
     },
     {
       "file": "src/css/188-ui-forms.css",
-      "bytes": 45058
+      "bytes": 48814
     },
     {
       "file": "src/css/192-r38-intake.css",
@@ -485,7 +485,7 @@
     },
     {
       "file": "src/css/193-ui-lists.css",
-      "bytes": 31015
+      "bytes": 35766
     },
     {
       "file": "src/css/201-dev-pages.css",
@@ -1141,7 +1141,7 @@
     },
     {
       "file": "src/js/176-activity-stream.js",
-      "bytes": 13989
+      "bytes": 14977
     },
     {
       "file": "src/js/177-sn-dev-forms.js",
@@ -1185,7 +1185,7 @@
     },
     {
       "file": "src/js/188-ui-forms.js",
-      "bytes": 106552
+      "bytes": 108734
     },
     {
       "file": "src/js/192-r38-intake.js",
@@ -1193,7 +1193,7 @@
     },
     {
       "file": "src/js/193-ui-lists.js",
-      "bytes": 78420
+      "bytes": 80040
     },
     {
       "file": "src/js/194-wf-credentials.js",
@@ -1244,5 +1244,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-6069c1a517"
+  "sw": "cnta-d6142824d9"
 }
