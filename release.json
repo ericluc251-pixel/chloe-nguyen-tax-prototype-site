@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-17T00:59:50Z",
-  "commit": "10e5c90",
+  "built": "2026-10-17T01:11:13Z",
+  "commit": "628fa41",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -1061,7 +1061,7 @@
     },
     {
       "file": "src/js/155-sys-props.js",
-      "bytes": 24798
+      "bytes": 26047
     },
     {
       "file": "src/js/156-ui-actions.js",
@@ -1244,5 +1244,5 @@
       "bytes": 304
     }
   ],
-  "sw": "cnta-d6142824d9"
+  "sw": "cnta-bbf8b71a8c"
 }
