@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-18T15:16:52Z",
-  "commit": "87ae4b8",
+  "built": "2026-10-18T18:19:35Z",
+  "commit": "d045f06",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -929,7 +929,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 119305
+      "bytes": 119412
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -1037,7 +1037,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 123441
+      "bytes": 123461
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1081,7 +1081,7 @@
     },
     {
       "file": "src/js/156-ui-actions.js",
-      "bytes": 41786
+      "bytes": 41877
     },
     {
       "file": "src/js/157-api-explorer.js",
@@ -1312,9 +1312,13 @@
       "bytes": 9344
     },
     {
+      "file": "src/js/227-updset-sn.js",
+      "bytes": 79072
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 551
     }
   ],
-  "sw": "cnta-8df7b2f9d8"
+  "sw": "cnta-36954c1eb6"
 }
