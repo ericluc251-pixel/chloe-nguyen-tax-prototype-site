@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-18T02:13:25Z",
-  "commit": "32479a6",
+  "built": "2026-10-18T11:52:48Z",
+  "commit": "606eb1c",
   "modules": [
     {
       "file": "src/css/00-app.css",
-      "bytes": 62628
+      "bytes": 63284
     },
     {
       "file": "src/css/10-front-r4.css",
@@ -453,7 +453,7 @@
     },
     {
       "file": "src/css/178-sn-polish.css",
-      "bytes": 7114
+      "bytes": 10457
     },
     {
       "file": "src/css/179-sn-parity.css",
@@ -485,7 +485,7 @@
     },
     {
       "file": "src/css/193-ui-lists.css",
-      "bytes": 36842
+      "bytes": 42205
     },
     {
       "file": "src/css/201-dev-pages.css",
@@ -885,7 +885,7 @@
     },
     {
       "file": "src/js/108-sn-list.js",
-      "bytes": 24825
+      "bytes": 26574
     },
     {
       "file": "src/js/109-sn-collab.js",
@@ -1037,7 +1037,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 123427
+      "bytes": 123441
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1053,7 +1053,7 @@
     },
     {
       "file": "src/js/149-list-power.js",
-      "bytes": 62697
+      "bytes": 62865
     },
     {
       "file": "src/js/150-dictionary.js",
@@ -1165,7 +1165,7 @@
     },
     {
       "file": "src/js/178-sn-polish.js",
-      "bytes": 7175
+      "bytes": 7672
     },
     {
       "file": "src/js/179-sn-parity.js",
@@ -1209,7 +1209,7 @@
     },
     {
       "file": "src/js/193-ui-lists.js",
-      "bytes": 85413
+      "bytes": 96569
     },
     {
       "file": "src/js/194-wf-credentials.js",
@@ -1217,7 +1217,7 @@
     },
     {
       "file": "src/js/195-field-names.js",
-      "bytes": 3788
+      "bytes": 3997
     },
     {
       "file": "src/js/196-sn-schema-admin.js",
@@ -1308,9 +1308,13 @@
       "bytes": 10643
     },
     {
+      "file": "src/js/221-fmt.js",
+      "bytes": 9344
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 551
     }
   ],
-  "sw": "cnta-9743d2b657"
+  "sw": "cnta-ff74ab6c77"
 }
