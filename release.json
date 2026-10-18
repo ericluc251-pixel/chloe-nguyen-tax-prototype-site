@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-18T18:19:35Z",
-  "commit": "d045f06",
+  "built": "2026-10-18T22:47:30Z",
+  "commit": "1a6e87b",
   "modules": [
     {
       "file": "src/css/00-app.css",
-      "bytes": 63284
+      "bytes": 64466
     },
     {
       "file": "src/css/10-front-r4.css",
@@ -405,11 +405,11 @@
     },
     {
       "file": "src/css/164-smart-search.css",
-      "bytes": 2717
+      "bytes": 3659
     },
     {
       "file": "src/css/165-shortcuts.css",
-      "bytes": 713
+      "bytes": 1384
     },
     {
       "file": "src/css/166-pu-fixes.css",
@@ -457,7 +457,7 @@
     },
     {
       "file": "src/css/179-sn-parity.css",
-      "bytes": 34244
+      "bytes": 38957
     },
     {
       "file": "src/css/180-backup-ui.css",
@@ -486,6 +486,10 @@
     {
       "file": "src/css/193-ui-lists.css",
       "bytes": 42205
+    },
+    {
+      "file": "src/css/200-systables.css",
+      "bytes": 1035
     },
     {
       "file": "src/css/201-dev-pages.css",
@@ -525,7 +529,7 @@
     },
     {
       "file": "src/js/04-sn-schema.js",
-      "bytes": 61875
+      "bytes": 87939
     },
     {
       "file": "src/js/04-sn-tables.js",
@@ -585,7 +589,7 @@
     },
     {
       "file": "src/js/20-portal.js",
-      "bytes": 66305
+      "bytes": 67370
     },
     {
       "file": "src/js/21-site.js",
@@ -821,7 +825,7 @@
     },
     {
       "file": "src/js/93-perf-integrity.js",
-      "bytes": 45594
+      "bytes": 46369
     },
     {
       "file": "src/js/94-env-health.js",
@@ -929,7 +933,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 119412
+      "bytes": 120974
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -1057,7 +1061,7 @@
     },
     {
       "file": "src/js/150-dictionary.js",
-      "bytes": 80611
+      "bytes": 83133
     },
     {
       "file": "src/js/151-record-client.js",
@@ -1093,7 +1097,7 @@
     },
     {
       "file": "src/js/159-schedules.js",
-      "bytes": 16029
+      "bytes": 16148
     },
     {
       "file": "src/js/160-import-sets.js",
@@ -1105,7 +1109,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 78942
+      "bytes": 81556
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1113,15 +1117,15 @@
     },
     {
       "file": "src/js/164-smart-search.js",
-      "bytes": 50799
+      "bytes": 51342
     },
     {
       "file": "src/js/165-shortcuts.js",
-      "bytes": 20011
+      "bytes": 21217
     },
     {
       "file": "src/js/166-form-guard.js",
-      "bytes": 6552
+      "bytes": 6594
     },
     {
       "file": "src/js/167-content-guard.js",
@@ -1165,11 +1169,11 @@
     },
     {
       "file": "src/js/178-sn-polish.js",
-      "bytes": 7672
+      "bytes": 7805
     },
     {
       "file": "src/js/179-sn-parity.js",
-      "bytes": 83218
+      "bytes": 104296
     },
     {
       "file": "src/js/180-backup-ui.js",
@@ -1209,7 +1213,7 @@
     },
     {
       "file": "src/js/193-ui-lists.js",
-      "bytes": 96569
+      "bytes": 96619
     },
     {
       "file": "src/js/194-wf-credentials.js",
@@ -1225,7 +1229,7 @@
     },
     {
       "file": "src/js/197-sn-mode.js",
-      "bytes": 4682
+      "bytes": 7404
     },
     {
       "file": "src/js/198-sn-codemod.js",
@@ -1233,19 +1237,19 @@
     },
     {
       "file": "src/js/200-systables-1-core.js",
-      "bytes": 36099
+      "bytes": 36998
     },
     {
       "file": "src/js/200-systables-2-config.js",
-      "bytes": 28129
+      "bytes": 28707
     },
     {
       "file": "src/js/200-systables-3-more.js",
-      "bytes": 33894
+      "bytes": 36830
     },
     {
       "file": "src/js/201-dev-pages.js",
-      "bytes": 58265
+      "bytes": 58301
     },
     {
       "file": "src/js/202-portal-requests.js",
@@ -1257,7 +1261,7 @@
     },
     {
       "file": "src/js/204-approvals.js",
-      "bytes": 38814
+      "bytes": 39471
     },
     {
       "file": "src/js/205-privacy-guard.js",
@@ -1269,7 +1273,7 @@
     },
     {
       "file": "src/js/206-session-state.js",
-      "bytes": 3005
+      "bytes": 3084
     },
     {
       "file": "src/js/207-vendor-charts.js",
@@ -1293,7 +1297,7 @@
     },
     {
       "file": "src/js/209-script-uat.js",
-      "bytes": 27332
+      "bytes": 29446
     },
     {
       "file": "src/js/210-sn-urls.js",
@@ -1313,12 +1317,12 @@
     },
     {
       "file": "src/js/227-updset-sn.js",
-      "bytes": 79072
+      "bytes": 121389
     },
     {
       "file": "src/js/9999-boot.js",
       "bytes": 551
     }
   ],
-  "sw": "cnta-36954c1eb6"
+  "sw": "cnta-400287a409"
 }
