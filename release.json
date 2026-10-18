@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-18T11:52:48Z",
-  "commit": "606eb1c",
+  "built": "2026-10-18T15:16:52Z",
+  "commit": "87ae4b8",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -517,7 +517,7 @@
     },
     {
       "file": "src/js/01-core-data.js",
-      "bytes": 29593
+      "bytes": 30907
     },
     {
       "file": "src/js/02-core-helpers.js",
@@ -533,7 +533,7 @@
     },
     {
       "file": "src/js/05-platform-registry.js",
-      "bytes": 29831
+      "bytes": 30850
     },
     {
       "file": "src/js/06-platform-rules-events.js",
@@ -637,7 +637,7 @@
     },
     {
       "file": "src/js/40-studio.js",
-      "bytes": 47811
+      "bytes": 47893
     },
     {
       "file": "src/js/41-ai-crawl.js",
@@ -853,7 +853,7 @@
     },
     {
       "file": "src/js/100-gsheet.js",
-      "bytes": 49815
+      "bytes": 54129
     },
     {
       "file": "src/js/101-data-admin.js",
@@ -1233,11 +1233,11 @@
     },
     {
       "file": "src/js/200-systables-1-core.js",
-      "bytes": 36031
+      "bytes": 36099
     },
     {
       "file": "src/js/200-systables-2-config.js",
-      "bytes": 27516
+      "bytes": 28129
     },
     {
       "file": "src/js/200-systables-3-more.js",
@@ -1297,7 +1297,7 @@
     },
     {
       "file": "src/js/210-sn-urls.js",
-      "bytes": 5352
+      "bytes": 5721
     },
     {
       "file": "src/js/211-field-acl.js",
@@ -1305,7 +1305,7 @@
     },
     {
       "file": "src/js/212-scopes.js",
-      "bytes": 10643
+      "bytes": 12002
     },
     {
       "file": "src/js/221-fmt.js",
@@ -1316,5 +1316,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-ff74ab6c77"
+  "sw": "cnta-8df7b2f9d8"
 }
