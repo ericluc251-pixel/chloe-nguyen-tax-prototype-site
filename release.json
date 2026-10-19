@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-19T04:29:30Z",
-  "commit": "f430208",
+  "built": "2026-10-19T17:17:04Z",
+  "commit": "8c4f945",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -277,7 +277,7 @@
     },
     {
       "file": "src/css/128-wf-editor.css",
-      "bytes": 29361
+      "bytes": 33585
     },
     {
       "file": "src/css/129-wf-runs.css",
@@ -457,7 +457,7 @@
     },
     {
       "file": "src/css/179-sn-parity.css",
-      "bytes": 38957
+      "bytes": 39145
     },
     {
       "file": "src/css/180-backup-ui.css",
@@ -518,6 +518,18 @@
     {
       "file": "src/css/220-form-tokens.css",
       "bytes": 15996
+    },
+    {
+      "file": "src/css/230-wf-spec-view.css",
+      "bytes": 1981
+    },
+    {
+      "file": "src/css/231-wf-exec-related.css",
+      "bytes": 425
+    },
+    {
+      "file": "src/css/232-wf-pill-picker.css",
+      "bytes": 1875
     },
     {
       "file": "src/js/00-roadmap.js",
@@ -589,7 +601,7 @@
     },
     {
       "file": "src/js/17-ws-list-form.js",
-      "bytes": 32029
+      "bytes": 32078
     },
     {
       "file": "src/js/20-portal.js",
@@ -969,11 +981,11 @@
     },
     {
       "file": "src/js/127-wf-meta.js",
-      "bytes": 134497
+      "bytes": 450754
     },
     {
       "file": "src/js/128-wf-editor.js",
-      "bytes": 243213
+      "bytes": 263074
     },
     {
       "file": "src/js/129-wf-runs.js",
@@ -1045,7 +1057,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 123477
+      "bytes": 123551
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1177,7 +1189,7 @@
     },
     {
       "file": "src/js/179-sn-parity.js",
-      "bytes": 104296
+      "bytes": 106187
     },
     {
       "file": "src/js/180-backup-ui.js",
@@ -1209,7 +1221,7 @@
     },
     {
       "file": "src/js/188-ui-forms.js",
-      "bytes": 136378
+      "bytes": 138677
     },
     {
       "file": "src/js/192-r38-intake.js",
@@ -1229,7 +1241,7 @@
     },
     {
       "file": "src/js/196-sn-schema-admin.js",
-      "bytes": 8114
+      "bytes": 11016
     },
     {
       "file": "src/js/197-sn-mode.js",
@@ -1328,9 +1340,21 @@
       "bytes": 130372
     },
     {
+      "file": "src/js/230-wf-spec-view.js",
+      "bytes": 10846
+    },
+    {
+      "file": "src/js/231-wf-exec-related.js",
+      "bytes": 6820
+    },
+    {
+      "file": "src/js/232-wf-pill-picker.js",
+      "bytes": 13128
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 551
     }
   ],
-  "sw": "cnta-b9a4806f1a"
+  "sw": "cnta-430985d157"
 }
