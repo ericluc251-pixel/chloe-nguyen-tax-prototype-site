@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-18T22:47:30Z",
-  "commit": "1a6e87b",
+  "built": "2026-10-19T00:43:22Z",
+  "commit": "41793fb",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -653,7 +653,7 @@
     },
     {
       "file": "src/js/50-storage.js",
-      "bytes": 42627
+      "bytes": 43024
     },
     {
       "file": "src/js/51-graph.js",
@@ -1324,5 +1324,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-400287a409"
+  "sw": "cnta-5cc0639b67"
 }
