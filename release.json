@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-20T03:30:29Z",
-  "commit": "b0368a0",
+  "built": "2026-10-20T03:59:46Z",
+  "commit": "499668b",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -561,7 +561,7 @@
     },
     {
       "file": "src/js/07-platform-tools.js",
-      "bytes": 18178
+      "bytes": 18388
     },
     {
       "file": "src/js/08-platform-agents.js",
@@ -577,7 +577,7 @@
     },
     {
       "file": "src/js/11-ws-workflow.js",
-      "bytes": 11245
+      "bytes": 11457
     },
     {
       "file": "src/js/12-ws-appointments-roles.js",
@@ -613,7 +613,7 @@
     },
     {
       "file": "src/js/22-intake.js",
-      "bytes": 20267
+      "bytes": 20504
     },
     {
       "file": "src/js/23-estimator.js",
@@ -953,7 +953,7 @@
     },
     {
       "file": "src/js/120-portal-builder.js",
-      "bytes": 57115
+      "bytes": 57188
     },
     {
       "file": "src/js/121-tenant.js",
@@ -1057,7 +1057,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 123551
+      "bytes": 123634
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1125,7 +1125,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 80853
+      "bytes": 86522
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1277,7 +1277,7 @@
     },
     {
       "file": "src/js/204-approvals.js",
-      "bytes": 39594
+      "bytes": 39644
     },
     {
       "file": "src/js/205-privacy-guard.js",
@@ -1352,9 +1352,17 @@
       "bytes": 13128
     },
     {
+      "file": "src/js/240-approvals-server.js",
+      "bytes": 9684
+    },
+    {
+      "file": "src/js/241-assignment-rules.js",
+      "bytes": 3619
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 551
     }
   ],
-  "sw": "cnta-b2fd976ad7"
+  "sw": "cnta-93eb0c48d3"
 }
