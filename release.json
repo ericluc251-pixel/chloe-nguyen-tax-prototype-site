@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-20T19:24:08Z",
-  "commit": "1b4a9d7",
+  "built": "2026-10-20T22:39:24Z",
+  "commit": "07174eb",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -569,7 +569,7 @@
     },
     {
       "file": "src/js/09-platform-integrations.js",
-      "bytes": 28192
+      "bytes": 28400
     },
     {
       "file": "src/js/10-ws-shell.js",
@@ -665,7 +665,7 @@
     },
     {
       "file": "src/js/42-studio-r5.js",
-      "bytes": 51175
+      "bytes": 51643
     },
     {
       "file": "src/js/50-storage.js",
@@ -873,7 +873,7 @@
     },
     {
       "file": "src/js/100-gsheet.js",
-      "bytes": 54605
+      "bytes": 55316
     },
     {
       "file": "src/js/101-data-admin.js",
@@ -925,7 +925,7 @@
     },
     {
       "file": "src/js/113-sla-jobs.js",
-      "bytes": 43197
+      "bytes": 43457
     },
     {
       "file": "src/js/114-numbering.js",
@@ -1057,7 +1057,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 123634
+      "bytes": 123658
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1125,7 +1125,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 92570
+      "bytes": 97696
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1185,7 +1185,7 @@
     },
     {
       "file": "src/js/178-sn-polish.js",
-      "bytes": 7805
+      "bytes": 7385
     },
     {
       "file": "src/js/179-sn-parity.js",
@@ -1201,7 +1201,7 @@
     },
     {
       "file": "src/js/183-survey.js",
-      "bytes": 40317
+      "bytes": 42164
     },
     {
       "file": "src/js/184-wf-import.js",
@@ -1217,7 +1217,7 @@
     },
     {
       "file": "src/js/187-identity.js",
-      "bytes": 71087
+      "bytes": 71344
     },
     {
       "file": "src/js/188-ui-forms.js",
@@ -1360,9 +1360,13 @@
       "bytes": 3619
     },
     {
+      "file": "src/js/274-webhook-vault.js",
+      "bytes": 5573
+    },
+    {
       "file": "src/js/9999-boot.js",
       "bytes": 551
     }
   ],
-  "sw": "cnta-af0855e5fd"
+  "sw": "cnta-bddfe03822"
 }
