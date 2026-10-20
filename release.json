@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-20T17:22:52Z",
-  "commit": "0afb3ad",
+  "built": "2026-10-20T19:24:08Z",
+  "commit": "1b4a9d7",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -669,7 +669,7 @@
     },
     {
       "file": "src/js/50-storage.js",
-      "bytes": 43024
+      "bytes": 43439
     },
     {
       "file": "src/js/51-graph.js",
@@ -873,7 +873,7 @@
     },
     {
       "file": "src/js/100-gsheet.js",
-      "bytes": 54129
+      "bytes": 54605
     },
     {
       "file": "src/js/101-data-admin.js",
@@ -1364,5 +1364,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-ee5354b674"
+  "sw": "cnta-af0855e5fd"
 }
