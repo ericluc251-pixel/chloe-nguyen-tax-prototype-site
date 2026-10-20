@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-20T03:59:46Z",
-  "commit": "499668b",
+  "built": "2026-10-20T17:17:45Z",
+  "commit": "97a66d9",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -601,7 +601,7 @@
     },
     {
       "file": "src/js/17-ws-list-form.js",
-      "bytes": 32078
+      "bytes": 32270
     },
     {
       "file": "src/js/20-portal.js",
@@ -633,7 +633,7 @@
     },
     {
       "file": "src/js/30-round3.js",
-      "bytes": 29764
+      "bytes": 29750
     },
     {
       "file": "src/js/31-front-r4.js",
@@ -897,11 +897,11 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 36189
+      "bytes": 36172
     },
     {
       "file": "src/js/107-sn-form.js",
-      "bytes": 27650
+      "bytes": 27837
     },
     {
       "file": "src/js/108-sn-list.js",
@@ -909,7 +909,7 @@
     },
     {
       "file": "src/js/109-sn-collab.js",
-      "bytes": 13801
+      "bytes": 14999
     },
     {
       "file": "src/js/110-sn-home.js",
@@ -1009,7 +1009,7 @@
     },
     {
       "file": "src/js/134-triage.js",
-      "bytes": 20246
+      "bytes": 20689
     },
     {
       "file": "src/js/135-requirements.js",
@@ -1081,7 +1081,7 @@
     },
     {
       "file": "src/js/151-record-client.js",
-      "bytes": 15897
+      "bytes": 16821
     },
     {
       "file": "src/js/152-sysfields.js",
@@ -1125,7 +1125,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 86522
+      "bytes": 92570
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1133,7 +1133,7 @@
     },
     {
       "file": "src/js/164-smart-search.js",
-      "bytes": 51410
+      "bytes": 52124
     },
     {
       "file": "src/js/165-shortcuts.js",
@@ -1229,7 +1229,7 @@
     },
     {
       "file": "src/js/193-ui-lists.js",
-      "bytes": 95794
+      "bytes": 95801
     },
     {
       "file": "src/js/194-wf-credentials.js",
@@ -1281,7 +1281,7 @@
     },
     {
       "file": "src/js/205-privacy-guard.js",
-      "bytes": 17971
+      "bytes": 18370
     },
     {
       "file": "src/js/206-icons.js",
@@ -1364,5 +1364,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-93eb0c48d3"
+  "sw": "cnta-ee5354b674"
 }
