@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-20T22:39:24Z",
-  "commit": "07174eb",
+  "built": "2026-10-21T17:05:19Z",
+  "commit": "2db8e78",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -205,7 +205,7 @@
     },
     {
       "file": "src/css/106-sn-shell.css",
-      "bytes": 9643
+      "bytes": 9863
     },
     {
       "file": "src/css/107-sn-form.css",
@@ -532,6 +532,18 @@
       "bytes": 1875
     },
     {
+      "file": "src/css/250-reports-server.css",
+      "bytes": 3716
+    },
+    {
+      "file": "src/css/256-catalog-fulfil.css",
+      "bytes": 918
+    },
+    {
+      "file": "src/css/260-catalog-portal.css",
+      "bytes": 1548
+    },
+    {
       "file": "src/js/00-roadmap.js",
       "bytes": 19268
     },
@@ -549,7 +561,7 @@
     },
     {
       "file": "src/js/04-sn-tables.js",
-      "bytes": 11588
+      "bytes": 13547
     },
     {
       "file": "src/js/05-platform-registry.js",
@@ -569,7 +581,7 @@
     },
     {
       "file": "src/js/09-platform-integrations.js",
-      "bytes": 28400
+      "bytes": 28982
     },
     {
       "file": "src/js/10-ws-shell.js",
@@ -637,7 +649,7 @@
     },
     {
       "file": "src/js/31-front-r4.js",
-      "bytes": 28703
+      "bytes": 28850
     },
     {
       "file": "src/js/32-front-ws.js",
@@ -669,7 +681,7 @@
     },
     {
       "file": "src/js/50-storage.js",
-      "bytes": 43439
+      "bytes": 43509
     },
     {
       "file": "src/js/51-graph.js",
@@ -837,7 +849,7 @@
     },
     {
       "file": "src/js/92-audit-retention.js",
-      "bytes": 45242
+      "bytes": 45337
     },
     {
       "file": "src/js/93-perf-integrity.js",
@@ -861,7 +873,7 @@
     },
     {
       "file": "src/js/98-perf-a11y.js",
-      "bytes": 26096
+      "bytes": 26237
     },
     {
       "file": "src/js/99-docs-hub.js",
@@ -897,7 +909,7 @@
     },
     {
       "file": "src/js/106-sn-shell.js",
-      "bytes": 36172
+      "bytes": 40932
     },
     {
       "file": "src/js/107-sn-form.js",
@@ -937,7 +949,7 @@
     },
     {
       "file": "src/js/116-reports.js",
-      "bytes": 57998
+      "bytes": 58049
     },
     {
       "file": "src/js/117-kb.js",
@@ -949,7 +961,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 122726
+      "bytes": 122864
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -973,7 +985,7 @@
     },
     {
       "file": "src/js/125-efile-return.js",
-      "bytes": 18845
+      "bytes": 19213
     },
     {
       "file": "src/js/126-efile-review.js",
@@ -981,7 +993,7 @@
     },
     {
       "file": "src/js/127-wf-meta.js",
-      "bytes": 450754
+      "bytes": 451338
     },
     {
       "file": "src/js/128-wf-editor.js",
@@ -1009,7 +1021,7 @@
     },
     {
       "file": "src/js/134-triage.js",
-      "bytes": 20689
+      "bytes": 20845
     },
     {
       "file": "src/js/135-requirements.js",
@@ -1025,7 +1037,7 @@
     },
     {
       "file": "src/js/137-query-client.js",
-      "bytes": 27509
+      "bytes": 34851
     },
     {
       "file": "src/js/138-client-portal-auth.js",
@@ -1057,7 +1069,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 123658
+      "bytes": 124009
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1089,7 +1101,7 @@
     },
     {
       "file": "src/js/153-history.js",
-      "bytes": 18783
+      "bytes": 18831
     },
     {
       "file": "src/js/154-dotwalk.js",
@@ -1125,7 +1137,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 97696
+      "bytes": 122570
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1133,7 +1145,7 @@
     },
     {
       "file": "src/js/164-smart-search.js",
-      "bytes": 52124
+      "bytes": 55795
     },
     {
       "file": "src/js/165-shortcuts.js",
@@ -1181,7 +1193,7 @@
     },
     {
       "file": "src/js/177-sn-dev-forms.js",
-      "bytes": 57901
+      "bytes": 58038
     },
     {
       "file": "src/js/178-sn-polish.js",
@@ -1189,7 +1201,7 @@
     },
     {
       "file": "src/js/179-sn-parity.js",
-      "bytes": 106187
+      "bytes": 108035
     },
     {
       "file": "src/js/180-backup-ui.js",
@@ -1209,7 +1221,7 @@
     },
     {
       "file": "src/js/185-code-editor.js",
-      "bytes": 20644
+      "bytes": 26658
     },
     {
       "file": "src/js/186-wf-templates.js",
@@ -1221,7 +1233,7 @@
     },
     {
       "file": "src/js/188-ui-forms.js",
-      "bytes": 143934
+      "bytes": 144125
     },
     {
       "file": "src/js/192-r38-intake.js",
@@ -1257,7 +1269,7 @@
     },
     {
       "file": "src/js/200-systables-2-config.js",
-      "bytes": 28858
+      "bytes": 29312
     },
     {
       "file": "src/js/200-systables-3-more.js",
@@ -1273,7 +1285,7 @@
     },
     {
       "file": "src/js/203-report-local.js",
-      "bytes": 1760
+      "bytes": 1803
     },
     {
       "file": "src/js/204-approvals.js",
@@ -1281,7 +1293,7 @@
     },
     {
       "file": "src/js/205-privacy-guard.js",
-      "bytes": 18370
+      "bytes": 18639
     },
     {
       "file": "src/js/206-icons.js",
@@ -1289,7 +1301,7 @@
     },
     {
       "file": "src/js/206-session-state.js",
-      "bytes": 3084
+      "bytes": 3201
     },
     {
       "file": "src/js/207-vendor-charts.js",
@@ -1337,7 +1349,7 @@
     },
     {
       "file": "src/js/227-updset-sn.js",
-      "bytes": 130372
+      "bytes": 139693
     },
     {
       "file": "src/js/230-wf-spec-view.js",
@@ -1357,7 +1369,67 @@
     },
     {
       "file": "src/js/241-assignment-rules.js",
-      "bytes": 3619
+      "bytes": 9059
+    },
+    {
+      "file": "src/js/245-email-log.js",
+      "bytes": 7733
+    },
+    {
+      "file": "src/js/246-inbound-actions.js",
+      "bytes": 4079
+    },
+    {
+      "file": "src/js/249-foundation-tables.js",
+      "bytes": 16824
+    },
+    {
+      "file": "src/js/250-reports-server.js",
+      "bytes": 23967
+    },
+    {
+      "file": "src/js/251-knowledge.js",
+      "bytes": 28208
+    },
+    {
+      "file": "src/js/252-service-catalog.js",
+      "bytes": 25480
+    },
+    {
+      "file": "src/js/253-platform-tables.js",
+      "bytes": 20622
+    },
+    {
+      "file": "src/js/254-notify-defs.js",
+      "bytes": 14500
+    },
+    {
+      "file": "src/js/256-catalog-fulfil.js",
+      "bytes": 16866
+    },
+    {
+      "file": "src/js/257-events-jobs.js",
+      "bytes": 11843
+    },
+    {
+      "file": "src/js/258-policies.js",
+      "bytes": 21666
+    },
+    {
+      "file": "src/js/259-templates.js",
+      "bytes": 11917
+    },
+    {
+      "file": "src/js/260-catalog-portal.js",
+      "bytes": 34062
+    },
+    {
+      "file": "src/js/262-web-services.js",
+      "bytes": 34911
+    },
+    {
+      "file": "src/js/272-impersonation.js",
+      "bytes": 16323
     },
     {
       "file": "src/js/274-webhook-vault.js",
@@ -1368,5 +1440,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-bddfe03822"
+  "sw": "cnta-99249390ee"
 }
