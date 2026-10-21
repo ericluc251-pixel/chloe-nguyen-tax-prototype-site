@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>body{margin:0;font-family:system-ui,sans-serif;font-size:14px}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>CNTA v3 SLA Setup</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: one admin frame; four views (tables model, SLA definition form, schedule form, task SLAs list) switched from the navigator. */
+:root{
+  --bg:#f6f7f5; --surface:#fff; --fg:#1d2320; --muted:#68706b; --line:#e2e4e0; --head:#1f2a26; --headfg:#e9efeb;
+  --accent:#b4573a; --accent-soft:#f3e4dd; --sel:#e8efe9; --link:#2d6a8a; --ok:#2f7a4f; --okbg:#e1f0e6; --warn:#a15c00; --warnbg:#fbeedd; --bad:#a3312b; --badbg:#f7e1df;
+  --body:"Instrument Sans", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#151816;--surface:#1d211f;--fg:#e7ebe8;--muted:#9aa29c;--line:#2d322f;--head:#0f1412;--headfg:#e7ebe8;--accent:#e08566;--accent-soft:#3a2720;--sel:#25302a;--link:#7fb9d6;--ok:#7cc79a;--okbg:#1d3226;--warn:#e7a94f;--warnbg:#3a2c16;--bad:#ef8a83;--badbg:#3c2120;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151816;--surface:#1d211f;--fg:#e7ebe8;--muted:#9aa29c;--line:#2d322f;--head:#0f1412;--headfg:#e7ebe8;--accent:#e08566;--accent-soft:#3a2720;--sel:#25302a;--link:#7fb9d6;--ok:#7cc79a;--okbg:#1d3226;--warn:#e7a94f;--warnbg:#3a2c16;--bad:#ef8a83;--badbg:#3c2120;color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;padding-inline:16px;padding-block:12px;box-sizing:border-box}
+.frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);min-height:calc(100vh - 56px);display:flex;flex-direction:column}
+header.app{background:var(--head);color:var(--headfg);display:flex;align-items:center;gap:14px;padding:0 14px;height:46px;flex:none}
+header.app b{font-weight:600}
+.body{flex:1;display:flex;min-height:0}
+.nav{width:210px;flex:none;border-right:1px solid var(--line);padding:10px 8px}
+.nav h4{font-size:12px;font-weight:600;margin:6px 6px 4px}
+.nav button{all:unset;display:block;cursor:pointer;padding:5px 8px 5px 14px;border-radius:6px;width:100%;box-sizing:border-box}
+.nav button[aria-current="true"],.nav button:hover{background:var(--sel)}
+.nav button:focus-visible,.btn:focus-visible,.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.main{flex:1;min-width:0;overflow:auto}
+.bar{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.bar h3{margin:0;font-size:15px;font-weight:600}
+.bar .t{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.bar .sp{flex:1}
+.btn{all:unset;cursor:pointer;background:var(--fg);color:var(--bg);padding:6px 12px;border-radius:6px;font-weight:500;font-size:13px}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.pad{padding:16px;display:flex;flex-direction:column;gap:14px}
+.lead{color:var(--muted);max-width:70ch;margin:0}
+.model{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.tbl{border:1px solid var(--line);border-radius:10px;overflow:hidden;min-width:0}
+.tbl .h{background:var(--bg);padding:9px 12px;display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+.tbl .h b{font-size:14px}
+.tbl .h span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.tbl ul{list-style:none;margin:0;padding:8px 12px;display:flex;flex-direction:column;gap:4px;font-size:13px}
+.tbl li{display:flex;justify-content:space-between;gap:10px}
+.tbl li code{font-family:var(--mono);font-size:12px}
+.tbl li i{font-style:normal;color:var(--muted);font-size:12px;text-align:right}
+.tbl .who{padding:8px 12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.links{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.links code{font-family:var(--mono);font-size:12px;color:var(--fg)}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{all:unset;cursor:pointer;padding:7px 12px;border-bottom:2px solid transparent;font-size:13px}
+.tabs button[aria-selected="true"]{border-bottom-color:var(--accent);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+.fld{display:flex;flex-direction:column;gap:3px;min-width:0}
+.fld label{font-size:12px;color:var(--muted)}
+.fld .v{border:1px solid var(--line);border-radius:6px;padding:6px 9px;min-height:18px;background:var(--surface)}
+.fld.wide{grid-column:1/-1}
+.fld .hint{font-size:12px;color:var(--muted)}
+.off{color:var(--muted);font-style:italic}
+.cond{border:1px solid var(--line);border-radius:6px;padding:8px;background:var(--bg);display:flex;flex-direction:column;gap:6px}
+.crow{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crow select,.crow input{border:1px solid var(--line);border-radius:6px;padding:5px 7px;background:var(--surface);color:var(--fg);font:inherit;font-size:13px}
+.pill{border-radius:999px;padding:1px 8px;font-size:12px;background:var(--sel)}
+.st-run{background:var(--okbg);color:var(--ok)}.st-pause{background:var(--warnbg);color:var(--warn)}.st-done{background:var(--sel)}.st-bad{background:var(--badbg);color:var(--bad)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:600;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+.meter{display:inline-block;width:80px;height:8px;border-radius:4px;background:var(--line);vertical-align:middle;margin-right:6px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--accent)}
+.note{font-size:12px;color:var(--muted);margin-top:6px}
+.sr{position:absolute;left:-9999px}
+@media (max-width:760px){.model,.grid{grid-template-columns:1fr}.nav{width:150px}}
+</style>
+
+<div class="frame">
+  <header class="app"><b>CNTA</b><span style="flex:1"></span><span>Admin</span></header>
+  <div class="body">
+    <nav class="nav" aria-label="Navigator"><h4>Service Level Management</h4>
+      <button data-v="model">How SLA setup fits together</button>
+      <button data-v="def">SLA Definitions</button>
+      <button data-v="sch">Schedules</button>
+      <button data-v="task">Task SLAs</button>
+    </nav>
+    <div class="main" id="main"></div>
+  </div>
+</div>
+<p class="note">Mockup with example data. Table and field names follow ServiceNow's SLA tables; greyed options are not available in the first version.</p>
+
+<script>
+let S = { v:'model', tab:0 };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fld = (l, v, o) => '<div class="fld' + (o && o.wide ? ' wide' : '') + '"><label>' + esc(l) + '</label><div class="v' + (o && o.off ? ' off' : '') + '">' + esc(v) + '</div>' + (o && o.hint ? '<span class="hint">' + esc(o.hint) + '</span>' : '') + '</div>';
+const cond = (l, rows, hint) => '<div class="fld wide"><label>' + esc(l) + '</label><div class="cond">' + rows.map((r, i) => '<div class="crow">' + (i ? '<span class="pill">' + (r[3] || 'AND') + '</span>' : '') + '<select aria-label="Field"><option>' + esc(r[0]) + '</option></select><select aria-label="Operator"><option>' + esc(r[1]) + '</option></select><input aria-label="Value" value="' + esc(r[2]) + '"></div>').join('') + '<div class="crow"><button class="btn ghost" type="button">AND</button><button class="btn ghost" type="button">OR</button></div></div>' + (hint ? '<span class="hint">' + esc(hint) + '</span>' : '') + '</div>';
+
+function model(){
+  const T = (name, table, fields, who) => '<div class="tbl"><div class="h"><b>' + name + '</b><span>' + table + '</span></div><ul>' + fields.map(f => '<li><code>' + f[0] + '</code><i>' + f[1] + '</i></li>').join('') + '</ul><div class="who">' + who + '</div></div>';
+  return '<div class="bar"><h3>How SLA setup fits together</h3></div><div class="pad"><p class="lead">An admin configures three tables. The fourth fills itself: the SLA engine attaches a Task SLA to each record that matches a definition and keeps its clock up to date.</p><div class="model">' +
+    T('SLA Definitions', 'contract_sla', [['name','"Return prepared within 10 days"'],['type','SLA · OLA · Underpinning contract'],['target','response · resolution'],['collection','the table it watches'],['duration','10 Days'],['schedule_source','SLA definition · no schedule'],['schedule','→ cmn_schedule'],['start / pause / stop / reset / cancel _condition','condition builders'],['when_to_resume / when_to_cancel','on condition · no match']], 'Admin configures. One row per promise you make.') +
+    T('Schedules', 'cmn_schedule', [['name','"Business days 8-5"'],['time_zone','America/Chicago'],['type','business hours']], 'Admin configures. Which hours count toward the clock.') +
+    T('Schedule entries', 'cmn_schedule_span', [['schedule','→ cmn_schedule'],['name','"Weekdays" / "Thanksgiving"'],['type','include · exclude (holiday)'],['start_date_time / end_date_time','08:00 – 17:00'],['repeat_type','weekly · Mon–Fri']], 'Admin configures. Working hours and holidays.') +
+    T('Task SLAs', 'task_sla', [['sla','→ contract_sla'],['task','→ the record (TAX0010001)'],['stage','in progress · paused · completed · cancelled'],['start_time / breach_time','set by the engine'],['business_percentage','62 %'],['has_breached','true · false']], 'Nobody edits these. The engine writes them; people read them.') +
+    '</div><div class="links"><span><code>contract_sla.schedule</code> → <code>cmn_schedule</code></span><span><code>cmn_schedule_span.schedule</code> → <code>cmn_schedule</code></span><span><code>task_sla.sla</code> → <code>contract_sla</code> · <code>task_sla.task</code> → the case</span></div></div>';
+}
+const DEF_TABS = [
+  ['SLA Definition', () => '<div class="grid">' + fld('Name', 'Return prepared within 10 days') + fld('Type', 'SLA') + fld('Target', 'Resolution') + fld('Table', 'Tax Case [x_cnta_tax_case]') +
+    fld('Duration type', 'User specified duration') + fld('Duration', '10 Days 00:00:00') + fld('Schedule source', 'SLA definition') + fld('Schedule', 'Business days 8-5') +
+    fld('Timezone source', "The SLA definition's time zone") + fld('Active', 'true') + fld('Relative duration', 'Not available yet', { off:true, hint:'Relative durations come later' }) + '</div>'],
+  ['Start condition', () => '<div class="grid">' + cond('Start condition', [['Stage','is','In preparation']], 'The clock starts when a case matches.') + fld('Retroactive start', 'false') + fld('Set start to', 'Created') + '</div>'],
+  ['Pause condition', () => '<div class="grid">' + cond('Pause condition', [['Stage','is','Waiting on documents']], 'Paused time does not count.') + fld('When to resume', 'Pause condition does not match') + '</div>'],
+  ['Stop condition', () => '<div class="grid">' + cond('Stop condition', [['Stage','is one of','Client signature, E-filed']], 'The SLA completes when a case matches.') + '</div>'],
+  ['Reset condition', () => '<div class="grid">' + cond('Reset condition', [['Preparer','changes','']], 'Starts a fresh clock.') + fld('Reset action', 'Cancel the running SLA') + '</div>'],
+  ['Cancel condition', () => '<div class="grid">' + fld('When to cancel', 'Start condition does not match') + cond('Cancel condition', [['Stage','is','Withdrawn']]) + '</div>']
+];
+function def(){
+  const t = DEF_TABS[S.tab] || DEF_TABS[0];
+  return '<div class="bar"><h3>Return prepared within 10 days</h3><span class="t">contract_sla</span><span class="sp"></span><button class="btn ghost">Delete</button><button class="btn">Update</button></div><div class="pad">' +
+    '<div class="tabs" role="tablist">' + DEF_TABS.map((x, i) => '<button role="tab" data-tab="' + i + '" aria-selected="' + (x === t) + '">' + x[0] + '</button>').join('') + '</div>' + t[1]() +
+    '<div><h4 style="margin:0 0 6px;font-size:13px">Task SLAs using this definition</h4>' + taskTable(true) + '</div></div>';
+}
+function sch(){
+  return '<div class="bar"><h3>Business days 8-5</h3><span class="t">cmn_schedule</span><span class="sp"></span><button class="btn">Update</button></div><div class="pad"><div class="grid">' + fld('Name', 'Business days 8-5') + fld('Time zone', 'America/Chicago') + fld('Type', 'Business hours') + '</div>' +
+    '<div><h4 style="margin:0 0 6px;font-size:13px">Schedule entries</h4><div class="tw"><table><thead><tr><th>Name</th><th>Type</th><th>When</th><th>Repeats</th></tr></thead><tbody>' +
+    [['Weekdays','Include','08:00 – 17:00','Weekly, Mon–Fri'],['Thanksgiving','Exclude (holiday)','All day, Nov 26','Yearly'],['Christmas Day','Exclude (holiday)','All day, Dec 25','Yearly']].map(r => '<tr>' + r.map(esc).map(x => '<td>' + x + '</td>').join('') + '</tr>').join('') +
+    '</tbody></table></div></div></div>';
+}
+function taskTable(compact){
+  const rows = [['TAX0010001','Return prepared within 10 days','In progress','run',62,'Oct 30, 17:00','false'],['TAX0010007','Return prepared within 10 days','Paused','pause',40,'Nov 4, 12:00','false'],['TAX0010013','Reply to client within 1 day','Completed','done',100,'Oct 19, 09:30','false'],['TAX0010011','Return prepared within 10 days','In progress','bad',118,'Oct 20, 17:00','true']];
+  return '<div class="tw"><table><thead><tr><th>Task</th>' + (compact ? '' : '<th>SLA definition</th>') + '<th>Stage</th><th>Business elapsed</th><th>Breach time</th><th>Has breached</th></tr></thead><tbody>' +
+    rows.map(r => '<tr><td>' + r[0] + '</td>' + (compact ? '' : '<td>' + esc(r[1]) + '</td>') + '<td><span class="pill st-' + r[3] + '">' + r[2] + '</span></td><td><span class="meter"><i style="width:' + Math.min(r[4], 100) + '%"></i></span>' + r[4] + '%</td><td>' + r[5] + '</td><td>' + r[6] + '</td></tr>').join('') + '</tbody></table></div>';
+}
+function task(){ return '<div class="bar"><h3>Task SLAs</h3><span class="t">task_sla</span><span class="sp"></span><span class="pill">Read only: written by the SLA engine</span></div><div class="pad">' + taskTable(false) + '</div>'; }
+function render(){
+  document.getElementById('main').innerHTML = ({ model, def, sch, task })[S.v]();
+  document.querySelectorAll('[data-v]').forEach(b => { b.setAttribute('aria-current', b.dataset.v === S.v); b.onclick = () => { S.v = b.dataset.v; S.tab = 0; render(); }; });
+  document.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => { S.tab = +b.dataset.tab; render(); });
+}
+render();
+</script>
+
+</body>
+</html>

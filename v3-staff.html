@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>body{margin:0;font-family:system-ui,sans-serif;font-size:14px}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>CNTA v3 Staff Canvas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: header + canvas (what Claude built, as tabs) + Claude panel on the right. The canvas starts empty. */
+:root{
+  --bg:#f6f7f5; --surface:#fff; --fg:#1d2320; --muted:#68706b; --line:#e2e4e0; --head:#1f2a26; --headfg:#e9efeb;
+  --accent:#b4573a; --accent-soft:#f3e4dd; --sel:#e8efe9; --link:#2d6a8a; --ok:#2f7a4f; --okbg:#e1f0e6;
+  --body:"Instrument Sans", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#151816;--surface:#1d211f;--fg:#e7ebe8;--muted:#9aa29c;--line:#2d322f;--head:#0f1412;--headfg:#e7ebe8;--accent:#e08566;--accent-soft:#3a2720;--sel:#25302a;--link:#7fb9d6;--ok:#7cc79a;--okbg:#1d3226;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151816;--surface:#1d211f;--fg:#e7ebe8;--muted:#9aa29c;--line:#2d322f;--head:#0f1412;--headfg:#e7ebe8;--accent:#e08566;--accent-soft:#3a2720;--sel:#25302a;--link:#7fb9d6;--ok:#7cc79a;--okbg:#1d3226;color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;padding-inline:16px;padding-block:12px;box-sizing:border-box}
+.frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);height:calc(100vh - 56px);min-height:520px;display:flex;flex-direction:column}
+header.app{background:var(--head);color:var(--headfg);display:flex;align-items:center;gap:14px;padding:0 14px;height:46px;flex:none}
+header.app .sp{flex:1}
+header.app .av{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.15);display:grid;place-items:center;font-size:11px}
+.body{flex:1;display:flex;min-height:0}
+.canvas{flex:1;min-width:0;display:flex;flex-direction:column}
+.empty{flex:1;display:grid;place-items:center;text-align:center;color:var(--muted);padding:24px}
+.empty h2{margin:0;color:var(--fg);font-weight:500;font-size:18px}
+.empty p{max-width:36ch;margin:6px auto 0}
+.ctabs{display:flex;gap:2px;border-bottom:1px solid var(--line);padding:0 10px;flex-wrap:wrap;align-items:center}
+.ctabs button{all:unset;cursor:pointer;padding:9px 12px;border-bottom:2px solid transparent;font-size:13px}
+.ctabs button[aria-selected="true"]{border-bottom-color:var(--accent);font-weight:600}
+.ctabs .reset{margin-left:auto;color:var(--muted);font-size:12px}
+.bar{display:flex;align-items:center;gap:8px;padding:9px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.bar h3{margin:0;font-size:15px;font-weight:600}
+.bar .sp{flex:1}
+.crumbs{padding:6px 14px;border-bottom:1px solid var(--line);font-size:13px;color:var(--link)}
+.tw{overflow:auto;flex:1}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:600;background:var(--bg);position:sticky;top:0}
+.pill{border-radius:999px;padding:1px 8px;font-size:12px;background:var(--sel)}
+.pill.done{background:var(--okbg);color:var(--ok)}
+.bars{padding:16px;display:flex;flex-direction:column;gap:10px}
+.brow{display:grid;grid-template-columns:150px minmax(0,1fr) 28px;gap:10px;align-items:center}
+.track{height:12px;background:var(--line);border-radius:6px;overflow:hidden}.track i{display:block;height:100%;background:var(--accent)}
+.flow{padding:16px;display:flex;flex-direction:column;gap:8px;max-width:520px}
+.step{border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+.step b{font-size:12px;color:var(--muted);font-weight:600;display:block}
+.btn{all:unset;cursor:pointer;background:var(--fg);color:var(--bg);padding:6px 12px;border-radius:6px;font-weight:500;font-size:13px}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn:focus-visible,.ctabs button:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.panel{width:340px;flex:none;border-left:1px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.panel .ph{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.mark{width:26px;height:26px;border-radius:50%;border:1.5px dashed var(--accent);display:grid;place-items:center;color:var(--accent);font-size:8px;font-family:var(--mono)}
+.msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px}
+.bubble{border-radius:10px;padding:9px 12px;line-height:1.45;max-width:94%}
+.bubble.ai{background:var(--bg)}
+.bubble.me{background:var(--accent-soft);align-self:flex-end}
+.prop{border:1px solid var(--line);border-radius:8px;padding:9px 11px;margin-top:8px;background:var(--surface);display:flex;flex-direction:column;gap:4px}
+.prop .k{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);font-weight:600}
+.prop .f{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.acts{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 12px 8px}
+.chip{all:unset;cursor:pointer;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted)}
+.panel form{border-top:1px solid var(--line);padding:8px;display:flex;gap:6px}
+.panel input{flex:1;min-width:0;border:1px solid var(--line);border-radius:6px;padding:7px 9px;background:var(--surface);color:var(--fg);font:inherit}
+.note{font-size:12px;color:var(--muted);margin-top:6px}
+.sr{position:absolute;left:-9999px}
+@media (max-width:760px){.body{flex-direction:column}.panel{width:auto;border-left:0;border-top:1px solid var(--line);height:55%}}
+</style>
+
+<div class="frame">
+  <header class="app"><b>CNTA</b><nav aria-label="Area" style="display:flex;gap:4px;margin-left:12px"><span style="padding:5px 10px;border-radius:6px;background:rgba(255,255,255,.14)">Workspace</span><a href="v3-admin.html" style="padding:5px 10px;border-radius:6px;color:var(--headfg);text-decoration:none" title="Shown only to people with the admin role">Admin</a></nav><span class="sp"></span><span class="av">EL</span></header>
+  <div class="body"><section class="canvas" id="canvas" aria-label="Your workspace"></section>
+    <aside class="panel" aria-label="Claude"><div class="ph"><div class="mark" title="Claude logo slot">logo</div><b>Claude</b></div><div class="msgs" id="msgs"></div><div class="chips" id="chips"></div>
+      <form id="form"><label for="m" class="sr">Message</label><input id="m" placeholder="Describe your work…" autocomplete="off"><button class="btn" type="submit">Send</button></form></aside></div>
+</div>
+<p class="note">Mockup with scripted answers and example data. Logo slot pending Anthropic brand approval.</p>
+
+<script>
+// Scripted conversation: each step proposes things; "Build it" adds them to the canvas as tabs (customer-layer rows in the real app).
+const RETURNS = [['TAX0010001','Northwind Bakery LLC','1120-S','Waiting on documents','Avery Example','Mar 16'],['TAX0010002','Juniper & Rowe','1065','In preparation','Avery Example','Mar 16'],['TAX0010003','Dana Fictional','1040','In review','Lee Placeholder','Apr 15'],['TAX0010004','Harbor Lane Dental','1120','Client signature','Avery Example','Apr 15'],['TAX0010005','Sam Testperson','1040','E-filed','Lee Placeholder','Apr 15']];
+const STEPS = [
+  { say:'I track tax returns from documents to e-file. I chase missing documents a lot.',
+    reply:'Got it. Here is what I would build. Nothing changes until you say so, and you can undo it.',
+    props:[{ id:'returns', k:'Table + list', t:'Tax returns', f:'number · client · form · stage · preparer · due date' },{ id:'chase', k:'Automation (off)', t:'Chase missing documents', f:'stage = Waiting on documents for 7 days → email the client the missing list' }] },
+  { say:'Also show me how many returns are in each stage.',
+    reply:'Here is a report on the Tax returns table you just added.',
+    props:[{ id:'report', k:'Report', t:'Returns by stage', f:'bar chart · count of Tax returns grouped by stage' }] }
+];
+let S = { msgs:[{ ai:true, t:'Hi Eric. What does your day look like? Describe your work and I will build what you need.' }], built:[], view:null, step:0, pending:null };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const TITLES = { returns:'Tax returns', chase:'Chase missing documents', report:'Returns by stage' };
+
+function canvas(){
+  if (!S.built.length) return '<div class="empty"><div><h2>Nothing here yet</h2><p>Tell Claude about your work. What it builds for you appears here.</p></div></div>';
+  const v = S.view || S.built[0];
+  let h = '<div class="ctabs" role="tablist">' + S.built.map(id => '<button role="tab" data-v="' + id + '" aria-selected="' + (id === v) + '">' + TITLES[id] + '</button>').join('') + '<button class="reset" id="reset">Reset to stock</button></div>';
+  if (v === 'returns') h += '<div class="bar"><h3>Tax returns</h3><span class="sp"></span><button class="btn ghost">Filter</button><button class="btn">New</button></div><div class="crumbs">All › Stage is not E-filed</div><div class="tw"><table><thead><tr><th>Number</th><th>Client</th><th>Form</th><th>Stage</th><th>Preparer</th><th>Due date</th></tr></thead><tbody>' +
+    RETURNS.map(r => '<tr><td>' + r[0] + '</td><td>' + esc(r[1]) + '</td><td>' + r[2] + '</td><td><span class="pill' + (r[3] === 'E-filed' ? ' done' : '') + '">' + r[3] + '</span></td><td>' + esc(r[4]) + '</td><td>' + r[5] + '</td></tr>').join('') + '</tbody></table></div>';
+  else if (v === 'report'){ const st = ['Waiting on documents','In preparation','In review','Client signature','E-filed']; h += '<div class="bar"><h3>Returns by stage</h3></div><div class="bars" role="img" aria-label="Returns by stage">' + st.map(s => { const n = RETURNS.filter(r => r[3] === s).length; return '<div class="brow"><span>' + s + '</span><div class="track"><i style="width:' + n * 100 + '%"></i></div><span>' + n + '</span></div>'; }).join('') + '</div>'; }
+  else h += '<div class="bar"><h3>Chase missing documents</h3><span class="pill">Off until you switch it on</span><span class="sp"></span><button class="btn" type="button">Switch on</button></div><div class="flow"><div class="step"><b>When</b>A tax return has stage Waiting on documents for 7 days</div><div class="step"><b>Then</b>Email the client the list of missing documents</div><div class="step"><b>Repeat</b>Every 7 days until the documents arrive</div></div>';
+  return h;
+}
+function msgs(){
+  return S.msgs.map((m, i) => '<div class="bubble ' + (m.ai ? 'ai' : 'me') + '">' + esc(m.t) +
+    (m.props ? m.props.map(p => '<div class="prop"><span class="k">' + p.k + '</span><b>' + esc(p.t) + '</b><span class="f">' + esc(p.f) + '</span></div>').join('') +
+      (S.pending === i ? '<div class="acts"><button class="btn" data-build="' + i + '">Build it</button><button class="btn ghost" data-skip="' + i + '">Not now</button></div>' : '') : '') + '</div>').join('');
+}
+function render(){
+  document.getElementById('canvas').innerHTML = canvas();
+  const box = document.getElementById('msgs'); box.innerHTML = msgs(); box.scrollTop = box.scrollHeight;
+  const next = STEPS[S.step];
+  document.getElementById('chips').innerHTML = next && S.pending == null ? '<button class="chip" id="try">Try: "' + esc(next.say.slice(0, 38)) + '…"</button>' : '';
+  const t = document.getElementById('try'); if (t) t.onclick = () => send(next.say);
+  document.querySelectorAll('[data-v]').forEach(b => b.onclick = () => { S.view = b.dataset.v; render(); });
+  document.querySelectorAll('[data-build]').forEach(b => b.onclick = () => { const m = S.msgs[+b.dataset.build]; m.props.forEach(p => { if (!S.built.includes(p.id)) S.built.push(p.id); }); S.view = m.props[0].id; S.pending = null; S.msgs.push({ ai:true, t:'Done. ' + m.props.map(p => p.t).join(' and ') + ' ' + (m.props.length > 1 ? 'are' : 'is') + ' in your workspace. Automations stay off until you switch them on.' }); render(); });
+  document.querySelectorAll('[data-skip]').forEach(b => b.onclick = () => { S.pending = null; S.msgs.push({ ai:true, t:'No problem. Nothing was changed.' }); render(); });
+  const r = document.getElementById('reset'); if (r) r.onclick = () => { S.built = []; S.view = null; S.msgs.push({ ai:true, t:'Back to stock. Everything I built is removed and backed up, so you can bring it back.' }); render(); };
+}
+function send(text){
+  S.msgs.push({ ai:false, t:text });
+  const step = STEPS[S.step];
+  if (step && S.pending == null){ S.msgs.push({ ai:true, t:step.reply, props:step.props }); S.pending = S.msgs.length - 1; S.step++; }
+  else S.msgs.push({ ai:true, t:'In the real app I would turn that into fields, lists or automations for you to approve. In this mockup, try the suggestion below.' });
+  render();
+}
+document.getElementById('form').onsubmit = e => { e.preventDefault(); const i = document.getElementById('m'); const v = i.value.trim(); if (!v) return; i.value = ''; send(v); };
+render();
+</script>
+
+</body>
+</html>

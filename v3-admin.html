@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>body{margin:0;font-family:system-ui,sans-serif;font-size:14px}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>CNTA v3 Admin</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: SN frame = dark header, simple named navigator, one list block (with SN filter) and one form block (tabs + related lists), Claude panel right. */
+:root{
+  --bg:#f6f7f5; --surface:#fff; --fg:#1d2320; --muted:#68706b; --line:#e2e4e0; --head:#1f2a26; --headfg:#e9efeb;
+  --accent:#b4573a; --accent-soft:#f3e4dd; --sel:#e8efe9; --link:#2d6a8a;
+  --body:"Instrument Sans", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#151816;--surface:#1d211f;--fg:#e7ebe8;--muted:#9aa29c;--line:#2d322f;--head:#0f1412;--headfg:#e7ebe8;--accent:#e08566;--accent-soft:#3a2720;--sel:#25302a;--link:#7fb9d6;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151816;--surface:#1d211f;--fg:#e7ebe8;--muted:#9aa29c;--line:#2d322f;--head:#0f1412;--headfg:#e7ebe8;--accent:#e08566;--accent-soft:#3a2720;--sel:#25302a;--link:#7fb9d6;color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;padding-inline:16px;padding-block:12px;box-sizing:border-box}
+.frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);height:calc(100vh - 56px);min-height:520px;display:flex;flex-direction:column}
+header.app{background:var(--head);color:var(--headfg);display:flex;align-items:center;gap:14px;padding:0 14px;height:46px;flex:none}
+header.app .brand{font-weight:600}
+header.app .search{flex:1;max-width:360px;background:rgba(255,255,255,.08);border-radius:6px;padding:6px 10px;color:rgba(233,239,235,.65);font-size:13px}
+header.app .sp{flex:1}
+header.app .av{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.15);display:grid;place-items:center;font-size:11px}
+.body{flex:1;display:flex;min-height:0}
+.nav{width:210px;flex:none;border-right:1px solid var(--line);overflow:auto;padding:10px 8px}
+.nav input{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:6px;padding:6px 8px;margin-bottom:6px;background:var(--surface);color:var(--fg);font:inherit}
+.nav h4{font-size:12px;font-weight:600;margin:10px 6px 4px}
+.nav button{all:unset;display:block;cursor:pointer;padding:5px 8px 5px 14px;border-radius:6px;width:100%;box-sizing:border-box}
+.nav button[aria-current="true"],.nav button:hover{background:var(--sel)}
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+.bar{display:flex;align-items:center;gap:8px;padding:9px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.bar h3{margin:0;font-size:15px;font-weight:600}
+.bar .sp{flex:1}
+.btn{all:unset;cursor:pointer;background:var(--fg);color:var(--bg);padding:6px 12px;border-radius:6px;font-weight:500;font-size:13px}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn:focus-visible,.nav button:focus-visible,.crumbs button:focus-visible,.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.crumbs{display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:6px 14px;border-bottom:1px solid var(--line);font-size:13px}
+.crumbs button{all:unset;cursor:pointer;color:var(--link)}
+.crumbs .sep{color:var(--muted)}
+.cond{padding:10px 14px;border-bottom:1px solid var(--line);background:var(--bg);display:flex;flex-direction:column;gap:8px}
+.crow{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.crow select,.crow input{border:1px solid var(--line);border-radius:6px;padding:5px 7px;background:var(--surface);color:var(--fg);font:inherit;font-size:13px}
+.tw{overflow:auto;flex:1}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:600;background:var(--bg);position:sticky;top:0}
+td a{color:var(--link);cursor:pointer;text-decoration:none}
+tbody tr:hover{background:var(--sel)}
+.pill{border-radius:999px;padding:1px 8px;font-size:12px;background:var(--sel)}
+.fwrap{overflow:auto;flex:1;padding:14px 18px;display:flex;flex-direction:column;gap:14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+.fld{display:flex;flex-direction:column;gap:3px;min-width:0}
+.fld label{font-size:12px;color:var(--muted)}
+.fld .v{border:1px solid var(--line);border-radius:6px;padding:6px 9px;min-height:18px;background:var(--surface)}
+.fld.wide{grid-column:1/-1}
+.fld .v.code{font-family:var(--mono);font-size:12px;white-space:pre;background:var(--bg);overflow:auto;min-height:96px}
+.fld .v.chk{border:0;padding:0}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line)}
+.tabs button{all:unset;cursor:pointer;padding:7px 12px;border-bottom:2px solid transparent;font-size:13px}
+.tabs button[aria-selected="true"]{border-bottom-color:var(--accent);font-weight:600}
+.rel h4{margin:0 0 6px;font-size:13px}
+.relbox{border:1px solid var(--line);border-radius:8px;overflow:auto}
+.panel{width:270px;flex:none;border-left:1px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.panel .ph{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line)}
+.mark{width:24px;height:24px;border-radius:50%;border:1.5px dashed var(--accent);display:grid;place-items:center;color:var(--accent);font-size:8px;font-family:var(--mono)}
+.panel .msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.bubble{border-radius:10px;padding:8px 11px;background:var(--bg);line-height:1.45}
+.panel form{border-top:1px solid var(--line);padding:8px;display:flex;gap:6px}
+.panel input{flex:1;min-width:0;border:1px solid var(--line);border-radius:6px;padding:7px 9px;background:var(--surface);color:var(--fg);font:inherit}
+.note{font-size:12px;color:var(--muted);margin-top:6px}
+.sr{position:absolute;left:-9999px}
+@media (max-width:900px){.panel{display:none}}
+@media (max-width:640px){.nav{width:130px}.grid{grid-template-columns:1fr}}
+</style>
+
+<div class="frame" id="frame"></div>
+<p class="note">Mockup with example data. Field names follow the ServiceNow tables. Logo slot pending Anthropic brand approval.</p>
+
+<script>
+// Each area = one table + list columns + form (tabs of fields) + related lists. The list/form blocks below draw all of them.
+const F = (l, v, t) => ({ l, v, t });
+const AREAS = [
+ { k:'si', t:'Script Includes', table:'sys_script_include', cols:['Name','API name','Client callable','Active','Updated'],
+   rows:[['TaxDeadlineUtil','global.TaxDeadlineUtil','false','true','2026-10-20'],['ReturnStageHelper','global.ReturnStageHelper','true','true','2026-10-18']],
+   tabs:[{ n:'Script include', f:[F('Name','{0}'),F('API name','{1}'),F('Application','Global'),F('Accessible from','This application scope only'),F('Client callable','{2}','chk'),F('Active','{3}','chk'),F('Description','Due-date helpers for tax cases','wide'),F('Script',"var TaxDeadlineUtil = Class.create();\nTaxDeadlineUtil.prototype = {\n  initialize: function() {},\n  type: 'TaxDeadlineUtil'\n};",'code')] }] },
+ { k:'cs', t:'Client Scripts', table:'sys_script_client', cols:['Name','Table','Type','Field name','Active'],
+   rows:[['Require reviewer','x_cnta_tax_case','onSubmit','','true'],['Due date hint','x_cnta_tax_case','onChange','due_date','true']],
+   tabs:[{ n:'Client script', f:[F('Name','{0}'),F('Table','{1}'),F('UI Type','Desktop'),F('Type','{2}'),F('Field name','{3}'),F('Active','{4}','chk'),F('Inherited','false','chk'),F('Global','true','chk'),F('Script',"function onSubmit() {\n  if (!g_form.getValue('reviewer')) {\n    g_form.addErrorMessage('Pick a reviewer');\n    return false;\n  }\n}",'code')] }] },
+ { k:'acl', t:'Access Control (ACL)', table:'sys_security_acl', cols:['Name','Operation','Type','Admin overrides','Active'],
+   rows:[['x_cnta_tax_case','read','record','true','true'],['x_cnta_tax_case.ssn','read','record','false','true']],
+   tabs:[{ n:'Access control', f:[F('Type','{2}'),F('Operation','{1}'),F('Name','{0}'),F('Active','{4}','chk'),F('Admin overrides','{3}','chk'),F('Advanced','false','chk'),F('Condition',[['Assigned to','is (dynamic)','Me']],'cond')] }],
+   rel:[{ t:'Requires role', cols:['Role'], rows:[['preparer'],['reviewer']] }] },
+ { k:'dict', t:'Dictionary', table:'sys_dictionary', cols:['Table','Column label','Column name','Type','Mandatory'],
+   rows:[['x_cnta_tax_case','Stage','stage','Choice','true'],['x_cnta_tax_case','Due date','due_date','Date','false']],
+   tabs:[{ n:'Dictionary entry', f:[F('Table','{0}'),F('Type','{3}'),F('Column label','{1}'),F('Column name','{2}'),F('Max length','40'),F('Mandatory','{4}','chk'),F('Read only','false','chk'),F('Active','true','chk'),F('Default value','')] }],
+   rel:[{ t:'Choices', cols:['Label','Value','Sequence'], rows:[['Waiting on documents','docs','100'],['In preparation','prep','200'],['In review','review','300']] }] },
+ { k:'usr', t:'Users', group:'Users and Groups', table:'sys_user', cols:['User ID','Name','Email','Active'],
+   rows:[['avery.example','Avery Example','avery@example.com','true'],['kim.sample','Kim Sample','kim@example.com','true']],
+   tabs:[{ n:'User', f:[F('User ID','{0}'),F('Name','{1}'),F('Email','{2}'),F('Active','{3}','chk'),F('Locked out','false','chk'),F('Time zone','America/Chicago')] }],
+   rel:[{ t:'Roles', cols:['Role','Inherited'], rows:[['preparer','false']] },{ t:'Groups', cols:['Group'], rows:[['Preparers']] }] },
+ { k:'grp', t:'Groups', group:'Users and Groups', table:'sys_user_group', cols:['Name','Manager','Active'], rows:[['Preparers','Chloe Example','true'],['Reviewers','Kim Sample','true']],
+   tabs:[{ n:'Group', f:[F('Name','{0}'),F('Manager','{1}'),F('Active','{2}','chk'),F('Description','Staff who prepare returns','wide')] }],
+   rel:[{ t:'Group members', cols:['User'], rows:[['Avery Example'],['Lee Placeholder']] },{ t:'Roles', cols:['Role'], rows:[['preparer']] }] },
+ { k:'role', t:'Roles', group:'Users and Groups', table:'sys_user_role', cols:['Name','Description','Elevated'], rows:[['preparer','Prepares tax returns','false'],['reviewer','Reviews prepared returns','false']],
+   tabs:[{ n:'Role', f:[F('Name','{0}'),F('Elevated privilege','{2}','chk'),F('Description','{1}','wide')] }],
+   rel:[{ t:'Contains roles', cols:['Role'], rows:[['itil']] }] },
+ { k:'br', t:'Business Rules', table:'sys_script', cols:['Name','Table','When','Order','Active'],
+   rows:[['Set stage on prepared','x_cnta_tax_case','before','100','true'],['Notify reviewer','x_cnta_tax_case','after','200','true']],
+   tabs:[{ n:'When to run', f:[F('Name','{0}'),F('Table','{1}'),F('Active','{4}','chk'),F('Advanced','true','chk'),F('When','{2}'),F('Order','{3}'),F('Insert','true','chk'),F('Update','true','chk'),F('Filter Conditions',[['Stage','changes to','In preparation']],'cond')] },
+         { n:'Actions', f:[F('Set field values',[['Stage','to','In preparation']],'cond'),F('Add message','false','chk')] },
+         { n:'Advanced', f:[F('Condition',"current.stage.changes()",'wide'),F('Script',"(function executeRule(current, previous) {\n  current.prepared_on = new GlideDateTime();\n})(current, previous);",'code')] }] },
+ { k:'ntf', t:'Notifications', table:'sysevent_email_action', cols:['Name','Table','Send when','Active'],
+   rows:[['Documents missing','x_cnta_tax_case','Record inserted or updated','true'],['8879 ready to sign','x_cnta_tax_case','Event is fired','true']],
+   tabs:[{ n:'When to send', f:[F('Name','{0}'),F('Table','{1}'),F('Active','{3}','chk'),F('Category','Tax cases'),F('Send when','{2}'),F('Updated','true','chk'),F('Conditions',[['Stage','is','Waiting on documents'],['Due date','relative after','7 days','AND']],'cond')] },
+         { n:'Who will receive', f:[F('Users/Groups in fields','Client'),F('Groups','Preparers'),F('Send to event creator','false','chk')] },
+         { n:'What it will contain', f:[F('Subject','We are still missing documents for ${number}','wide'),F('Message HTML',"Hi ${client.first_name},\n\nWe still need: ${missing_documents}.\nUpload them here: ${portal_link}",'code')] }] },
+ { k:'sla', t:'SLA Definitions', table:'contract_sla', cols:['Name','Table','Duration','Schedule','Active'],
+   rows:[['Return prepared within 10 days','x_cnta_tax_case','10 Days','Business days 8-5','true'],['Reply to client within 1 day','x_cnta_tax_case','1 Day','Business days 8-5','true']],
+   tabs:[{ n:'SLA definition', f:[F('Name','{0}'),F('Table','{1}'),F('Duration type','User specified duration'),F('Duration','{2}'),F('Schedule','{3}'),F('Timezone source','The SLA definition's time zone'),F('Active','{4}','chk')] },
+         { n:'Start condition', f:[F('Start condition',[['Stage','is','In preparation']],'cond')] },
+         { n:'Pause condition', f:[F('Pause condition',[['Stage','is','Waiting on documents']],'cond')] },
+         { n:'Stop condition', f:[F('Stop condition',[['Stage','is one of','Client signature, E-filed']],'cond')] }],
+   rel:[{ t:'Task SLAs', cols:['Task','Stage','Business elapsed','Has breached'], rows:[['TAX0010001','In progress','62%','false'],['TAX0010007','Paused','40%','false']] }] },
+ { k:'cat', t:'Catalog Items', table:'sc_cat_item', cols:['Name','Category','Price','Active'],
+   rows:[['Individual return (1040)','Tax returns','$350.00','true'],['ITIN application','Immigration','$200.00','true']],
+   tabs:[{ n:'Item details', f:[F('Name','{0}'),F('Catalogs','Service Catalog'),F('Category','{1}'),F('Price','{2}'),F('Active','{3}','chk'),F('Short description','File your 2025 federal and state return','wide')] }],
+   rel:[{ t:'Variables', cols:['Question','Type','Mandatory'], rows:[['Filing status','Select Box','true'],['Dependents','Single Line Text','false']] }] }
+];
+const NAV = [['System Definition',['si','cs','br','dict']],['System Security',['acl']],['Users and Groups',['usr','grp','role']],['System Notification',['ntf']],['Service Level Management',['sla']],['Service Catalog',['cat']]];
+let S = { area:'br', rec:null, tab:0, filterOpen:false, conds:[{ f:'Active', op:'is', v:'true' }], navq:'' };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const A = () => AREAS.find(a => a.k === S.area);
+
+function nav(){
+  const q = S.navq.toLowerCase();
+  return '<nav class="nav" aria-label="Navigator"><label for="nf" class="sr">Filter navigator</label><input id="nf" placeholder="Filter navigator" value="' + esc(S.navq) + '">' +
+    NAV.map(([g, ks]) => { const items = ks.map(k => AREAS.find(a => a.k === k)).filter(a => !q || a.t.toLowerCase().includes(q) || g.toLowerCase().includes(q));
+      return items.length ? '<h4>' + g + '</h4>' + items.map(a => '<button data-a="' + a.k + '"' + (a.k === S.area ? ' aria-current="true"' : '') + '>' + esc(a.t) + '</button>').join('') : ''; }).join('') + '</nav>';
+}
+function rowsFiltered(a){
+  return a.rows.filter(r => S.conds.every(c => { const i = a.cols.indexOf(c.f); if (i < 0) return true; const x = String(r[i]).toLowerCase(), y = String(c.v).toLowerCase();
+    return c.op === 'is' ? x === y : c.op === 'is not' ? x !== y : x.includes(y); }));
+}
+function list(){
+  const a = A(), rows = rowsFiltered(a);
+  const crumbs = '<div class="crumbs" aria-label="Filter breadcrumbs"><button data-crumb="-1">All</button>' + S.conds.map((c, i) => '<span class="sep">›</span><button data-crumb="' + i + '">' + esc(c.f + ' ' + c.op + ' ' + c.v) + '</button>').join('') + '</div>';
+  const builder = S.filterOpen ? '<div class="cond">' + S.conds.map((c, i) => '<div class="crow"><label class="sr" for="cf' + i + '">Field</label><select id="cf' + i + '" data-ci="' + i + '" data-k="f">' + a.cols.concat(S.conds.map(x=>x.f)).filter((v,j,arr)=>arr.indexOf(v)===j).map(x => '<option' + (x === c.f ? ' selected' : '') + '>' + esc(x) + '</option>').join('') + '</select>' +
+      '<label class="sr" for="co' + i + '">Operator</label><select id="co' + i + '" data-ci="' + i + '" data-k="op">' + ['is','is not','contains'].map(o => '<option' + (o === c.op ? ' selected' : '') + '>' + o + '</option>').join('') + '</select>' +
+      '<label class="sr" for="cv' + i + '">Value</label><input id="cv' + i + '" data-ci="' + i + '" data-k="v" value="' + esc(c.v) + '"><button class="btn ghost" data-del="' + i + '">Remove</button></div>').join('') +
+      '<div class="crow"><button class="btn ghost" id="and">AND</button><button class="btn ghost" id="or" title="OR shown for the mockup">OR</button><span style="flex:1"></span><button class="btn" id="run">Run</button></div></div>' : '';
+  return '<div class="bar"><button class="btn ghost" id="funnel" aria-expanded="' + S.filterOpen + '">Filter</button><h3>' + esc(a.t) + '</h3><span class="sp"></span><button class="btn">New</button></div>' + builder + crumbs +
+    '<div class="tw"><table><thead><tr>' + a.cols.map(c => '<th>' + esc(c) + '</th>').join('') + '</tr></thead><tbody>' +
+    (rows.length ? rows.map(r => '<tr>' + r.map((v, i) => '<td>' + (i === 0 ? '<a data-r="' + a.rows.indexOf(r) + '">' + esc(v) + '</a>' : (v === 'true' || v === 'false') ? '<span class="pill">' + v + '</span>' : esc(v)) + '</td>').join('') + '</tr>').join('')
+      : '<tr><td colspan="' + a.cols.length + '">No records to display</td></tr>') + '</tbody></table></div>';
+}
+function fieldHtml(f, r){
+  if (f.t === 'cond') return '<div class="fld wide"><label>' + esc(f.l) + '</label><div class="cond" style="border:1px solid var(--line);border-radius:6px">' +
+    f.v.map((c, i) => '<div class="crow">' + (i ? '<span class="pill">' + (c[3] || 'AND') + '</span>' : '') + '<select aria-label="Field"><option>' + esc(c[0]) + '</option></select><select aria-label="Operator"><option>' + esc(c[1]) + '</option></select><input aria-label="Value" value="' + esc(c[2]) + '"></div>').join('') +
+    '<div class="crow"><button class="btn ghost" type="button">AND</button><button class="btn ghost" type="button">OR</button></div></div></div>';
+  const v = String(f.v).replace(/\{(\d)\}/g, (_, i) => r[+i]);
+  if (f.t === 'chk') return '<div class="fld"><label>' + esc(f.l) + '</label><div class="v chk"><input type="checkbox" disabled' + (v === 'true' ? ' checked' : '') + ' aria-label="' + esc(f.l) + '"></div></div>';
+  return '<div class="fld' + (f.t === 'wide' || f.t === 'code' ? ' wide' : '') + '"><label>' + esc(f.l) + '</label><div class="v' + (f.t === 'code' ? ' code' : '') + '">' + esc(v) + '</div></div>';
+}
+function form(){
+  const a = A(), r = a.rows[S.rec], tabs = a.tabs, t = tabs[Math.min(S.tab, tabs.length - 1)];
+  return '<div class="bar"><button class="btn ghost" id="back">‹ ' + esc(a.t) + '</button><h3>' + esc(r[0]) + '</h3><span class="sp"></span><button class="btn ghost">Delete</button><button class="btn">Update</button></div>' +
+    '<div class="fwrap">' + (tabs.length > 1 ? '<div class="tabs" role="tablist">' + tabs.map((x, i) => '<button role="tab" data-tab="' + i + '" aria-selected="' + (x === t) + '">' + esc(x.n) + '</button>').join('') + '</div>' : '') +
+    '<div class="grid">' + t.f.map(f => fieldHtml(f, r)).join('') + '</div>' +
+    (a.rel || []).map(x => '<div class="rel"><h4>' + esc(x.t) + '</h4><div class="relbox"><table><thead><tr>' + x.cols.map(c => '<th>' + esc(c) + '</th>').join('') + '</tr></thead><tbody>' + x.rows.map(rr => '<tr>' + rr.map(v => '<td>' + esc(v) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div></div>').join('') + '</div>';
+}
+function render(){
+  const a = A();
+  document.getElementById('frame').innerHTML = '<header class="app"><span class="brand">CNTA</span><a href="v3-staff.html" style="color:var(--headfg);text-decoration:none;padding:5px 10px;border-radius:6px">Workspace</a><span style="padding:5px 10px;border-radius:6px;background:rgba(255,255,255,.14)">Admin</span><span class="search">Search</span><span class="sp"></span><span class="av">EL</span></header><div class="body">' + nav() +
+    '<div class="main">' + (S.rec == null ? list() : form()) + '</div><aside class="panel" aria-label="Claude"><div class="ph"><div class="mark">logo</div><b>Claude</b></div><div class="msgs"><div class="bubble">Ask me to change ' + esc(a.t) + ', or describe a new one. Example: "notify the reviewer when a return moves to In review".</div></div><form onsubmit="event.preventDefault()"><label for="m" class="sr">Message</label><input id="m" placeholder="Ask Claude…"><button class="btn" type="submit">Send</button></form></aside></div>';
+  const nf = document.getElementById('nf'); nf.oninput = () => { S.navq = nf.value; render(); const n = document.getElementById('nf'); n.focus(); n.setSelectionRange(n.value.length, n.value.length); };
+  document.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { S.area = b.dataset.a; S.rec = null; S.tab = 0; S.conds = [{ f:'Active', op:'is', v:'true' }]; render(); });
+  document.querySelectorAll('a[data-r]').forEach(x => x.onclick = () => { S.rec = +x.dataset.r; S.tab = 0; render(); });
+  document.querySelectorAll('[data-tab]').forEach(x => x.onclick = () => { S.tab = +x.dataset.tab; render(); });
+  document.querySelectorAll('[data-crumb]').forEach(x => x.onclick = () => { S.conds = S.conds.slice(0, +x.dataset.crumb + 1); render(); });
+  document.querySelectorAll('[data-ci]').forEach(x => x.onchange = () => { S.conds[+x.dataset.ci][x.dataset.k] = x.value; });
+  document.querySelectorAll('[data-del]').forEach(x => x.onclick = () => { S.conds.splice(+x.dataset.del, 1); render(); });
+  const on = (id, fn) => { const e = document.getElementById(id); if (e) e.onclick = fn; };
+  on('back', () => { S.rec = null; render(); });
+  on('funnel', () => { S.filterOpen = !S.filterOpen; render(); });
+  on('and', () => { S.conds.push({ f: a.cols[0], op:'contains', v:'' }); render(); });
+  on('or', () => { S.conds.push({ f: a.cols[0], op:'contains', v:'' }); render(); });
+  on('run', () => { S.filterOpen = false; render(); });
+}
+render();
+</script>
+
+</body>
+</html>

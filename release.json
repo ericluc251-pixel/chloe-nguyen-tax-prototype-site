@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-21T18:12:25Z",
-  "commit": "29fee77",
+  "built": "2026-10-21T20:35:29Z",
+  "commit": "d44197a",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -581,7 +581,7 @@
     },
     {
       "file": "src/js/09-platform-integrations.js",
-      "bytes": 28982
+      "bytes": 30011
     },
     {
       "file": "src/js/10-ws-shell.js",
@@ -961,7 +961,7 @@
     },
     {
       "file": "src/js/119-scripts.js",
-      "bytes": 122864
+      "bytes": 123947
     },
     {
       "file": "src/js/120-portal-builder.js",
@@ -1069,7 +1069,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 124009
+      "bytes": 124056
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1137,7 +1137,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 122570
+      "bytes": 125134
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1349,7 +1349,7 @@
     },
     {
       "file": "src/js/227-updset-sn.js",
-      "bytes": 139693
+      "bytes": 140658
     },
     {
       "file": "src/js/230-wf-spec-view.js",
@@ -1378,6 +1378,14 @@
     {
       "file": "src/js/246-inbound-actions.js",
       "bytes": 4079
+    },
+    {
+      "file": "src/js/247-sla-display.js",
+      "bytes": 8393
+    },
+    {
+      "file": "src/js/248-transform-maps.js",
+      "bytes": 36871
     },
     {
       "file": "src/js/249-foundation-tables.js",
@@ -1440,5 +1448,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-99249390ee"
+  "sw": "cnta-c8013e1bc1"
 }

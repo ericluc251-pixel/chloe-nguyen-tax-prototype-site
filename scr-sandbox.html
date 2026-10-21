@@ -93,7 +93,6 @@ GlideElement.prototype = {
   getDisplayValue: function(){ var s = GE.get(this); return dispVal(s.t, s.f, elRaw(this)); },
   setDisplayValue: function(dv){ var s = GE.get(this), rt = refT(s.t, s.f); if (!rt || !hasT(rt)) return this.setValue(dv);
     var rs = T[rt], d = dt(rt); for (var i = 0; i < rs.length; i++) if (recDisplay(rt, rs[i]) === kstr(dv)) return this.setValue(d && d.key ? rs[i][d.key] : refKey(s.t, s.f, rs[i])); return this.setValue(dv); },
-  getBooleanValue: function(){ var v = elRaw(this); return v === true || v === 1 || v === 'true' || v === '1'; },
   nil: function(){ var v = elRaw(this); return v == null || kstr(v) === ''; },
   changes: function(){ var s = GE.get(this), b = s.base ? s.base() : null; return kstr(b ? b[s.f] : null) !== kstr(elRaw(this)); },
   changesFrom: function(x){ var s = GE.get(this), b = s.base ? s.base() : null; return this.changes() && kstr(b ? b[s.f] : null) === kstr(unwrap(x)); },
@@ -270,7 +269,7 @@ GRP.chooseWindow = function(first, last){ st(this).win = [Math.max(0, Math.floor
 GRP.setWorkflow = function(b){ st(this).wf = b !== false; };
 GRP.autoSysFields = function(b){ st(this).sysf = b !== false; };
 GRP.setForceUpdate = function(b){ st(this).force = b !== false; };
-GRP.setQueryReason = function(){}; GRP.setCategory = function(){};
+GRP.setCategory = function(){};
 // Query business rules (when = before, Query ticked): run before every GlideRecord / GlideAggregate query and get() on their table, with
 // current = a GlideRecord on that table; the conditions they add (current.addQuery(...)) filter the rows. Not for setWorkflow(false);
 // a query made inside a query rule on the same table does not run the rules again (recursion guard). Rules come from the host (qrules).
@@ -444,7 +443,6 @@ GlideDateTime.prototype = {
   isValid: function(){ return !isNaN(this.__ms); },
   getDate: function(){ var g = new GlideDate(); g.__ms = Math.floor(this.__ms / 864e5) * 864e5; return g; },
   getLocalDate: function(){ var g = new GlideDate(); g.__ms = Math.floor(toLocal(this.__ms) / 864e5) * 864e5; return g; },
-  getByFormat: function(fmt){ return fmt == null ? this.getDisplayValue() : javaFmt(toLocal(this.__ms), fmt); },
   getTime: function(){ var ms = this.__ms; return { getValue: function(){ return fmtDT(ms).slice(11); }, getByFormat: function(){ return fmtDT(ms).slice(11); } }; },
   getLocalTime: function(){ var ms = toLocal(this.__ms); return { getValue: function(){ return fmtDT(ms).slice(11); }, getByFormat: function(){ return fmtDT(ms).slice(11); } }; },
   getTZOffset: function(){ return tzOff(this.__ms); },
@@ -471,7 +469,7 @@ GlideDateTime.prototype = {
   getDaysInMonthUTC: function(){ var d = new Date(this.__ms); return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 0)).getUTCDate(); }
 };
 GlideDateTime.subtract = function(a, b){ return new GlideDuration(gdtMs(b) - gdtMs(a)); };
-// Java-style date patterns (yyyy MM dd HH hh mm ss a EEE EEEE MMM MMMM, 'quoted text'), the pattern language GlideDate/GlideDateTime.getByFormat uses
+// Java-style date patterns (yyyy MM dd HH hh mm ss a EEE EEEE MMM MMMM, 'quoted text'), the pattern language GlideDate.getByFormat uses
 function javaFmt(ms, fmt){
   var d = new Date(ms), D3 = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], D9 = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], M3 = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], M9 = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var h = d.getUTCHours();
@@ -488,8 +486,8 @@ GlideDate.prototype = {
   constructor: GlideDate,
   getValue: function(){ return isNaN(this.__ms) ? '' : fmtDT(this.__ms).slice(0, 10); }, toString: function(){ return this.getValue(); }, toJSON: function(){ return this.getValue(); },
   getDisplayValue: function(){ return this.getValue(); }, setValue: function(v){ var ms = parseDT(unwrap(v)); this.__ms = isNaN(ms) ? NaN : Math.floor(ms / 864e5) * 864e5; }, setDisplayValue: function(v){ this.setValue(v); },
-  getByFormat: function(fmt){ return fmt == null ? this.getValue() : javaFmt(this.__ms, fmt); }, addDays: function(n){ this.__ms += Math.trunc(Number(n) || 0) * 864e5; }, addDaysUTC: function(n){ this.addDays(n); },
-  getNumericValue: function(){ return this.__ms; }, getDayOfMonthNoTZ: function(){ return new Date(this.__ms).getUTCDate(); }, getMonthNoTZ: function(){ return new Date(this.__ms).getUTCMonth() + 1; }, getYearNoTZ: function(){ return new Date(this.__ms).getUTCFullYear(); }
+  getByFormat: function(fmt){ return fmt == null ? this.getValue() : javaFmt(this.__ms, fmt); },
+  getDayOfMonthNoTZ: function(){ return new Date(this.__ms).getUTCDate(); }, getMonthNoTZ: function(){ return new Date(this.__ms).getUTCMonth() + 1; }, getYearNoTZ: function(){ return new Date(this.__ms).getUTCFullYear(); }
 };
 GlideDate.subtract = function(a, b){ return new GlideDuration(gdtMs(b) - gdtMs(a)); };
 function GlideDuration(v){ if (!(this instanceof GlideDuration)) return new GlideDuration(v);
@@ -544,7 +542,7 @@ var gs = Object.freeze({
   getSession: function(){ return gsSession(); },   // one session object (GlideSession.get() returns it too): see the update-set block
   getProperty: function(k, d){ var p = IN.props || {}; k = String(k); if (own.call(p, k) && p[k] != null && p[k] !== '') return kstr(p[k]); return d !== undefined ? d : own.call(p, k) ? '' : null; },   // D11: an existing empty property is ''
   setProperty: function(k){ throw new Error('gs.setProperty("' + String(k) + '"): scripts cannot change system properties (protected control; change them on the System Properties page)'); },
-  nowDateTime: function(){ return fmtDT(nowMs()); }, nowNoTZ: function(){ return fmtDT(nowMs()); }, now: function(){ return IN.today; }, nowDate: function(){ return IN.today; },
+  nowDateTime: function(){ return fmtDT(nowMs()); }, nowNoTZ: function(){ return fmtDT(nowMs()); }, now: function(){ return IN.today; },
   minutesAgo: function(n){ return fmtDT(nowMs() - nint(n) * 60000); }, minutesAgoStart: function(n){ var m = nowMs() - nint(n) * 60000; return fmtDT(m - m % 60000); },
   hoursAgo: function(n){ return fmtDT(nowMs() - nint(n) * 3600000); }, hoursAgoStart: function(n){ var m = nowMs() - nint(n) * 3600000; return fmtDT(m - m % 3600000); }, hoursAgoEnd: function(n){ var m = nowMs() - nint(n) * 3600000; return fmtDT(m - m % 3600000 + 3599000); },
   daysAgo: function(n){ return fmtDT(nowMs() - nint(n) * 864e5); }, daysAgoStart: function(n){ return fmtDT(dayStartLocal(nowMs(), -nint(n))); }, daysAgoEnd: function(n){ return fmtDT(dayEndLocal(nowMs(), -nint(n))); },
@@ -614,7 +612,6 @@ function GlideAjax(proc){ if (!(this instanceof GlideAjax)) return new GlideAjax
 GlideAjax.prototype = {
   constructor: GlideAjax,
   addParam: function(n, v){ this.__p[String(n)] = v == null ? '' : kstr(unwrap(v)); },
-  getParam: function(n){ return own.call(this.__p, n) ? this.__p[n] : null; },
   __run: function(){ try { this.__r = ajaxServe(this.__proc, this.__p); } catch (e) { if (e && e.cntaAbort) throw e; log.error(String(e && e.message || e)); this.__r = { answer: null, items: [], error: String(e && e.message || e) }; } return this.__r; },
   getXMLAnswer: function(cb, extra, rp){ var self = this; later(function(){ var r = self.__run(); if (typeof cb === 'function') cb(r.answer, rp); }); },
   getXML: function(cb, extra, rp){ var self = this; later(function(){ var r = self.__run(); if (typeof cb === 'function') cb(ajaxResp(r), rp); }); },

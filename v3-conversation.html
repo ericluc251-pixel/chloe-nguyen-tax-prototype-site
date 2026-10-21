@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>body{margin:0;font-family:system-ui,sans-serif;font-size:14px}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>CNTA Conversation Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: one quiet column; the conversation is the app. Built items collect in a slim rail that appears only once something exists. */
+:root{
+  --bg:#f7f7f4; --surface:#ffffff; --fg:#1f2421; --muted:#6b716c; --line:#e3e4df;
+  --accent:#b4573a; --accent-soft:#f3e4dd; --ok:#2f7a4f; --ok-soft:#e1f0e6;
+  --display:"Fraunces", Georgia, serif; --body:"Instrument Sans", system-ui, sans-serif; --mono:"JetBrains Mono", ui-monospace, monospace;
+  --r:12px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#161816; --surface:#1e211f; --fg:#e8e9e4; --muted:#9aa09a; --line:#2e322f;
+  --accent:#e08566; --accent-soft:#3a2720; --ok:#7cc79a; --ok-soft:#1d3226; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161816; --surface:#1e211f; --fg:#e8e9e4; --muted:#9aa09a; --line:#2e322f;
+  --accent:#e08566; --accent-soft:#3a2720; --ok:#7cc79a; --ok-soft:#1d3226; color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;padding-inline:16px}
+.app{display:grid;grid-template-columns:1fr;max-width:1080px;margin:0 auto;min-height:100%;gap:24px}
+.app.has-rail{grid-template-columns:200px minmax(0,1fr)}
+.rail{padding-block:28px;display:flex;flex-direction:column;gap:20px;border-right:1px solid var(--line);padding-right:16px}
+.rail h4{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.rail button{all:unset;display:block;cursor:pointer;padding:5px 8px;border-radius:6px;font-size:14px;width:100%;box-sizing:border-box}
+.rail button:hover,.rail button[aria-current="true"]{background:var(--accent-soft)}
+.rail button:focus-visible,.btn:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.rail .reset{color:var(--muted);font-size:13px;margin-top:auto}
+main{min-width:0;display:flex;flex-direction:column;padding-block:28px}
+.home{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;text-align:center;padding-block:48px}
+.mark{width:64px;height:64px;border-radius:50%;border:1.5px dashed var(--accent);display:grid;place-items:center;color:var(--accent);font-family:var(--mono);font-size:10px;line-height:1.2}
+.home h1{font-family:var(--display);font-weight:400;font-size:32px;margin:0;text-wrap:balance}
+.home p{color:var(--muted);margin:0;max-width:46ch}
+.compose{width:100%;max-width:640px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px;display:flex;flex-direction:column;gap:10px;box-sizing:border-box}
+.compose textarea{all:unset;min-height:72px;font:inherit;color:var(--fg);text-align:left;white-space:pre-wrap}
+.compose .row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:640px}
+.chip{all:unset;cursor:pointer;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--muted);background:var(--surface)}
+.chip:hover{color:var(--fg);border-color:var(--muted)}
+.btn{all:unset;cursor:pointer;background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:8px;font-weight:500;font-size:14px}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn.small{padding:5px 10px;font-size:13px}
+.note{font-size:12px;color:var(--muted)}
+.thread{display:flex;flex-direction:column;gap:18px;max-width:720px;width:100%;margin:0 auto}
+.msg{display:flex;gap:12px;align-items:flex-start}
+.msg .who{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:600}
+.msg.user .who{background:var(--line);color:var(--fg)}
+.msg.ai .who{border:1.5px dashed var(--accent);color:var(--accent)}
+.msg .body{min-width:0;flex:1}
+.msg.user .body{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 14px}
+.prop{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.prop .head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.prop .kind{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.prop h3{margin:0;font-size:16px;font-weight:600}
+.prop p{margin:0;color:var(--muted);font-size:14px}
+.prop .fields{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.added{background:var(--ok-soft);color:var(--ok);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:600}
+.view{max-width:860px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.view h2{font-family:var(--display);font-weight:400;font-size:26px;margin:0}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.pill{border-radius:999px;padding:2px 8px;font-size:12px;background:var(--accent-soft);color:var(--accent)}
+.pill.done{background:var(--ok-soft);color:var(--ok)}
+.bars{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.bar{display:grid;grid-template-columns:130px minmax(0,1fr) 32px;gap:10px;align-items:center;font-size:14px}
+.bar .track{height:12px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:6px}
+.bar .n{text-align:right;font-variant-numeric:tabular-nums}
+.backbar{display:flex;gap:8px;align-items:center}
+@media (max-width:720px){.app.has-rail{grid-template-columns:1fr}.rail{border-right:0;border-bottom:1px solid var(--line);padding-right:0;flex-direction:row;flex-wrap:wrap;gap:12px}.rail .reset{margin-top:0}}
+@media (prefers-reduced-motion:no-preference){.msg,.prop{animation:in .25s ease-out both}@keyframes in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}}
+</style>
+
+<div class="app" id="app">
+  <nav class="rail" id="rail" hidden aria-label="Your workspace"></nav>
+  <main id="main"></main>
+</div>
+
+<script>
+// Prototype only: fictional data, scripted replies. Nothing is sent anywhere.
+const SAMPLE = "I run a small tax practice. Clients send me documents by email, I chase the missing ones, prepare the return, a reviewer checks it, the client signs form 8879, then I e-file and track whether the IRS accepts it. Every Monday I tell my partner how many returns are in each stage.";
+const PROPOSALS = [
+  {id:'t-clients', kind:'Table', title:'Clients', text:'Who you work for and how to reach them.', fields:'name · email · phone · entity type · preparer'},
+  {id:'t-returns', kind:'Table', title:'Tax returns', text:'One row per return, moving through your stages.', fields:'client · tax year · form · stage · preparer · reviewer · due date'},
+  {id:'t-docs', kind:'Table', title:'Documents', text:'Every file a client sends, linked to its return.', fields:'return · document type · received on · status'},
+  {id:'a-chase', kind:'Automation', title:'Chase missing documents', text:'If a return waits on documents for 7 days, email the client the list of what is missing. Repeats weekly until everything arrives.'},
+  {id:'a-review', kind:'Automation', title:'Send to review', text:'When a return is marked prepared, assign it to the reviewer and notify them.'},
+  {id:'a-8879', kind:'Automation', title:'8879 signature reminder', text:'When review passes, send the client the 8879 to sign and remind them every 3 days.'},
+  {id:'r-monday', kind:'Report', title:'Returns by stage', text:'A Monday summary for your partner: count of returns in each stage, emailed at 8:00.'}
+];
+const RETURNS = [
+  ['Northwind Bakery LLC','2025','1120-S','Waiting on documents','Avery Example','Kim Sample','Mar 16'],
+  ['Juniper & Rowe','2025','1065','In preparation','Avery Example','Kim Sample','Mar 16'],
+  ['Dana Fictional','2025','1040','In review','Lee Placeholder','Kim Sample','Apr 15'],
+  ['Harbor Lane Dental','2025','1120','Client signature','Avery Example','Kim Sample','Apr 15'],
+  ['Sam Testperson','2025','1040','E-filed','Lee Placeholder','Kim Sample','Apr 15'],
+  ['Maple Street Florist','2025','1040-C','Accepted by IRS','Avery Example','Kim Sample','Apr 15'],
+  ['Pat Example','2025','1040','Waiting on documents','Lee Placeholder','Kim Sample','Apr 15']
+];
+const STAGES = ['Waiting on documents','In preparation','In review','Client signature','E-filed','Accepted by IRS'];
+let state = { messages: [], added: new Set(), view: null };
+
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const markHtml = '<div class="mark" title="Claude logo goes here (official Anthropic asset, pending brand approval)">Claude<br>logo</div>';
+
+function render(){
+  const main = $('#main'), rail = $('#rail'), app = $('#app');
+  const any = state.added.size > 0;
+  rail.hidden = !any; app.classList.toggle('has-rail', any);
+  if (any) renderRail(rail);
+  if (state.view) return renderView(main);
+  if (!state.messages.length) return renderHome(main);
+  renderThread(main);
+}
+
+function renderHome(main){
+  main.innerHTML = '<section class="home">' + markHtml +
+    '<h1>What does your day look like?</h1>' +
+    '<p>Describe the work you do, in your own words. I will suggest what can run on its own and build the tables and reports you need.</p>' +
+    composer('Tell me about your day-to-day work…') +
+    '<div class="chips"><button class="chip" id="sample">Try: a small tax practice</button></div>' +
+    '<p class="note">Prototype with example data. Nothing you type leaves this page.</p></section>';
+  wireComposer();
+  $('#sample').onclick = () => { $('#ask').value = SAMPLE; $('#ask').focus(); };
+}
+
+function composer(ph){
+  return '<form class="compose" id="form"><label for="ask" class="note" style="text-align:left">Your message</label>' +
+    '<textarea id="ask" placeholder="' + esc(ph) + '"></textarea>' +
+    '<div class="row"><span class="note">Enter to send · Shift+Enter for a new line</span><button class="btn" type="submit">Send</button></div></form>';
+}
+function wireComposer(){
+  const f = $('#form'), t = $('#ask');
+  t.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); f.requestSubmit(); } });
+  f.addEventListener('submit', e => { e.preventDefault(); const v = t.value.trim(); if (!v) return; send(v); });
+}
+
+function send(text){
+  state.messages.push({who:'user', text});
+  if (state.messages.filter(m => m.who === 'user').length === 1){
+    state.messages.push({who:'ai', text:'Here is what I heard: documents come in, you chase what is missing, prepare, a reviewer checks, the client signs the 8879, you e-file and watch for acceptance. Every Monday you report counts by stage.\n\nThis is what I can set up. Nothing changes until you add it, and you can undo anything.', proposals:true});
+  } else {
+    state.messages.push({who:'ai', text:'Got it. In the full version I would turn that into new fields, stages or automations for you to preview. In this prototype, try adding the suggestions above.'});
+  }
+  render();
+}
+
+function renderThread(main){
+  let h = '<div class="thread">';
+  state.messages.forEach(m => {
+    h += '<div class="msg ' + m.who + '"><div class="who">' + (m.who === 'ai' ? 'C' : 'You') + '</div><div class="body">' +
+      esc(m.text).replace(/\n/g,'<br>');
+    if (m.proposals) h += PROPOSALS.map(p => propHtml(p)).join('') +
+      '<div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" id="addall">Add all</button></div>';
+    h += '</div></div>';
+  });
+  h += composer('Ask for a change, e.g. "add a priority field to returns"') + '</div>';
+  main.innerHTML = h;
+  wireComposer();
+  main.querySelectorAll('[data-add]').forEach(b => b.onclick = () => { state.added.add(b.dataset.add); render(); });
+  const all = $('#addall'); if (all) all.onclick = () => { PROPOSALS.forEach(p => state.added.add(p.id)); render(); };
+}
+
+function propHtml(p){
+  const on = state.added.has(p.id);
+  return '<div class="prop"><div class="head"><span class="kind">' + p.kind + '</span>' +
+    (on ? '<span class="added">Added</span>' : '<button class="btn ghost small" data-add="' + p.id + '">Add</button>') + '</div>' +
+    '<h3>' + esc(p.title) + '</h3><p>' + esc(p.text) + '</p>' + (p.fields ? '<div class="fields">' + esc(p.fields) + '</div>' : '') + '</div>';
+}
+
+function renderRail(rail){
+  const group = k => PROPOSALS.filter(p => p.kind === k && state.added.has(p.id));
+  let h = '<button id="chat"' + (state.view ? '' : ' aria-current="true"') + '>Conversation</button>';
+  [['Table','Tables'],['Report','Reports'],['Automation','Automations']].forEach(([k, label]) => {
+    const items = group(k); if (!items.length) return;
+    h += '<div><h4>' + label + '</h4>' + items.map(p => '<button data-open="' + p.id + '"' + (state.view === p.id ? ' aria-current="true"' : '') + '>' + esc(p.title) + '</button>').join('') + '</div>';
+  });
+  h += '<button class="reset" id="reset">Reset to stock</button>';
+  rail.innerHTML = h;
+  $('#chat').onclick = () => { state.view = null; render(); };
+  rail.querySelectorAll('[data-open]').forEach(b => b.onclick = () => { state.view = b.dataset.open; render(); });
+  $('#reset').onclick = () => { state = { messages: [], added: new Set(), view: null }; render(); };
+}
+
+function renderView(main){
+  const p = PROPOSALS.find(x => x.id === state.view);
+  let h = '<section class="view"><div class="backbar"><button class="btn ghost small" id="back">Back to conversation</button></div><h2>' + esc(p.title) + '</h2>';
+  if (p.id === 't-returns'){
+    h += '<div class="tablewrap"><table><thead><tr><th>Client</th><th>Tax year</th><th>Form</th><th>Stage</th><th>Preparer</th><th>Reviewer</th><th>Due</th></tr></thead><tbody>' +
+      RETURNS.map(r => '<tr><td>' + r.slice(0,3).map(esc).join('</td><td>') + '</td><td><span class="pill' + (/Accepted|E-filed/.test(r[3]) ? ' done' : '') + '">' + esc(r[3]) + '</span></td><td>' + r.slice(4).map(esc).join('</td><td>') + '</td></tr>').join('') +
+      '</tbody></table></div><p class="note">Example rows. Your list follows the standard list layout: you can add, hide and reorder columns.</p>';
+  } else if (p.id === 't-clients'){
+    const names = [...new Set(RETURNS.map(r => r[0]))];
+    h += '<div class="tablewrap"><table><thead><tr><th>Name</th><th>Email</th><th>Entity type</th><th>Preparer</th></tr></thead><tbody>' +
+      names.map((n, i) => '<tr><td>' + esc(n) + '</td><td>client' + (i + 1) + '@example.com</td><td>' + (/LLC|Dental|Rowe|Florist/.test(n) ? 'Business' : 'Individual') + '</td><td>' + esc(RETURNS[i][4]) + '</td></tr>').join('') +
+      '</tbody></table></div>';
+  } else if (p.id === 't-docs'){
+    const docs = [['Northwind Bakery LLC','W-2','Mar 2','Received'],['Northwind Bakery LLC','1099-NEC','—','Missing'],['Pat Example','1098 mortgage interest','—','Missing'],['Juniper & Rowe','K-1','Feb 27','Received']];
+    h += '<div class="tablewrap"><table><thead><tr><th>Return</th><th>Document type</th><th>Received on</th><th>Status</th></tr></thead><tbody>' +
+      docs.map(d => '<tr><td>' + d.slice(0,3).map(esc).join('</td><td>') + '</td><td><span class="pill' + (d[3] === 'Received' ? ' done' : '') + '">' + d[3] + '</span></td></tr>').join('') + '</tbody></table></div>';
+  } else if (p.kind === 'Report'){
+    const counts = STAGES.map(s => [s, RETURNS.filter(r => r[3] === s).length]); const max = Math.max(...counts.map(c => c[1]));
+    h += '<div class="bars" role="img" aria-label="Returns by stage">' + counts.map(([s, n]) => '<div class="bar"><span>' + esc(s) + '</span><div class="track"><div class="fill" style="width:' + (n / max * 100) + '%"></div></div><span class="n">' + n + '</span></div>').join('') + '</div><p class="note">Emailed every Monday at 8:00 (switched off in this prototype).</p>';
+  } else {
+    h += '<div class="prop"><span class="kind">Automation · Off until you switch it on</span><p style="color:var(--fg)">' + esc(p.text) + '</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn small" type="button" disabled>Switch on</button><button class="btn ghost small" type="button">See steps</button></div></div><p class="note">Every automation starts switched off. You review its steps before turning it on.</p>';
+  }
+  main.innerHTML = h + '</section>';
+  $('#back').onclick = () => { state.view = null; render(); };
+}
+
+render();
+</script>
+
+</body>
+</html>
