@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-21T20:35:29Z",
-  "commit": "d44197a",
+  "built": "2026-10-21T21:43:08Z",
+  "commit": "f4914b0",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -585,7 +585,7 @@
     },
     {
       "file": "src/js/10-ws-shell.js",
-      "bytes": 4330
+      "bytes": 4374
     },
     {
       "file": "src/js/11-ws-workflow.js",
@@ -893,11 +893,11 @@
     },
     {
       "file": "src/js/102-ws-lists.js",
-      "bytes": 3329
+      "bytes": 3147
     },
     {
       "file": "src/js/103-ws-nav.js",
-      "bytes": 5516
+      "bytes": 5370
     },
     {
       "file": "src/js/104-front-simple.js",
@@ -1021,7 +1021,7 @@
     },
     {
       "file": "src/js/134-triage.js",
-      "bytes": 20845
+      "bytes": 20878
     },
     {
       "file": "src/js/135-requirements.js",
@@ -1448,5 +1448,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-c8013e1bc1"
+  "sw": "cnta-28faa488fa"
 }
