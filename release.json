@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-22T06:09:12Z",
-  "commit": "2747a27",
+  "built": "2026-10-22T13:45:26Z",
+  "commit": "dd3369e",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -277,7 +277,7 @@
     },
     {
       "file": "src/css/128-wf-editor.css",
-      "bytes": 33585
+      "bytes": 33561
     },
     {
       "file": "src/css/129-wf-runs.css",
@@ -557,7 +557,7 @@
     },
     {
       "file": "src/js/04-sn-schema.js",
-      "bytes": 87939
+      "bytes": 88994
     },
     {
       "file": "src/js/04-sn-tables.js",
@@ -957,7 +957,7 @@
     },
     {
       "file": "src/js/118-chat-int.js",
-      "bytes": 19374
+      "bytes": 19387
     },
     {
       "file": "src/js/119-scripts.js",
@@ -993,11 +993,11 @@
     },
     {
       "file": "src/js/127-wf-meta.js",
-      "bytes": 451338
+      "bytes": 451346
     },
     {
       "file": "src/js/128-wf-editor.js",
-      "bytes": 263074
+      "bytes": 263034
     },
     {
       "file": "src/js/129-wf-runs.js",
@@ -1025,7 +1025,7 @@
     },
     {
       "file": "src/js/135-requirements.js",
-      "bytes": 76121
+      "bytes": 76098
     },
     {
       "file": "src/js/136-explain-data.js",
@@ -1069,7 +1069,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 124056
+      "bytes": 124038
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1089,7 +1089,7 @@
     },
     {
       "file": "src/js/150-dictionary.js",
-      "bytes": 83133
+      "bytes": 83152
     },
     {
       "file": "src/js/151-record-client.js",
@@ -1137,7 +1137,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 125134
+      "bytes": 127510
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1217,7 +1217,7 @@
     },
     {
       "file": "src/js/184-wf-import.js",
-      "bytes": 17738
+      "bytes": 4801
     },
     {
       "file": "src/js/185-code-editor.js",
@@ -1225,11 +1225,11 @@
     },
     {
       "file": "src/js/186-wf-templates.js",
-      "bytes": 10933
+      "bytes": 10930
     },
     {
       "file": "src/js/187-identity.js",
-      "bytes": 71344
+      "bytes": 71349
     },
     {
       "file": "src/js/188-ui-forms.js",
@@ -1245,7 +1245,7 @@
     },
     {
       "file": "src/js/194-wf-credentials.js",
-      "bytes": 11029
+      "bytes": 11013
     },
     {
       "file": "src/js/195-field-names.js",
@@ -1297,7 +1297,7 @@
     },
     {
       "file": "src/js/206-icons.js",
-      "bytes": 26622
+      "bytes": 26631
     },
     {
       "file": "src/js/206-session-state.js",
@@ -1448,5 +1448,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-0d72be08c3"
+  "sw": "cnta-a6fc9f9bcf"
 }
