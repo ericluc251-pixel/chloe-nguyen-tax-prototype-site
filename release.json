@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-22T13:45:26Z",
-  "commit": "dd3369e",
+  "built": "2026-10-22T17:27:14Z",
+  "commit": "263caa9",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -1137,7 +1137,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 127510
+      "bytes": 129354
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1425,7 +1425,7 @@
     },
     {
       "file": "src/js/259-templates.js",
-      "bytes": 11917
+      "bytes": 12332
     },
     {
       "file": "src/js/260-catalog-portal.js",
@@ -1448,5 +1448,5 @@
       "bytes": 551
     }
   ],
-  "sw": "cnta-a6fc9f9bcf"
+  "sw": "cnta-0b2ca01364"
 }
