@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "built": "2026-10-22T22:10:05Z",
-  "commit": "1a6b620",
+  "built": "2026-10-23T06:43:41Z",
+  "commit": "902b79c",
   "modules": [
     {
       "file": "src/css/00-app.css",
@@ -549,7 +549,7 @@
     },
     {
       "file": "src/js/01-core-data.js",
-      "bytes": 30907
+      "bytes": 30719
     },
     {
       "file": "src/js/02-core-helpers.js",
@@ -569,7 +569,7 @@
     },
     {
       "file": "src/js/06-platform-rules-events.js",
-      "bytes": 6647
+      "bytes": 6967
     },
     {
       "file": "src/js/07-platform-tools.js",
@@ -585,7 +585,7 @@
     },
     {
       "file": "src/js/10-ws-shell.js",
-      "bytes": 4374
+      "bytes": 3825
     },
     {
       "file": "src/js/11-ws-workflow.js",
@@ -885,7 +885,7 @@
     },
     {
       "file": "src/js/100-gsheet.js",
-      "bytes": 56956
+      "bytes": 58249
     },
     {
       "file": "src/js/101-data-admin.js",
@@ -937,7 +937,7 @@
     },
     {
       "file": "src/js/113-sla-jobs.js",
-      "bytes": 43457
+      "bytes": 43212
     },
     {
       "file": "src/js/114-numbering.js",
@@ -993,11 +993,11 @@
     },
     {
       "file": "src/js/127-wf-meta.js",
-      "bytes": 451346
+      "bytes": 451692
     },
     {
       "file": "src/js/128-wf-editor.js",
-      "bytes": 263034
+      "bytes": 263180
     },
     {
       "file": "src/js/129-wf-runs.js",
@@ -1017,7 +1017,7 @@
     },
     {
       "file": "src/js/133-notify-editor.js",
-      "bytes": 47114
+      "bytes": 47769
     },
     {
       "file": "src/js/134-triage.js",
@@ -1069,7 +1069,7 @@
     },
     {
       "file": "src/js/145-packages.js",
-      "bytes": 124038
+      "bytes": 142751
     },
     {
       "file": "src/js/146-mcp-tokens.js",
@@ -1137,7 +1137,7 @@
     },
     {
       "file": "src/js/162-acl.js",
-      "bytes": 130607
+      "bytes": 129634
     },
     {
       "file": "src/js/163-ai-builder.js",
@@ -1145,7 +1145,7 @@
     },
     {
       "file": "src/js/164-smart-search.js",
-      "bytes": 55795
+      "bytes": 58694
     },
     {
       "file": "src/js/165-shortcuts.js",
@@ -1225,7 +1225,7 @@
     },
     {
       "file": "src/js/186-wf-templates.js",
-      "bytes": 10930
+      "bytes": 11152
     },
     {
       "file": "src/js/187-identity.js",
@@ -1352,12 +1352,20 @@
       "bytes": 140658
     },
     {
+      "file": "src/js/228-plugin-hooks.js",
+      "bytes": 3832
+    },
+    {
+      "file": "src/js/229-app-tax-hooks.js",
+      "bytes": 7793
+    },
+    {
       "file": "src/js/230-wf-spec-view.js",
       "bytes": 10846
     },
     {
       "file": "src/js/231-wf-exec-related.js",
-      "bytes": 6820
+      "bytes": 6814
     },
     {
       "file": "src/js/232-wf-pill-picker.js",
@@ -1409,7 +1417,7 @@
     },
     {
       "file": "src/js/254-notify-defs.js",
-      "bytes": 14500
+      "bytes": 14443
     },
     {
       "file": "src/js/256-catalog-fulfil.js",
@@ -1445,8 +1453,8 @@
     },
     {
       "file": "src/js/9999-boot.js",
-      "bytes": 551
+      "bytes": 672
     }
   ],
-  "sw": "cnta-f100beda36"
+  "sw": "cnta-4b532bc222"
 }
